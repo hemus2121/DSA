@@ -1,2 +1,3 @@
 # DSA
-Practising Algos
+Practising Algos on each sub topics
+
