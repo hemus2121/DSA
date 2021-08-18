@@ -11,25 +11,23 @@ public class TwoSum {
    You can return the answer in any order.
     */
 
-    //Soln - time O(n^2) | space O(1)
+    // TODO Soln1 - time O(n^2) | space O(1)
     public static int [] twoNumberSumUsingLoops( int [] data, int target){
 
         for (int i =0;i<data.length;i++){
              int firstNumber = data[i];
              // compare from 2nd number
             for (int j =i+1;j < data.length;j++){
-                 int secondNumber = data[j];
-                 if (target == firstNumber + secondNumber){
-                     return new int [] {firstNumber, secondNumber};
+                 if (target == firstNumber + data[j]){
+                     return new int [] {firstNumber, data[j]};
                  }
             }
         }
         return new int[0];
     }
 
-    //Soln -using maps - time - O(n) | space - O(n)
+    // TODO Soln2 -using maps - time - O(n) | space - O(n)
     public static int[] twoNumberSumUsingMap(int []data, int target){
-
         Map<Integer, Integer> dataMap = new HashMap<>();
          for (int i =0;i< data.length; i++){
              if (dataMap.containsKey(target-data[i])){
@@ -41,7 +39,7 @@ public class TwoSum {
         return new int [0];
     }
 
-    //Soln -using set - time - O(n) | space - O(n)
+    //TODO Soln3 -using set - time - O(n) | space - O(n)
     public static int [] twoNumberSumUsingSet(int [] data, int target){
 
          Set<Integer> dataset = new HashSet<>();
@@ -58,6 +56,6 @@ public class TwoSum {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(twoNumberSumUsingLoops(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10)));
         System.out.println(Arrays.toString(twoNumberSumUsingMap(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10)));
-        System.out.println(Arrays.toString(twoNumberSumUsingSet(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10)));
+        System.out.println(Arrays.toString(twoNumberSumUsingSet(new int[] {3, 5, 4, 8, 11, 1, -1, 6}, 10)));
     }
 }
