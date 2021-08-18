@@ -12,7 +12,7 @@ public class ContainerWithMostWater {
     //The key idea here is that , for any container, the water it could contain is determined by the shorter height.
     // Try candidate from the far left and far right. Always move the shorter pointer to the center.
 
-    // TODO- time O(n)  || space (1)
+    // Approach 1 - time O(n)  || space (1)
     public static  int maxArea(int [] height){
        int left = 0;
        int right = height.length-1;
@@ -32,6 +32,8 @@ public class ContainerWithMostWater {
 
     // APPROACH 2-->The following method is a small optimization of the above method.
     // For the same height, we can directly move left and right, and no longer calculate the capacity.
+    // time O (n) || space (1)
+
     public static int maxArea1(int [] height){
         int left =0, right = height.length-1;
         int res =0;
