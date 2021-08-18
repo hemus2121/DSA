@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysProb;
 
 public class ContainerWithMostWater {
 
