@@ -38,10 +38,8 @@ public class ThreeSum {
 
     public static void main(String[] args) {
         List<Integer[]> results = threeSum(new int[] {12, 3, 1, 2, -6, 5, -8, 6}, 0);
-        for (Integer[] integersA : results) {
-            for (int j : integersA) {
-                System.out.println(j);
-            }
-        }
+        results.stream().forEach(integers -> {
+            System.out.println(Arrays.toString(integers));
+        });
     }
 }
