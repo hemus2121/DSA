@@ -31,11 +31,20 @@ public class SpiralMatrix {
 
             //iterate last row
             for (int col = endColumn-1 ; col >=startCol; col-- ){
+                //Handle edge case when there is single row
+                //in the middle of matrix. in this case we don't want
+                // to double count the value in the row,
+                // which we have already counted in the first for loop above
+
                 if(startRow == endRow) break;
                 response.add(array[endRow][col]);
             }
             //iterate 1st column
             for (int row = endRow-1; row > startRow; row--){
+                //Handle edge case when there is single column
+                //in the middle of matrix. in this case we don't want
+                // to double count the value in the row,
+                // which we have already counted in the second for loop above
                 if (startCol== endColumn) break;
                 response.add(array[row][startCol]);
             }
