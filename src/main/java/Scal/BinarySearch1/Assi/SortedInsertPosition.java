@@ -21,6 +21,7 @@ public interface SortedInsertPosition {
             if (A[mid]< B) l= mid+1;
             else r= mid-1;
         }
+        //last position indicates where element can be inserted after while loop breaks
         return l;
     }
     static void main(String[] args) {
