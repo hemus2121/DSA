@@ -32,7 +32,8 @@ public class SpecialInteger {
         if (sum >B) return false;
         //slide over window till the length of the Array
         for (int i =k;i<A.length;i++){
-            sum += A[i] -A[i-k];
+            sum += A[i];
+            sum =  sum -A[i-k];
             if (sum > B ) return false;
         }
         return true;
