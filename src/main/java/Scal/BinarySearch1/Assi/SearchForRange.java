@@ -11,36 +11,42 @@ Return an array of size 2, such that first element = starting position of B in A
  */
 public class SearchForRange {
     public static int [] searchRange(int []A, int B){
-        int [] res = new int [2];
-        res[0] = firstIndex (A, B);
-        res[1] = lastIndex(A, B);
-        return res;
+        int [] response = new int [2];
+        response[0] = firstIndex(A,B) ==-1? -1: firstIndex(A,B);
+        response[1] = lastIndex(A,B) ==-1? -1: lastIndex(A,B);
+        return response;
     }
     private static int firstIndex(int []A, int B){
-        int l=0;int r = A.length-1;
+        int l =0;int r = A.length-1;
+        int ans=-1;
         while (l<=r){
             int mid = (l+r)/2;
-            //condition is element is matching exactly AND (mid==0 OR current element NOT equal to previous)
-            if (A[mid]==B && (mid==0 || A[mid]!=A[mid-1])){
-                return mid;
+
+            // if found at middle search for better possible answer on LHS
+            if (A[mid]==B){
+                ans= mid;
+                r=mid-1;
             }
-            if (A[mid]<B) l= mid+1;
+            if (A[mid] <B) l = mid+1;
             else r = mid-1;
         }
-        return -1;
+        return ans;
     }
     private static int lastIndex(int [] A, int B){
-        int l =0;int r = A.length-1;
+        int l =0;
+        int r = A.length-1;
+        int ans=-1;
         while (l<=r){
-            int mid = (l+r)/2;
-            //condition is element is matching exactly AND (mid==length-1 OR current element NOT equal to next)
-            if (A[mid]==B && (mid == A.length-1 || A[mid] != A[mid+1])){
-                return mid;
+            int mid = l+ (r-l)/2;
+            // if found at middle search for better possible answer on RHS
+            if (A[mid]==B){
+                ans = mid;
+                l =mid+1;
             }
-            if (A[mid]<B)  l = mid+1;
+            if (A[mid]<= B) l =mid+1;
             else r = mid-1;
         }
-        return -1;
+        return ans;
     }
 
     public static void main(String[] args) {
