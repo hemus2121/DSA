@@ -20,7 +20,7 @@ public class DistinctElements {
             if (dataMap.get(A[i - B]) == 1) dataMap.remove(A[i - B]);
 
                 //reduce freqcount from map if frequency count is more than 1
-            else dataMap.put(A[i], dataMap.get(A[i - B]) - 1);
+            else dataMap.put(A[i-B], dataMap.get(A[i - B]) - 1);
 
             //add new incoming element  into map along with frequency
             dataMap.put(A[i], dataMap.getOrDefault(A[i], 0) + 1);
