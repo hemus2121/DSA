@@ -1,19 +1,12 @@
 package Scal.Hashing2.Homework;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.List;
-import java.util.ArrayList;
-import java.io.*;
 import java.util.*;
 
 /*
 Problem Description
 
 Given two array of integers A and B, Sort A in such a way that the relative order among the elements will be the same as those are in B. For the elements not present in B, append them at last in sorted order.
-
 Return the array A after sorting from the above method.
-
 NOTE: Elements of B are unique.
  */
 public class SortArrayInGivenOrder {
