@@ -35,7 +35,7 @@ public class T3Sum {
     public static void main(String[] args) {
          int [] data = {-1, 2, 1, -4};
         System.out.println(get3sum(data,1));
-        
+
         int [] dataa={1,2,3};
         System.out.println(get3sum(dataa,6));
     }
