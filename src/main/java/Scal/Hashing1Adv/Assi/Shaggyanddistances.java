@@ -1,4 +1,4 @@
-package Scal.Hashing.Assi;
+package Scal.Hashing1Adv.Assi;
 
 import java.util.HashMap;
 import java.util.Map;

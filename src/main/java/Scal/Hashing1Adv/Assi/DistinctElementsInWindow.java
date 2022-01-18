@@ -1,9 +1,9 @@
-package Scal.Hashing2.Assi;
+package Scal.Hashing1Adv.Assi;
 
 import java.util.*;
 
 //https://www.geeksforgeeks.org/count-distinct-elements-in-every-window-of-size-k/
-public class DistinctElements {
+public class DistinctElementsInWindow {
     private static int[] getDistcount(int []A, int B){
         Map<Integer, Integer> dataMap = new HashMap();
         List<Integer> res= new ArrayList<>();
