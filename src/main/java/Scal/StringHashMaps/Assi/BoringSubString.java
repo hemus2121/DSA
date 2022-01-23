@@ -1,4 +1,5 @@
 package Scal.StringHashMaps.Assi;
+import java.util.*;
 /*
 Problem Description
 
@@ -16,6 +17,7 @@ public class BoringSubString {
         int smallestodd=Integer.MAX_VALUE,largestodd=Integer.MIN_VALUE;
         int smallesteven=Integer.MAX_VALUE,largesteven=Integer.MIN_VALUE;
 
+
         for (char c : A.toCharArray()){
             int temp = (int)c;
             if (temp%2==0){
@@ -30,7 +32,7 @@ public class BoringSubString {
         System.out.println("smallesteven="+smallesteven + " largesteven="+largesteven);
         System.out.println("smallestodd="+smallestodd + "  largestodd="+ largestodd);
         //conditions to check
-        if (smallestodd >0 && smallesteven >0 && Math.abs(smallestodd-smallesteven )!=1) return 1;
+        if (smallestodd >0 && largesteven >0 && Math.abs(smallestodd-largesteven )!=1) return 1;
        // else if (smallestodd >0 && largesteven>0 && Math.abs(smallestodd -largesteven) !=1) return 1;
         else if (largestodd >0 && smallesteven>0 && Math.abs(largestodd-smallesteven) !=1) return 1;
         //else if (largestodd>0 && largesteven>0&& Math.abs(largestodd-largesteven)!=1) return 1;
@@ -39,5 +41,6 @@ public class BoringSubString {
     public static void main(String[] args) {
         System.out.println(checkBoring("abcd"));
         System.out.println(checkBoring("aab"));
+        System.out.println(checkBoring("ejbfb"));
     }
 }
