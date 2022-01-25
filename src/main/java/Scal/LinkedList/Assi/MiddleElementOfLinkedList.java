@@ -1,5 +1,11 @@
 package Scal.LinkedList.Assi;
+/*
+Problem Description
 
+Given a linked list of integers. Find and return the middle element of the linked list.
+
+NOTE: If there are N nodes in the linked list and N is even then return the (N/2 + 1)th element.
+ */
 public class MiddleElementOfLinkedList {
 
     //Method 1: iterating through complete list

@@ -1,5 +1,11 @@
 package Scal.LinkedList.Assi;
 
+/*
+Problem Description
+
+You are given a singly linked list having head node A.
+You have to reverse the linked list and return the head node of that reversed list.
+ */
 public class ReverseLL {
     private static Node reverse(Node A){
         //Declare 2 extra pointers
