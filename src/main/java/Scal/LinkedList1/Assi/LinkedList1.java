@@ -1,4 +1,4 @@
-package Scal.LinkedList.Assi;
+package Scal.LinkedList1.Assi;
 
 /*
 Design and implement a Linked List data structure.

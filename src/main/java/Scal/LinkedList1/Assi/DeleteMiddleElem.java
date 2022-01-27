@@ -1,4 +1,4 @@
-package Scal.LinkedList.Assi;
+package Scal.LinkedList1.Assi;
 /*
 Problem Description
 Given a singly linked list, delete middle of the linked list.
