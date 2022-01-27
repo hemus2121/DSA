@@ -1,7 +1,6 @@
-package Scal.LinkedList.Homework;
+package Scal.LinkedList1.HomeWork;
 
-import Scal.LinkedList.Assi.LinkedList1.ListNode;
-
+import  Scal.LinkedList1.Assi.LinkedList1.ListNode;
 /*
 Problem Description
 
@@ -11,6 +10,7 @@ For example, Given linked list: 1->2->3->4->5, and B = 2. After removing the sec
 NOTE: If B is greater than the size of the list, remove the first node of the list.
 NOTE: Try doing it using constant additional space.
  */
+
 public class RemoveNthNodeFromEnd {
     private static ListNode removeNthFromEnd(ListNode A, int B){
         if (B==1&& A.next==null) return null;
@@ -41,7 +41,5 @@ public class RemoveNthNodeFromEnd {
         tmp.next = tmp.next.next;
         return A;
     }
-    public static void main(String[] args) {
 
-    }
 }
