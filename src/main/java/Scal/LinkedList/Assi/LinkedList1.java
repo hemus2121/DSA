@@ -8,18 +8,18 @@ It should support the following operations:
 
 public class LinkedList1 {
 
-    static  class node {
-        int data;
-        node next;
+    public static class ListNode {
+        public int data;
+        public ListNode next;
     }
-    static node head = null;
+    static ListNode head = null;
     static int size_of_ll = 0;
 
     public static void insert_node(int position, int value) {
         // @params position, integer
         // @params value, integer
         if (position >= 1 && position <= size_of_ll + 1) {
-            node temp = new node();
+            ListNode temp = new ListNode();
             temp.data = value;
             //inserting at head position
             if (position == 1) {
@@ -27,7 +27,7 @@ public class LinkedList1 {
                 head = temp;
             } else {
                 int count = 1;
-                node prev = head;
+                ListNode prev = head;
                 while (count < position - 1) {
                     prev = prev.next;
                     count++;
@@ -41,14 +41,14 @@ public class LinkedList1 {
     public static void delete_node(int position) {
         // @params position, integer
         if (position >= 1 && position <= size_of_ll) {
-            node temp = null;
+            ListNode temp = null;
             //deleting 1st node
             if (position == 1) {
                 temp = head;
                 head = head.next;
             } else {
                 int count = 1;
-                node prev = head;
+                ListNode prev = head;
                 while (count < position - 1) {
                     prev = prev.next;
                     count++;
@@ -62,7 +62,7 @@ public class LinkedList1 {
 
     public static void print_ll() {
         // Output each element followed by a space
-        node temp = head;
+        ListNode temp = head;
         int flag = 0;
         while (temp != null) {
             if (flag == 0) {
