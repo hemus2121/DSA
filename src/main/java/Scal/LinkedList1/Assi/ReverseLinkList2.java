@@ -1,12 +1,12 @@
 package Scal.LinkedList1.Assi;
 
-import  Scal.LinkedList1.Assi.LinkedList1.ListNode;
+import  Scal.LinkedList1.ListNode;
 /*
- Reverse a linked list A from position B to C.
+Reverse a linked list A from position B to C.
 
 NOTE: Do it in-place and in one-pass. 
  */
-public class ReveseLinkList2 {
+public class ReverseLinkList2 {
 
     public ListNode reverseBetween(ListNode A, int B, int C) {
         ListNode temp = A;

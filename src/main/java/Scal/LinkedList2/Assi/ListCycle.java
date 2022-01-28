@@ -1,6 +1,6 @@
 package Scal.LinkedList2.Assi;
 
-import  Scal.LinkedList1.Assi.LinkedList1.ListNode;
+import  Scal.LinkedList1.ListNode;
 /*
 Problem Description
 
@@ -21,7 +21,7 @@ public class ListCycle {
         while (fast.next!=null && fast.next.next !=null){
             slow = slow.next;
             fast = fast.next.next;
-            if (slow.data==fast.data){
+            if (slow.val==fast.val){
                 isCycleExists= true;
                 break;
             }

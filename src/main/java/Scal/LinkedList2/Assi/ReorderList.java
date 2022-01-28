@@ -1,6 +1,6 @@
 package Scal.LinkedList2.Assi;
 
-import Scal.LinkedList1.Assi.LinkedList1.ListNode;
+import Scal.LinkedList1.ListNode;
 
 /*
  Given a singly linked list A
@@ -49,13 +49,11 @@ public class ReorderList {
         return prev;
     }
     public ListNode getMiddle(ListNode head){
-        ListNode fast=null, slow=null;
+        ListNode fast=head, slow=head;
         while (fast.next != null && fast.next.next != null){
             fast= fast.next.next;
             slow = slow.next;
         }
         return slow;
     }
-
-
 }

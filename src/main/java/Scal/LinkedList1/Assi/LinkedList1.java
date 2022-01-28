@@ -8,9 +8,10 @@ It should support the following operations:
 
 public class LinkedList1 {
 
-    public static class ListNode {
+    public static  class ListNode {
         public int data;
         public ListNode next;
+
     }
     static ListNode head = null;
     static int size_of_ll = 0;

@@ -1,6 +1,6 @@
 package Scal.LinkedList1.HomeWork;
 
-import  Scal.LinkedList1.Assi.LinkedList1.ListNode;
+import  Scal.LinkedList1.ListNode;
 /*
 Problem Description
 
@@ -41,5 +41,4 @@ public class RemoveNthNodeFromEnd {
         tmp.next = tmp.next.next;
         return A;
     }
-
 }

@@ -5,7 +5,7 @@ Problem Description
 
 Given a sorted linked list, delete all duplicates such that each element appear only once.
  */
-import  Scal.LinkedList1.Assi.LinkedList1.ListNode;
+import  Scal.LinkedList1.ListNode;
 
 public class RemoveDuplicatesFromSortedList {
 
@@ -13,7 +13,7 @@ public class RemoveDuplicatesFromSortedList {
         ListNode cur = A;
         while (cur !=null && cur.next!=null){
             // check if consecutive nodes values are equal
-            if (cur.data == cur.next.data){
+            if (cur.val == cur.next.val){
                 cur.next = cur.next.next;
             }
             else cur= cur.next;

@@ -1,6 +1,6 @@
 package Scal.LinkedList2.Assi;
 
-import  Scal.LinkedList1.Assi.LinkedList1.ListNode;
+import  Scal.LinkedList1.ListNode;
 
 /*
 Problem Description

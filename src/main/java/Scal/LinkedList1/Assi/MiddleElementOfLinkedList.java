@@ -1,4 +1,6 @@
 package Scal.LinkedList1.Assi;
+
+import  Scal.LinkedList1.ListNode;
 /*
 Problem Description
 
@@ -27,16 +29,16 @@ public class MiddleElementOfLinkedList {
         }
 
     //Method 2: iterating through complete list using 2 pointers
-    private static int printmiddleMethod2(Node A){
+    private static int printmiddleMethod2(ListNode A){
 
-        Node slow=A, fast=A;
-        if (fast.next==null) return fast.value;
+        ListNode slow=A, fast=A;
+        if (fast.next==null) return fast.val;
         while (fast!=null && fast.next!=null){
             slow = slow.next;
             fast = fast.next.next;
         }
-        System.out.println("Prining middle element-->"+ slow.value);
-        return slow.value;
+        System.out.println("Prining middle element-->"+ slow.val);
+        return slow.val;
     }
 
     public static void main(String[] args) {

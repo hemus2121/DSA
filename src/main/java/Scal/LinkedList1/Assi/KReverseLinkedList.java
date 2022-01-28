@@ -2,7 +2,6 @@ package Scal.LinkedList1.Assi;
 
 import  Scal.LinkedList1.Assi.LinkedList1.ListNode;
 
-
 /*
 Problem Description
 Given a singly linked list A and an integer B, reverse the nodes of the list B at a time and
