@@ -27,6 +27,7 @@ public class LinkedList1 {
                 temp.next = head;
                 head = temp;
             } else {
+                //head is not empty
                 int count = 1;
                 ListNode prev = head;
                 while (count < position - 1) {
@@ -63,15 +64,15 @@ public class LinkedList1 {
 
     public static void print_ll() {
         // Output each element followed by a space
-        ListNode temp = head;
+        ListNode curr = head;
         int flag = 0;
-        while (temp != null) {
+        while (curr != null) {
             if (flag == 0) {
-                System.out.print(temp.data);
+                System.out.print(curr.data);
                 flag = 1;
             } else
-                System.out.print(" " + temp.data);
-            temp = temp.next;
+                System.out.print(" " + curr.data);
+            curr = curr.next;
         }
     }
 
