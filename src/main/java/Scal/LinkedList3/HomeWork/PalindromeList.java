@@ -54,6 +54,4 @@ public class PalindromeList {
         }
         return slow;
     }
-
-    }
 }
