@@ -35,7 +35,7 @@ public class LRUCache {
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
-        // set the new inital connection between nodes
+        // set the new initial connection between nodes
         tail.prev=head;
         head.next=tail;
     }
@@ -45,8 +45,6 @@ public class LRUCache {
         //if present get from Map and reset it position in DLL
         Node current = dataMap.get(key);
         removeFromHead(current);
-        //current.prev.next = current.next;
-        //current.next.prev= current.prev;
         addToTail(current);
         return dataMap.get(key).value;
     }
@@ -71,14 +69,14 @@ public class LRUCache {
         addToTail(newNode);
         size++;
     }
-
+    // keep adding from Tail side - latest element is always left of tail element
     public void addToTail(Node x){
         x.next =tail;
         x.prev = tail.prev;
         x.prev.next=x;
         tail.prev=x;
     }
-
+    // remove from head side  - last accessed element is denoted by Head
     public void removeFromHead(Node node){
         node.prev.next= node.next;
         node.next.prev = node.prev;
