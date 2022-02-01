@@ -43,13 +43,11 @@ public class SimplyDirectoryPath {
 
         // Final Step - this to avoid TLE since it was happening for too larger input
         String res="";
-        String res1="";
         while (!stack.isEmpty()){
-            res1 = "/"+stack.pop();
-            //append to first before 2nd character .. like attach to head node concept
-            res = res1+ res;
+            String res1 = "/"+stack.pop();
+            res = res1 +res;
         }
-        return res==null? "/" : res;
+        return res==""? "/":res;
 
 
     }
