@@ -29,7 +29,7 @@ public class DoubleCharacter {
 //            }
 //        }
 
-        //Solution -2 
+        //Solution -2
         Stack <Character> stack = new Stack();
         for (char c : A.toCharArray()){
             if (!stack.isEmpty() && c==stack.peek()){

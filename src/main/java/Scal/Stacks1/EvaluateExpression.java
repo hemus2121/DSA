@@ -4,7 +4,7 @@ import java.util.*;
 /*
 Problem Description
 
-An arithmetic expression is given by a charater array A of size N. Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+An arithmetic expression is given by a character array A of size N. Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 Valid operators are +, -, *, /. Each character may be an integer or an operator.
  */
 public class EvaluateExpression {

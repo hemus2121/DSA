@@ -6,7 +6,6 @@ import java.util.Stack;
 Problem Description
 
 Given an array of integers A .
-
 value of a array = max(array) - min(array).
 
 Calculate and return the sum of values of all possible subarrays of A % 109+7.
