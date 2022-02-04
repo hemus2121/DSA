@@ -15,17 +15,26 @@ Keep performing this operation on the string until there are no more occurrences
 public class DoubleCharacter {
     private static String solve(String A){
         if (A==null) return null;
-        Stack <Character> stack = new Stack<>();
+        // Solution - 1
+//        Stack <Character> stack = new Stack<>();
+//        for (char c : A.toCharArray()){
+//            if (stack.isEmpty()){
+//                stack.push(c);
+//            }else {
+//                if (stack.peek()== c){
+//                    stack.pop();
+//                }else{
+//                    stack.push(c);
+//                }
+//            }
+//        }
+
+        //Solution -2 
+        Stack <Character> stack = new Stack();
         for (char c : A.toCharArray()){
-            if (stack.isEmpty()){
-                stack.push(c);
-            }else {
-                if (stack.peek()== c){
-                    stack.pop();
-                }else{
-                    stack.push(c);
-                }
-            }
+            if (!stack.isEmpty() && c==stack.peek()){
+                stack.pop();
+            } else stack.push(c);
         }
         //build response
         StringBuilder sb = new StringBuilder();
