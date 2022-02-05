@@ -1,6 +1,7 @@
 package Scal.Stacks1;
 
 import java.util.Stack;
+import java.util.*;
 
 /*
 Problem Description
@@ -24,6 +25,10 @@ public class MAXandMIN {
         int [] nearLargestLeft = nearGreatestLeft(A);
         int [] nearLargestRight = nearGreatestRight(A);
 
+        System.out.println("nearSmallestLeft--> "+nearSmallestLeft);
+        System.out.println("nearSmallestRight-->"+nearSmallestRight);
+        System.out.println("nearLargestLeft-->"+nearLargestLeft);
+        System.out.println("nearLargestRight-->"+nearLargestRight);
 
         for (int i =0;i<A.length;i++){
             int j = nearLargestLeft[i];
@@ -52,8 +57,8 @@ public class MAXandMIN {
         return res;
     }
 
-    //just iterating from length of array side i.e start from (Array.length-1)
-    // if not found Assign A.length to result
+    ////just iterating from length of array side i.e start from (Array.length-1)
+    ///if not found Assign A.length to result
     public static int [] nearSmallestRight(int [] A){
         int [] res = new int [A.length];
         Stack<Integer> st = new Stack();
@@ -67,6 +72,7 @@ public class MAXandMIN {
         }
         return res;
     }
+
 
     // GREATEST ELEMENT SECTION
     // condition in while reverses from smallest i.e. peek <= A[i]
