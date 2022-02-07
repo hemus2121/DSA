@@ -15,19 +15,19 @@ public class TaskScheduling {
         for (int a: A){
             refQue.add(a);
         }
-        int clcokCycleCount = 0;
+        int clockCount = 0;
         //iterate over B to find jobs
         for (int i =0;i<B.length;i++){
             while (B[i]!= refQue.peek()){
                 int temp = refQue.peek();
                 refQue.remove();
-                clcokCycleCount++;
+                clockCount++;
                 refQue.add(temp);
             }
-            clcokCycleCount++;
+            clockCount++;
             refQue.remove();
         }
-        return clcokCycleCount
+        return clockCount;
     }
     public static void main(String[] args) {
         int [] A = {2, 3, 1, 5, 4};
