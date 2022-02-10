@@ -39,6 +39,10 @@ public class SlidingWindowMaximum {
     public static void main(String[] args) {
         int [] data = {1, 3, -1, -3, 5, 3, 6, 7};
         int b = 3;
-        System.out.println(Arrays.toString(slidingMaximum(data,b)));
+       // System.out.println(Arrays.toString(slidingMaximum(data,b)));
+
+        int [] data1= { 2, 5, -1, 7, -3, -1, -2 };
+        int bb=4;
+        System.out.println(Arrays.toString(slidingMaximum(data1, bb)));
     }
 }
