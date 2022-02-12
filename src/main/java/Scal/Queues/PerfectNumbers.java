@@ -1,6 +1,5 @@
 package Scal.Queues;
 
-import java.sql.Array;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.*;
@@ -20,9 +19,9 @@ public class PerfectNumbers {
     private static  String getNthPerfectNumber(int A){
 
         Queue<String> que = new LinkedList();
+
         que.add("1");
         que.add("2");
-
         List<String> resList = new ArrayList();
 
         while (resList.size() < A){
@@ -48,4 +47,5 @@ public class PerfectNumbers {
         //System.out.println(getNthPerfectNumber(3));
 
     }
-}
+
+    }

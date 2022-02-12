@@ -1,4 +1,4 @@
-package Scal.Stacks1;
+package Scal.Stacks;
 /*
 Problem Description
 

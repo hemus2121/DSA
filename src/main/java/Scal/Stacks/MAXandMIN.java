@@ -1,7 +1,6 @@
-package Scal.Stacks1;
+package Scal.Stacks;
 
 import java.util.Stack;
-import java.util.*;
 
 /*
 Problem Description
