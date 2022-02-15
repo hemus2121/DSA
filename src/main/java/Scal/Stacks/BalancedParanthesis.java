@@ -24,17 +24,26 @@ public class BalancedParanthesis {
                 stack.push(c);
             }else {
                 //critical block
-                if (stack.isEmpty()) return 0;
-                if (c=='}' && stack.peek() !='{')return 0;
-                if (c==']' && stack.peek() !='[')return 0;
-                if (c==')' && stack.peek() !='(')return 0;
-                stack.pop();
+                //if (stack.isEmpty()) return 0;
+                if (!stack.isEmpty()) {
+                    if (c == '}' && stack.peek() != '{') return 0;
+                    if (c == ']' && stack.peek() != '[') return 0;
+                    if (c == ')' && stack.peek() != '(') return 0;
+                    stack.pop();
+                }else{
+                    stack.push(c);
+                }
             }
         }
         return stack.isEmpty()?1:0;
     }
     public static void main(String[] args) {
-        System.out.println(checkParanthesis("())"));
-        System.out.println(checkParanthesis("{([])}"));
+        //System.out.println(checkParanthesis("())"));
+        //System.out.println(checkParanthesis("{([])}"));
+       // System.out.println(checkParanthesis("([])(){}(())()()"));
+       // System.out.println(checkParanthesis("[((([])([]){}){}){}([])[]((())"));
+       // System.out.println(checkParanthesis("(141[])(){waga}((51afaw))()hh()"));
+       // System.out.println(checkParanthesis("(agwgg)([ghhheah%&@Q])"));
+        System.out.println(checkParanthesis(")[]}"));
     }
 }
