@@ -2,8 +2,8 @@ package Scal.Trees;
 
 public class TreeNode {
     public int val;
-    TreeNode left;
-    TreeNode right;
+    public TreeNode left;
+    public TreeNode right;
     //constructor
     public TreeNode(int x ){
         this.val = x;
