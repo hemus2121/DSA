@@ -18,6 +18,7 @@ public class ReverseLevelOrder {
         while (!que.isEmpty()){
             TreeNode temp= que.remove();
             tempList.add(temp.val);
+            // Since level has to reverse add right first instead of left
             if (temp.right != null) que.add(temp.right);
             if(temp.left != null) que.add(temp.left);
 
