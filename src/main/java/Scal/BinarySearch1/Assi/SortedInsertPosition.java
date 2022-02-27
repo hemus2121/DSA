@@ -8,7 +8,7 @@ If not, return the index where it would be if it were inserted in order.
 NOTE: You may assume no duplicates in the array. Users are expected to solve this in O(log(N)) time.
 */
 
-public interface SortedInsertPosition {
+public class SortedInsertPosition {
 
     static int searchInsert (int []A, int B){
         int l =0;
