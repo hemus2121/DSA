@@ -6,8 +6,6 @@ Problem Description
 Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
  */
 
-import sun.reflect.generics.tree.Tree;
-
 import java.util.*;
 public class LevelOrder {
 
