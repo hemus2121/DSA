@@ -1,4 +1,4 @@
-package Scal.DynamicProg;
+package Scal.DynamicProg.TwoDArray;
 /*
 Problem Description
 Given a M x N grid A of integers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
