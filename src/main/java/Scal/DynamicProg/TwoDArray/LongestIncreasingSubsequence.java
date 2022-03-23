@@ -35,5 +35,6 @@ public class LongestIncreasingSubsequence {
     public static void main(String[] args) {
         int [] data = {1};
         System.out.println(getLength(data));
+
     }
 }

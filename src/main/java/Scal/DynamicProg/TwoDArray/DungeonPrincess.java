@@ -23,9 +23,8 @@ public class DungeonPrincess {
            return Math.max(1, 1-A[currentrow][currentcol]);
         }
         // check in existing array if values is present return it
-        if (dp[currentrow][currentcol]!=0){
-            return dp[currentrow][currentcol];
-        }
+        if (dp[currentrow][currentcol]!=0) return dp[currentrow][currentcol];
+
 
         int c1 = solveRecursive(currentrow+1,currentcol, m,n, A);
         int c2 = solveRecursive(currentrow, currentcol+1, m,n, A);

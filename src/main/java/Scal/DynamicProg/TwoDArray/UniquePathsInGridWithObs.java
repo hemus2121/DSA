@@ -8,8 +8,8 @@ public class UniquePathsInGridWithObs {
         //create a DP array
         int [] [] dp = new int [m][n];
 
-        //return computeFromTopLeft(m,n, dp, A);
-        return computePathFromBottomRight(m,n,dp,A);
+        return computeFromTopLeft(m,n, dp, A);
+        //return computePathFromBottomRight(m,n,dp,A);
         //return computePathUsingRecursion(0,0, m, n, dp, A);
     }
 
@@ -85,7 +85,10 @@ public class UniquePathsInGridWithObs {
                 {0,1,0},
                 {0,0,0}
         };
-        System.out.println(computePaths(data));
+        int [][] data1 = new int [][]{
+                {0,0}
+        };
+        System.out.println(computePaths(data1));
 
     }
 }
