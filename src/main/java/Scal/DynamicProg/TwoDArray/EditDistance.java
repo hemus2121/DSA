@@ -39,7 +39,8 @@ public class EditDistance {
 
         //Iterative approach
         static int computeIteratively(String A, String B, int m, int n) {
-             dp= new int [m+1][n+1];
+
+            // +1 denotes cost of the operation
 
             //setting 1st column
             for(int i=1;i<=m;i++){
