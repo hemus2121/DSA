@@ -12,18 +12,18 @@ NOTE: You cannot break an item, either pick the complete item, or don’t pick i
 public class ZeroOneKnapsack {
 
     // Sol1 - Bottom UP approach - Iterative approach
-    private static  int knapsackIteration(int [] values, int [] wt ,int capacity){
+    private static  int knapsackIteration(int [] values, int [] wt ,int capacity) {
 
-        int [] [] dp = new int [ wt.length+1][capacity+1];
+        int[][] dp = new int[wt.length + 1][capacity + 1];
 
         //setting 1st row values as zero
-        for (int i =0;i<=capacity;i++){
-            dp[0][i]=0;
-        }
+        //for (int i =0;i<=capacity;i++){
+        //   dp[0][i]=0;
+        //}
         //setting 1st column values as zero
-        for (int i=0;i<= wt.length;i++){
-            dp [0][i] =0;
-        }
+        // for (int i=0;i<= wt.length;i++){
+        //    dp [0][i] =0;
+        //    }
 
         for (int i=1;i<= wt.length;i++){
             for (int j=1;j<=capacity;j++){
@@ -49,21 +49,21 @@ public class ZeroOneKnapsack {
         return computeRecursion(A.length, C, A, B);
     }
 
-    static int computeRecursion(int noOfItems , int weight, int [] val,int [] wt) {
+    static int computeRecursion(int noOfItems , int capacity, int [] val,int [] wt) {
         //BAse case - ran out of length of knapsack capacity or
-        if (noOfItems == 0 || weight == 0) return 0;
+        if (noOfItems == 0 || capacity == 0) return 0;
 
         //if found in cache
-        if (dp[noOfItems][weight] != 0) return dp[noOfItems][weight];
+        if (dp[noOfItems][capacity] != 0) return dp[noOfItems][capacity];
 
         //computation
-        if (weight >= wt[noOfItems - 1]) {
-            dp[noOfItems][weight] = Math.max(computeRecursion(noOfItems - 1, weight, val, wt),
-                                             computeRecursion(noOfItems - 1, weight - wt[noOfItems - 1], val, wt) + val[noOfItems - 1]);
+        if (capacity >= wt[noOfItems - 1]) {
+            dp[noOfItems][capacity] = Math.max(computeRecursion(noOfItems - 1, capacity, val, wt),
+                                             computeRecursion(noOfItems - 1, capacity - wt[noOfItems - 1], val, wt) + val[noOfItems - 1]);
         } else {
-            dp[noOfItems][weight] = computeRecursion(noOfItems - 1, weight, val, wt);
+            dp[noOfItems][capacity] = computeRecursion(noOfItems - 1, capacity, val, wt);
         }
-        return dp[noOfItems][weight];
+        return dp[noOfItems][capacity];
     }
 
     public static void main(String[] args) {
