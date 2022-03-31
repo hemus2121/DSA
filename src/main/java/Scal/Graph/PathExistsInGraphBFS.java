@@ -4,7 +4,7 @@ package Scal.Graph;
 
 import java.util.*;
 
-public class BreadthFirstSearch {
+public class PathExistsInGraphBFS {
 
     //NOTE: Graph is starting from node 1 and searching from 1 to 4
 
@@ -22,7 +22,7 @@ public class BreadthFirstSearch {
             adjacency_list.get(edge[1]).add(edge[0]);
         }
 
-
+        // to have level order traversal
         Queue<Integer> queue = new LinkedList<>();
         queue.add(start);
 
