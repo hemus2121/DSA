@@ -2,7 +2,7 @@ package Scal.Graph;
 
 import java.util.*;
 
-public class SimpleBFS {
+public class SimpleBFSUsingArrayList {
     static void simpleBFS(int n, int [][] edges, int start){
 
         //construct Graph to hold list values
