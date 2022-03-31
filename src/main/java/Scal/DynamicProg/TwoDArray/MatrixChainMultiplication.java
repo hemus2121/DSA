@@ -30,7 +30,6 @@ public class MatrixChainMultiplication {
     // using Bottom up Approach
     static int computeMinCostIteration(int[] A, int n, int[][] dp) {
 
-
         // start from bottom row to top row
         for (int i = n; i >= 1; i--) {
             // start from left column to right column
@@ -45,6 +44,7 @@ public class MatrixChainMultiplication {
                 }
             }
         }
+        //answer is stored at [1][n-1] location
         return dp[1][n - 1];
     }
 
