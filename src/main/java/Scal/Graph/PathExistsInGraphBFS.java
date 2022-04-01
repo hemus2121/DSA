@@ -1,6 +1,6 @@
 package Scal.Graph;
 
-/* Sample program for BFS using Adjacency List */
+/* Path Exists between Nodes in Graph using BFS - Adjacency List */
 
 import java.util.*;
 
@@ -34,9 +34,9 @@ public class PathExistsInGraphBFS {
             int node = queue.poll();
 
             // Check if we have reached the target node.
-            if (node == end) {
-                return true;
-            }
+            //if (node == end) {
+             //   return true;
+            //}
 
             // Add all neighbors to the stack. - iterating inner list of list
             for (int neighbor : adjacency_list.get(node)) {
@@ -47,7 +47,9 @@ public class PathExistsInGraphBFS {
                 }
             }
         }
-        return false;
+        //check whether visited array destination value is SET
+        return (visited[end] )? true: false;
+
     }
 
 
