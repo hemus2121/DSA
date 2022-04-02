@@ -2,6 +2,10 @@ package Scal.Graph;
 
 import java.util.*;
 
+/*
+ BFS using Arraylist implement for Adjacency list- NOT USED much
+ */
+
 public class SimpleBFSUsingArrayList {
     static void simpleBFS(int n, int [][] edges, int start){
 

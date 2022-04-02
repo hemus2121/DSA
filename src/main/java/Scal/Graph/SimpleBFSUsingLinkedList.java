@@ -1,8 +1,11 @@
 package Scal.Graph;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
+
+/*
+ BFS using Linked list implement for Adjacency list- NOT USED much
+ */
 
 public class SimpleBFSUsingLinkedList {
     private int V;   // No. of vertices
@@ -19,6 +22,7 @@ public class SimpleBFSUsingLinkedList {
     void addEdge(int v,int w) {
         adj[v].add(w);
     }
+
     // prints BFS traversal from a given source s
     void BFS(int s)
     {
