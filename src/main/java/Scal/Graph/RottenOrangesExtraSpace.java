@@ -19,9 +19,6 @@ import java.util.Queue;
 
 public class RottenOrangesExtraSpace {
 
-    static int [] dx={-1, 0, 1, 0};
-    static int [] dy={ 0, 1, 0, -1};
-
     static class Pair {
         int x,y, time;
         Pair(int x, int y, int time){
