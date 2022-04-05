@@ -69,7 +69,7 @@ public class DistanceOfNearestCell {
             {0,0,0}
         };
         System.out.println(Arrays.toString(nearestCell(data)));
-        
+
         int [][] data1 = {
                 {1, 1, 0, 1, 1, 0},
                 {1, 1, 1, 0, 0, 0}
