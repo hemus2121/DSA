@@ -3,7 +3,7 @@ package Scal.Graph;
 import java.util.*;
 
 /*
-Problem Description
+Problem Description - Dijsktra Algo
 
 Given a weighted undirected graph having A nodes and M weighted edges, and a source node C.
 You have to find an integer array D of size A such that:
@@ -56,6 +56,7 @@ public class DijkstraAlgo {
         }
         return  dist;
     }
+    
     // using MINHEAP - priority Que since we need minimum value all the time
     static void computeDijistra(List<List<Pair>> adjList, int [] dist, int source){
 
@@ -81,7 +82,8 @@ public class DijkstraAlgo {
             }
         }
     }
-    // Graph Building mechanism 
+
+    // Graph Building mechanism
     static void buildGraph(List<List<Pair>> adjList,int A, int [][]B){
         // outer structure
         for (int i =0;i<=A;i++) {
@@ -105,6 +107,5 @@ public class DijkstraAlgo {
                 {1, 3, 8}
         };
         System.out.println(Arrays.toString(computeDijAlgo(5, B,4)));
-
     }
 }
