@@ -16,20 +16,21 @@ import java.util.List;
 import java.util.Queue;
 
 public class PathDirectedGraphBFS {
-    private static int checkPathInDirectedGraph(int A, int [][] B){
+    private static int checkPathInDirectedGraph(int A, int [][] B) {
+        List<List<Integer>> adjList = new ArrayList<>();
+        buildGraph(adjList, A, B);
+        return checkPath(A, 1, A, adjList);
+    }
 
-        // construct Adjacency List
-        List<List<Integer>> adjList= new ArrayList<>();
+       //Graph building mechanism
+     static  void buildGraph(List<List<Integer>> adjList, int A, int [][]B){
         for (int i=0;i<=A;i++){
             adjList.add(new ArrayList<>());
         }
-
         //construct edges given - directed graph mentioned
         for (int [] edge : B){
             adjList.get(edge[0]).add(edge[1]);
         }
-
-        return checkPath(A, 1, A, adjList);
     }
 
     // TRAVERSAL - using Queue - for level order traversal

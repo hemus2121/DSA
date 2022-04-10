@@ -56,7 +56,7 @@ public class CheckBipartiteGraph {
     }
 
     static void constructGraph(List<List<Integer>> adjList , int A, int [][]B){
-        for (int i =0;i< A;i++){
+        for (int i =0;i<=A;i++){
             adjList.add(new ArrayList<>());
         }
         //bidirection graph

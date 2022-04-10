@@ -16,6 +16,10 @@ No multiple edges between two pair of vertices.
 The graph may or may not be connected.
 Nodes are numbered from 0 to A-1.
 Your solution will run on multiple testcases. If you are using global variables make sure to clear them.
+
+INPUT
+The first argument contains an integer, A, representing the number of islands.
+The second argument contains an 2-d integer matrix, B, of size M x 3 where Island B[i][0] and B[i][1] are connected using a bridge of cost B[i][2].
  */
 public class DijkstraAlgo {
 
@@ -56,7 +60,7 @@ public class DijkstraAlgo {
         }
         return  dist;
     }
-    
+
     // using MINHEAP - priority Que since we need minimum value all the time
     static void computeDijistra(List<List<Pair>> adjList, int [] dist, int source){
 
@@ -69,7 +73,7 @@ public class DijkstraAlgo {
 
         //Normal BFS
         while (! pq.isEmpty()){
-            Pair temp = pq.poll();
+            Pair temp = pq.remove();
             // Go ahead with computation of options/routes if present considering minimal value of weight
             if (temp.weight == dist[temp.node]){
                 // Start traversing through edges connected to current node
@@ -98,7 +102,6 @@ public class DijkstraAlgo {
     }
 
     public static void main(String[] args) {
-
         int [][] B = {
                 {0, 3, 4},
                 {2, 3, 3},
