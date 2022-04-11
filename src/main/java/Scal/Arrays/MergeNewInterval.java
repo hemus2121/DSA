@@ -10,11 +10,18 @@ You may assume that the intervals were initially sorted according to their start
 Input 1:
 Given intervals [1, 3], [6, 9] insert and merge [2, 5] .
  */
-public class MergeIntervals {
+public class MergeNewInterval {
 
     static class Interval{
         int start, end;
         Interval(int s, int e) { start =s; end=e; };
+        @Override
+        public String toString() {
+            return "Interval{" +
+                    "start=" + start +
+                    ", end=" + end +
+                    '}';
+        }
     }
     static ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInterval) {
         //result list
@@ -49,6 +56,5 @@ public class MergeIntervals {
         existingInterval.add(new Interval(1, 3));
         existingInterval.add(new Interval(6, 9));
         System.out.println(insert(existingInterval, new Interval(2, 5)));
-
     }
 }

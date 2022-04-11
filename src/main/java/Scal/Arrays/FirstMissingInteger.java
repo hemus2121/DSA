@@ -10,8 +10,10 @@ public class FirstMissingInteger {
         int n = A.length;
 
         for (int i =0;i< n;i++){
-            // we will continue if number is within range
+
+            // we will continue if and only if number is within range
             if (A[i]>0  && A[i]<n){
+
                 int rightIndex = A[i]-1;
                 // check if they are in correct index location
                 if (A[rightIndex] != A[i]){
