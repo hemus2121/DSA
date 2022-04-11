@@ -1,4 +1,4 @@
-package Scal.DynamicProg.TwoDArray;
+package Scal.DynamicProg;
 
 import java.util.Arrays;
 /*
