@@ -24,7 +24,7 @@ public class FirstMissingInteger {
                     int temp = A[i];
                     A[i] = A[rightIndex];
                     A[rightIndex] = temp;
-                    // since we swapped element let start from same index to check again 
+                    // since we swapped element let start from same index to check again
                     i--;
                 }
             }
