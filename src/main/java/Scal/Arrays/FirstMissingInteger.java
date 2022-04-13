@@ -7,13 +7,15 @@ Note: Your algorithm should run in O(n) time and use constant space.
 */
 public class FirstMissingInteger {
     private static int firstMissingInteger(int [] A){
+
         int n = A.length;
 
+        //iterate till all elements are scanned for right position
         for (int i =0;i< n;i++){
 
             // we will continue if and only if number is within range
             if (A[i]>0  && A[i]<n){
-
+                // this is because arrays are ZERO based and we want to check correct index for current element
                 int rightIndex = A[i]-1;
                 // check if they are in correct index location
                 if (A[rightIndex] != A[i]){
@@ -22,6 +24,7 @@ public class FirstMissingInteger {
                     int temp = A[i];
                     A[i] = A[rightIndex];
                     A[rightIndex] = temp;
+                    // since we swapped element let start from same index to check again 
                     i--;
                 }
             }

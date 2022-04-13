@@ -41,6 +41,7 @@ public class MergeNewInterval {
             newInterval.end = Math.max(intervals.get(cur).end, newInterval.end);
             cur++;
         }
+        //add to result after computing all merged intervals or incoming interval
         resultList.add(newInterval);
 
         // case 3 : copy remaining intervals which r not overlapping
@@ -55,6 +56,6 @@ public class MergeNewInterval {
         ArrayList <Interval> existingInterval = new ArrayList<>();
         existingInterval.add(new Interval(1, 3));
         existingInterval.add(new Interval(6, 9));
-        System.out.println(insert(existingInterval, new Interval(2, 5)));
+        System.out.println(insert(existingInterval, new Interval(10, 11)));
     }
 }
