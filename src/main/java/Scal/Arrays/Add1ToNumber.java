@@ -18,42 +18,46 @@ public class Add1ToNumber {
 
     static int[] add1ToNumber(int []A){
         int [] res = addNumber(A);
-        return removeTrailingZeros(res);
+        return  removeTrailingZeros(res);
     }
 
     // Need to remove starting zeros
      static int[] removeTrailingZeros(int[] res) {
-        List<Integer> resultList = new ArrayList<>();
-
-        // since result is shown as each number we need to iterate in that array
-        for (int i = 0; i< res.length; i++){
-            if (res[i]!=0)
-                resultList.add(res[i]);
-        }
-
-        return resultList.stream().mapToInt(val -> val).toArray();  //convert list to array
+         List<Integer> resList = new ArrayList<>();
+         for (int i : res){
+             if (i==0 && resList.size()==0){
+                 continue;
+             }
+             resList.add(i);
+         }
+         return resList.stream().mapToInt(val->val).toArray();
     }
 
     //Method to add 1 from  LSB side
     static int [] addNumber(int []A){
-        for ( int i = A.length-1;i>=0;i--){
+        //iterate from LSB and check if its <9 if yes add 1 to whole number
+        for (int i = A.length-1;i>=0;i--){
             if (A[i]<9){
                 A[i]++;
                 return A;
             }
-            // if number is Greater than 9 than LSB would become ZERO
-            else A[i] =0;
+            // set value to zero if value at that location is 9
+            A[i]=0;
         }
-
-        // create new array and set MSB and return it if in case we received 9 in input
-        int [] res = new int [1];
-        res[0] =1;
-        return  res;
-
+        //result
+        int [] result = new int[A.length+1];
+        result[0]=1;
+        return result;
     }
 
     public static void main(String[] args) {
-        int [] data = { 1, 2, 9};
+        int [] data = {9,2,9};
         System.out.println(Arrays.toString(add1ToNumber(data)));
+
+        ArrayList<Integer> A = new ArrayList<>();
+        A.add(9);
+        A.add(9);
+        A.add(9);
+        //System.out.println(plusOne(A));
     }
 }

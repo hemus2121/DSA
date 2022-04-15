@@ -5,8 +5,8 @@ public class WaysToDecode {
     private static int getWays(String A){
         int n = A.length();
         int [] dp = new int[n+1];
-        return decodeRecur(A, 0, dp);
-        //return iterative (A,dp);
+        //return decodeRecur(A, 0, dp);
+        return iterative (A,dp);
     }
 
     //https://leetcode.com/problems/decode-ways/discuss/1823526/Simple-Java-Recursion-Memoization-Tabulation
@@ -35,21 +35,24 @@ public class WaysToDecode {
         dp[1] = 1; // single character has 1 decoding possible
 
         for (int i = 2; i <= A.length(); i++) {
-            //if immediate 1 character is in between 1 to 9 then current value is same as previous value
-            if (A.charAt(i - 1) >= '1' && A.charAt(i - 1) <= '9') {
-                dp[i] = dp[i - 1] % mod;
+
+            //first gets LSB  and second gets whole number
+            int first = Integer.valueOf(A.substring(i - 1, i));
+            int second = Integer.valueOf(A.substring(i - 2, i));
+
+            if (first > 0 && first <= 9) {
+                dp[i] = (dp[i] + dp[i - 1]) % mod;
             }
-            if (A.charAt(i - 2) == '1') {
-                dp[i] = (dp[i] % mod + dp[i - 2] % mod) % mod;
-            }
-            if (A.charAt(i - 2) == '2' && A.charAt(i - 1) >= '0' && A.charAt(i - 1) <= '6') {
-                dp[i] = (dp[i] % mod + dp[i - 2] % mod) % mod;
+
+            //check the second number from 9 to 29 which is range for next set of numbers
+            if (second > 9 && second <= 26) {
+                dp[i] = (dp[i] + dp[i - 2]) % mod;
             }
         }
         return dp[A.length()] % mod;
     }
 
     public static void main(String[] args) {
-        System.out.println(getWays("12"));
+        System.out.println(getWays("999"));
     }
 }
