@@ -41,7 +41,7 @@ public class Add1ToNumber {
                 A[i]++;
                 return A;
             }
-            // set value to zero if value at that location is 9
+            // set value to zero if value at that location is more than 9
             A[i]=0;
         }
         //result
@@ -51,13 +51,7 @@ public class Add1ToNumber {
     }
 
     public static void main(String[] args) {
-        int [] data = {9,2,9};
+        int [] data = {9,9,9,4,9};
         System.out.println(Arrays.toString(add1ToNumber(data)));
-
-        ArrayList<Integer> A = new ArrayList<>();
-        A.add(9);
-        A.add(9);
-        A.add(9);
-        //System.out.println(plusOne(A));
     }
 }

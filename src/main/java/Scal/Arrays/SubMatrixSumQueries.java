@@ -1,5 +1,6 @@
 package Scal.Arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
@@ -33,7 +34,7 @@ public class SubMatrixSumQueries {
             pfArr[0][i] = (A[0][i]+pfArr[0][i-1])%mod;
         }
 
-        // //1st colun of PF array
+        // 1st column of PF array
         for (int i =1;i<row;i++){
             pfArr[i][0]= (A[i][0]+pfArr[i-1][0])%mod;
         }
@@ -45,12 +46,14 @@ public class SubMatrixSumQueries {
             }
         }
 
-        //now iterate over input elements gets values to deduce from PF matix
+        //now iterate over input query elements gets values to deduce from PF matrix
         for (int i=0;i< B.length;i++){
             int rs = B[i]-1;
             int cs = C[i]-1;
+
             int re = D[i]-1;
             int ce = E[i]-1;
+
 
             int top = (rs-1 >=0) ? pfArr[rs-1][ce]:0;
             int left = (cs-1 >=0)? pfArr[re][cs-1]:0;
@@ -62,6 +65,7 @@ public class SubMatrixSumQueries {
         }
         return res;
     }
+
 
     public static void main(String[] args) {
         int [] [] A ={
