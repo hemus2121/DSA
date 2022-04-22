@@ -15,10 +15,10 @@ If there are more than one equilibrium indexes then return the minimum index.
 public class EquilibriumIndex {
 
     static int getEquilibriumIndex(int []A){
-        int totalSum = 0;
+        int rightSum = 0;
 
         for (int a: A){
-            totalSum += a;
+            rightSum += a;
         }
 
         /*
@@ -31,11 +31,11 @@ public class EquilibriumIndex {
 
         int leftSum = 0;
         for (int i =0;i< A.length;i++){
-             totalSum = totalSum - A[i]; //Reduce from totalsum current element so its right sum
-             if (totalSum ==leftSum ){
+             rightSum = rightSum - A[i]; //keep reducing current element from total sum
+             if (rightSum == leftSum ){ // check current rightsum == leftsum
                  return i;
              }
-             leftSum += A[i]; //update left sum
+             leftSum += A[i]; //update left sum with current incoming element
         }
          return  -1;
     }
