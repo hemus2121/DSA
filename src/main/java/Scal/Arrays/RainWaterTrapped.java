@@ -54,6 +54,7 @@ public class RainWaterTrapped {
         // compute total water
         int ans = 0;
         for (int i = 0; i < n; i++) {
+            //choose minimum of left and right till now and reduce current height
             ans += Math.min(left[i], right[i]) - A[i];
         }
         return ans;
