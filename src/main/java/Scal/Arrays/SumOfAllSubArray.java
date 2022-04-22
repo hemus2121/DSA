@@ -17,7 +17,7 @@ public class SumOfAllSubArray {
         for (int i =0;i< n;i++){
             int left = i +1; // count of subarray where ith index element is present from 0 to ith index
             int right = n-i;  // count of subarray where ith index element is present from ith index to N-1 index (n-1-i+1)
-            int total = left * right;
+            long total = left * right;
             sum = sum + A[i] * total;
         }
         return  sum;
