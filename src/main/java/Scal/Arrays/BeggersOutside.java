@@ -23,14 +23,13 @@ public class BeggersOutside {
             int end = B[i][1]; // anyway we need to substract from R+1 query index so no need to reduce
             int amount = B[i][2];  // contribution amount
 
-
             result [start]+= amount;  //add to start index
             if (end < A){
-                result [end] -=amount; // reduce from ending index if index is below array length
+                result [end] -=amount; // reduce from ending index if index is within array length
             }
         }
 
-        //compute PF value, update in result array to avoid extra space of new Array creation
+        //compute PF value, update in  same result array to avoid extra space of new Array creation -SPACE REDUCTION
         int s = result[0];
         for (int i =1;i<A;i++){
             s += result[i];
@@ -38,6 +37,7 @@ public class BeggersOutside {
         }
         return result;
     }
+
     public static void main(String[] args) {
         int [][] B = {
                 {1,2, 10},
