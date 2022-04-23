@@ -1,5 +1,10 @@
 package Scal.Arrays;
 
+/*
+Given an integer array A and an integer B, you have to print the same array after rotating it B times towards the right.
+
+NOTE: You can use extra memory.
+ */
 import java.util.Arrays;
 import java.util.Scanner;
 

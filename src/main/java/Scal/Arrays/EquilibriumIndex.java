@@ -40,8 +40,27 @@ public class EquilibriumIndex {
          return  -1;
     }
 
+    //Another way of simply computing left and right sum
+    static int getEquilibriumIndex2(int []A){
+        int totalSum = 0;
+        for (int a: A){
+            totalSum += a;
+        }
+
+        int leftSum = 0;
+        for (int i =0;i< A.length;i++){
+            leftSum = leftSum + A[i];
+            int rightSum = totalSum - leftSum + A[i ] ;
+            if (leftSum == rightSum) return i;
+        }
+        return  -1;
+    }
+
+
+
     public static void main(String[] args) {
         int [] data = {1,2,3,7,1,2,3};
         System.out.println(getEquilibriumIndex(data));
+        System.out.println(getEquilibriumIndex2(data));
     }
 }
