@@ -8,11 +8,12 @@ Find the contiguous non-empty subarray within an array, A of length N, with the 
  */
 
 //Using KADAN'Es Algo
-public class MaxSumContSubArray {
+public class MaxSumContiguousSubArray {
     private static int computeSumUsingKadanes(int [] A){
 
         int ans = Integer.MIN_VALUE;
         int sum =0;
+
         for (int i =0;i<A.length;i++){
             sum += A[i];
             ans = Math.max(ans, sum);
