@@ -38,7 +38,7 @@ public class ValidParanthesis {
         return st.isEmpty();
     }
 
-    //Sol1 - WithOUT Extra Space of Map
+    //Sol1 - WithOUT Extra Space of Map- BEST 
     private static boolean checkParan2(String s){
          Stack<Character> st = new Stack();
 
