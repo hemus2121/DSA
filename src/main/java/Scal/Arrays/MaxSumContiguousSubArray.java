@@ -14,11 +14,11 @@ public class MaxSumContiguousSubArray {
         int ans = Integer.MIN_VALUE;
         int sum =0;
 
-        for (int i =0;i<A.length;i++){
-            sum += A[i];
+        for (int j : A) {
+            sum += j;
             ans = Math.max(ans, sum);
             //Reset sum = 0 if anytime sum <0
-            if (sum <0 ) sum =0;
+            if (sum < 0) sum = 0;
         }
         return  ans;
     }
