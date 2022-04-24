@@ -19,7 +19,7 @@ public class NextPointerBinaryTreeWithSpace {
     }
 
     //Iterative solution
-    public void connect (TreeLinkNode treeLinkNode){
+    static public void connect (TreeLinkNode treeLinkNode){
 
         if (treeLinkNode ==null) return ;
 
@@ -43,5 +43,9 @@ public class NextPointerBinaryTreeWithSpace {
                 if (temp.right !=null) que.add(temp.right);
             }
         }
+    }
+
+    public static void main(String[] args) {
+
     }
 }
