@@ -1,4 +1,4 @@
-package LeetCode.Gen.Stacks;
+package LeetCode.Stacks;
 
 import java.util.HashMap;
 import java.util.Map;

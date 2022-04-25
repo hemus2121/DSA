@@ -1,4 +1,4 @@
-package LeetCode.Gen.Arrays;
+package LeetCode.Arrays;
 
 import java.util.Arrays;
 import java.util.Deque;
