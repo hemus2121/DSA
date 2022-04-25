@@ -46,6 +46,7 @@ public class MAXandMIN {
     public static int [] nearSmallestLeft(int []A){
         int [] res = new int [A.length];
         Stack<Integer> st = new Stack();
+
         for (int i =0;i< A.length;i++){
             while (!st.isEmpty() && A[st.peek()]>=A[i]){
                 st.pop();

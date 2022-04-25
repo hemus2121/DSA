@@ -41,6 +41,7 @@ public class InfixToPostfix {
                 }
                 //push curr operator to stack
                 st.push(c);
+                st.peek();
             }
         }
         while (!st.isEmpty()){

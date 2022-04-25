@@ -19,6 +19,7 @@ public class FirstNonRepeatingCharacter {
             // add incoming element to Q from last
             deque.addLast(c);
 
+
             // check if first element freq is >1 keep popping from first
             while (!deque.isEmpty() && freqMap.get(deque.peekFirst()) > 1) {
                 deque.removeFirst();
