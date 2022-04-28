@@ -19,7 +19,7 @@ public class ClosestMinMax {
             max = Math.max(a,max);
             min = Math.min(a,min);
         }
-        
+
         if (min==max) return 1; // if both are equal return 1
 
         // Step 2:: Initalized min, max indexes to being with as 2n(dummy values) and ans=n
