@@ -13,7 +13,7 @@ public class LongestPalindromeSubString {
 
             //Odd length palindrome
             String palindrome = expand(s, i,i);
-            //store the highest maximum String 
+            //store the highest maximum String
             if (maxPalindrome.length() < palindrome.length()) {
                 maxPalindrome = palindrome;
             }
