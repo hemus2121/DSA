@@ -7,18 +7,18 @@ A height-balanced binary tree is a binary tree in which the depth of the two sub
 
 public class SortedArrayToBST {
 
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-
-        @Override
-        public String toString() {
-            return " " + val + " " + left +  " " + right ;
-        }
-    }
+//    static class TreeNode {
+//        int val;
+//        TreeNode left;
+//        TreeNode right;
+//        TreeNode() {}
+//        TreeNode(int val) { this.val = val; }
+//
+//        @Override
+//        public String toString() {
+//            return " " + val + " " + left +  " " + right ;
+//        }
+//    }
 
     private static TreeNode generateTreeNode(int [] nums){
 
