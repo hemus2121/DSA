@@ -1,6 +1,5 @@
 package Scal.Arrays.Matrix;
 
-
 /*
 Problem Description
 
@@ -13,22 +12,22 @@ Example: For A = 3 pattern looks like:
  */
 public class PatternPrint1 {
     private  static  int [][] generate(int A){
-        int [][] result = new int [A][A];
-        for (int i=1;i<=A;i++){
-            for (int j =1; j<=A;j++){
-                if (j<=i) {
-                    result [i-1][j-1] = j;
-                }
-            }
-        }
-        return  result;
 
-//        int ans [][] = new int[A][A];
-//        for(int i = 0; i < A; ++i){
-//            for(int j = 0; j <= i; ++j)
-//                ans[i][j] = j + 1;
+        int [][] result = new int [A][A];
+
+//        for (int i=1;i<=A;i++){
+//            for (int j =1; j<=A;j++){
+//                if (j<=i) {
+//                    result [i-1][j-1] = j;
+//                }
+//            }
 //        }
-//        return ans;
+
+        for(int i = 0; i < A; ++i){
+            for(int j = 0; j <= i; ++j)
+                result [i][j] = j + 1;
+        }
+       return result;
 
     }
     public static void main(String[] args) {
