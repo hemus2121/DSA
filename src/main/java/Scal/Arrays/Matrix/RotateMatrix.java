@@ -16,7 +16,6 @@ public class RotateMatrix {
     //                                          |______________________________________________|
     private static void rotateMatrixInPlace(int [][]A){
         int n = A.length;
-        int m = A[0].length;
 
         for (int i =1;i < n;i++){
             for (int j =i;j< i;j++){
@@ -30,6 +29,7 @@ public class RotateMatrix {
         System.out.println(A);
     }
 
+    //Using method of Transpose and swapping row element - swap either upper triangle or lower triangle of the matrix based ont main Diagonal
     private static void rotateusingTrasnposeAndRowReversal(int [][]A){
         //step1. Transpose of a matrix - lower triangle matrix
 
