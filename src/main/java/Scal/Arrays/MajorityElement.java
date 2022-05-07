@@ -15,6 +15,9 @@ public class MajorityElement {
         int freq = 1;
         int n = A.length;
 
+        // Since we are asking N/2 which is in form of N/K+1 we need 1 bag and 1 DustBin
+        // case 1: if incoming element = already existing element increment frequency
+        // case 2: if Frequency is zero reset Majority element and frequency
         for(int i =1;i<n ;i++){
             int x= A[i];
             if (x== majorEle){
