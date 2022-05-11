@@ -1,6 +1,11 @@
 package Scal.Arrays;
 
-import java.util.Arrays;
+/* XOR Queries
+Problem Description
+You are given an array A (containing only 0 and 1) as element of N length.
+
+Given L and R, you need to determine value of XOR of all elements from L to R (both inclusive) and number of unset bits (0's) in the given range of the array.
+ */
 
 public class XORQueries {
     public static int [][] computeValues(int [] A, int [][]B){
@@ -33,7 +38,7 @@ public class XORQueries {
             int r = B[i][1]-1;
 
             int xoroutput = (l==0)? xorPFArray[r] :  xorPFArray[r]^ xorPFArray[l-1];
-            int zerooutput = (l==0)?zeroPFArray[r]:zeroPFArray[r]- zeroPFArray[l-1];
+            int zerooutput = (l==0)? zeroPFArray[r]: zeroPFArray[r]- zeroPFArray[l-1];
 
             outputArray[i][0] = xoroutput;
             outputArray[i][1] = zerooutput;
