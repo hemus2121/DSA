@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.Matrix;
 /*
 Maximum Sum Square SubMatrix
 Problem Description

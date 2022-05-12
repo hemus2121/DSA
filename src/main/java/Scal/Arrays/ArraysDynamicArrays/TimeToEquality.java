@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.ArraysDynamicArrays;
 /*
 Problem Description
 Given an integer array A of size N. In one second, you can increase the value of one element by 1.

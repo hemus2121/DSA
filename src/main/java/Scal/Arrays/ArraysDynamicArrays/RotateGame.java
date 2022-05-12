@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.ArraysDynamicArrays;
 
 /*
 Given an integer array A and an integer B, you have to print the same array after rotating it B times towards the right.

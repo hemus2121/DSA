@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.DSAArrays;
 /*
 Problem Description
 Given a non-negative number represented as an array of digits, add 1 to the number ( increment the number represented by the digits ).

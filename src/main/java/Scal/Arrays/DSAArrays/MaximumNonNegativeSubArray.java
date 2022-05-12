@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.DSAArrays;
 
 /* Maximum NonNegative Sub Array
 Given an array of integers, A of length N, find out the maximum sum sub-array of non negative numbers from A.

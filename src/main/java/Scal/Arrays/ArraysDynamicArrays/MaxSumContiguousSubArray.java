@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.ArraysDynamicArrays;
 
 /*
  Max Sum Contiguous Subarray
