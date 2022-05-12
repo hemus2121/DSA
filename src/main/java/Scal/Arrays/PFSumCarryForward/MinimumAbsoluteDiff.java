@@ -1,11 +1,11 @@
-package Scal.Arrays;
+package Scal.Arrays.PFSumCarryForward;
 /*
 Problem Description
  You are given an array of N integers, A1, A2, …. AN.
  Return the maximum value of f(i, j) for all 1 ≤ i, j ≤ N. f(i, j) is defined as |A[i] - A[j]| + |i - j|, where |x| denotes absolute value of x.
 
  */
-public class MaximumAbsoluteDiff {
+public class MinimumAbsoluteDiff {
     private static int getMaximumDifference(int []A){
 
         int min_sub =A[0], max_sub = A[0];

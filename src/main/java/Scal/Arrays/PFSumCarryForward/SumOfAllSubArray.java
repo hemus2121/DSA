@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.PFSumCarryForward;
 
 /*  Sum of All Subarrays
 

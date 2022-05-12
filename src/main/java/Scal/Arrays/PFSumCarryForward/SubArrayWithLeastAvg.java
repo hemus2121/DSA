@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.PFSumCarryForward;
 
 public class SubArrayWithLeastAvg {
     static int getIndexOfSubArray(int [] A, int B){

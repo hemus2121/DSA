@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.PFSumCarryForward;
 /*
 Equilibrium index of an array
 Problem Description
@@ -50,12 +50,11 @@ public class EquilibriumIndex {
         int leftSum = 0;
         for (int i =0;i< A.length;i++){
             leftSum = leftSum + A[i];
-            int rightSum = totalSum - leftSum + A[i ] ;
+            int rightSum = totalSum - leftSum + A[i] ;
             if (leftSum == rightSum) return i;
         }
         return  -1;
     }
-
 
 
     public static void main(String[] args) {

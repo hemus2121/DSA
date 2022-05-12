@@ -1,5 +1,10 @@
-package Scal.Arrays;
+package Scal.Arrays.PFSumCarryForward;
+/* Arithmetic Progression?
+Problem Description
+Given an integer array A of size N. Return 1 if the array can be arranged to form an arithmetic progression, otherwise return 0.
+A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
 
+ */
 import java.util.Arrays;
 
 public class CheckAP {
@@ -17,9 +22,9 @@ public class CheckAP {
     }
     public static void main(String[] args) {
         int [] data = { 3, 5, 1};
-        System.out.println(checkAP(data));
+        System.out.println(checkAP(data)); //expected 1
 
         int [] data1 = { 2, 4, 1};
-        System.out.println(checkAP(data1));
+        System.out.println(checkAP(data1)); //expected 0
     }
 }
