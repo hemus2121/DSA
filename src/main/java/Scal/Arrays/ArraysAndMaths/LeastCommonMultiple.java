@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.ArraysAndMaths;
 /*
 Least Common Multiple
 Problem Description

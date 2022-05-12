@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.ArraysAndMaths;
 /* Leap Year -3
 Problem Description
 Given an integer A representing a year, Return 1 if it is a leap year else, return 0.

@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.ArraysAndMaths;
 
 import java.util.Arrays;
 

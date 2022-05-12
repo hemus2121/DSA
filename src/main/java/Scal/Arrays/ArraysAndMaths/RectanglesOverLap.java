@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.ArraysAndMaths;
 /*
 Find if two rectangles overlap
 Problem Description

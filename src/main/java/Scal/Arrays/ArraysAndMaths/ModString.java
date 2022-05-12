@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.ArraysAndMaths;
 /* Mod String - Asked in Google
 Problem Description
 You are given a large number in the form of a string A where each character denotes a digit of the number.

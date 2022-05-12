@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.ArraysAndMaths;
 /* Nth Magical Number
 Problem Description
 Given an integer A, find and return the Ath magic number.

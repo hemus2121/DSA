@@ -7,7 +7,7 @@ A sequence of numbers is called an arithmetic progression if the difference betw
  */
 import java.util.Arrays;
 
-public class CheckAP {
+public class ArithmeticProgression {
     private static int checkAP(int [] A){
         //sort the array to keep numbers in order
         Arrays.sort(A);

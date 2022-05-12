@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.Sorting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
