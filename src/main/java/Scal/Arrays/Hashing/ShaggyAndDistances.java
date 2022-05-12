@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.Hashing;
 /* Shaggy and distances
 Problem Description
 

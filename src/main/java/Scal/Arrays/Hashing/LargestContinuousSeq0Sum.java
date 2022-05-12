@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.Hashing;
 
 /* Largest Continuous Sequence Zero Sum
 

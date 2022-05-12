@@ -1,4 +1,4 @@
-package Scal.Arrays;
+package Scal.Arrays.Hashing;
 
 import java.util.HashMap;
 import java.util.Map;
