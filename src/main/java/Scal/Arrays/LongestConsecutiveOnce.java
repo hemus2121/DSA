@@ -49,7 +49,6 @@ public class LongestConsecutiveOnce {
                 if (i >0) L= leftPref1s[i-1];
                 if (i<n-1) R = rightPref1s[i+1];
                 // to handle the case where no of L+R 1's count is same as countOf1s
-
                 if(L+R < countOf1s)
                     ans = Math.max(ans, L+R+1);
                 else
