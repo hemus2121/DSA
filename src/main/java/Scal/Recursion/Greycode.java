@@ -1,4 +1,4 @@
-package Scal.Recursion2.Assi;
+package Scal.Recursion;
 
 /*Problem Description
 
