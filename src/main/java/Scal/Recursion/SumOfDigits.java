@@ -10,6 +10,7 @@ public class SumOfDigits {
     static int computeSum(int A){
         // Base case
         if ( A==0) return 0;
+        if (A < 9) return A;
         //Main Logic
         // Add remainder to (number /A)
         return A%10 + computeSum(A/10);

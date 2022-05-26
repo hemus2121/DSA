@@ -2,6 +2,10 @@ package Scal.Arrays;
 
 /* Program to generate all SubArray of Array*/
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.IntStream;
+
 // TC: O(n^3)
 public class GenerateSubArray {
     private static void generateSubArray(int []A){
@@ -19,5 +23,9 @@ public class GenerateSubArray {
     public static void main(String[] args) {
         int [] data = { 3, -2, 6, 4, 2};
         generateSubArray(data);
+
+        int[] numbers = new int[] { -8, 7, 5, 9, 10, -2, 3 };
+        // sorting numbers in reverse order
+        numbers = IntStream.of(numbers).boxed().sorted().mapToInt(i -> i).toArray();
     }
 }

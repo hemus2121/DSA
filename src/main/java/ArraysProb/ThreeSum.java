@@ -38,8 +38,15 @@ public class ThreeSum {
 
     public static void main(String[] args) {
         List<Integer[]> results = threeSum(new int[] {12, 3, 1, 2, -6, 5, -8, 6}, 0);
-        results.stream().forEach(integers -> {
+       // results.stream().forEach(integers -> {
+       //     System.out.println(Arrays.toString(integers));
+      //  });
+
+
+        List<Integer[]> results1 = threeSum(new int[] { -1,0,1,2,-1,-4}, 0);
+        results1.stream().forEach(integers -> {
             System.out.println(Arrays.toString(integers));
         });
+
     }
 }
