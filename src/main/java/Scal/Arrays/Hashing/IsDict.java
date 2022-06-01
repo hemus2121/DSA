@@ -1,11 +1,10 @@
 package Scal.Arrays.Hashing;
 
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
+/*
 
+ */
 public class IsDict {
     private static int checkDictionary(String [] S, String B){
 
@@ -34,18 +33,13 @@ public class IsDict {
 
     public static void main(String[] args) {
 
-        int a = 5;
-        int [] b = {5,4,10,15,7,6};
-        for (int bb : b)
-            System.out.println( a ^ bb);
-
         String [] data = { "hello", "scaler", "interviewbit"};
         String B = "adhbcfegskjlponmirqtxwuvzy";
-       // System.out.println(checkDictionary(data,B));
+        System.out.println(checkDictionary(data,B));
 
         String [] data1 = { "fine", "none", "no"};
         String B1 = "qwertyuiopasdfghjklzxcvbnm";
-        //System.out.println(checkDictionary(data1,B1));
+        System.out.println(checkDictionary(data1,B1));
 
     }
 }
