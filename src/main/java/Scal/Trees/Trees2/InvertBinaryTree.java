@@ -17,7 +17,6 @@ public class InvertBinaryTree {
         //Base case
         if (A == null) return null ;
 
-
         //Main Logic-Using POST order Traversal
         treeInverse(A.left);
         treeInverse(A.right);
