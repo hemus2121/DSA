@@ -44,7 +44,7 @@ public class TopologicalSort {
         while (!que.isEmpty()){
             int temp = que.poll();
             resultList.add(temp);
-            
+
             for (int neighbour : adjList.get(temp)){
                 indegree[neighbour]--; // reduce indegree of destination nodes
                 if (indegree[neighbour] ==0){ // add ot que if indegree reached ZERO

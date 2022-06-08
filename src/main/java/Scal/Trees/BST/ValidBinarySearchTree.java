@@ -2,7 +2,7 @@ package Scal.Trees.BST;
 
 import Scal.Trees.TreeNode;
 
-/*
+/* Valid Binary Search Tree
 Given a binary tree represented by root A.
 
 Assume a BST is defined as follows:

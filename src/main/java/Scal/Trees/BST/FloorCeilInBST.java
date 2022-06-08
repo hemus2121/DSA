@@ -12,7 +12,6 @@ Floor(X) is the highest element in the tree <= X, while the ceil(X) is the lowes
 NOTE: If floor or ceil of any element of B doesn't exists, output -1 for the value which doesn't exists.
  */
 public class FloorCeilInBST {
-
     public ArrayList<ArrayList<Integer>> solve(TreeNode A, ArrayList<Integer> B) {
 
         ArrayList<ArrayList<Integer>> finalRes = new ArrayList<>();
