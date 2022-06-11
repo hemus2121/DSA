@@ -67,7 +67,7 @@ public class DijkstraAlgo {
        // since we need minimum going to use MIN-Heap - Priority Que - starting with source node
         PriorityQueue <Pair> pq = new PriorityQueue<>(new customComparator());
 
-        // since we are starting from source let set the distance of source to ZERO
+        // since we are starting from source let set the weight of source is ZERO
         dist[source]=0;
         pq.add( new Pair(0, source));
 
@@ -75,7 +75,7 @@ public class DijkstraAlgo {
         while (! pq.isEmpty()){
             Pair temp = pq.remove();
             // Go ahead with computation of options/routes if present considering minimal value of weight
-            if (temp.weight == dist[temp.node]){
+           // if (temp.weight == dist[temp.node]){
                 // Start traversing through edges connected to current node
                 for (Pair neighbour : adjList.get(temp.node)){
                     if ( dist[neighbour.node] > dist[temp.node]+ neighbour.weight){
@@ -83,7 +83,7 @@ public class DijkstraAlgo {
                         pq.add(new Pair(dist[neighbour.node], neighbour.node));
                     }
                 }
-            }
+            //}
         }
     }
 

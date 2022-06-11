@@ -47,18 +47,18 @@ public class FloorCeilInBST {
     }
 
     // Ceil - Highest value when iterating left
-    public int ceilValue(TreeNode A, int key){
-        int ceil=-1;
-        TreeNode treeNode =A;
-        while (treeNode!=null){
+    public int ceilValue(TreeNode A, int key) {
+        int ceil = -1;
+        TreeNode treeNode = A;
+        while (treeNode != null) {
 
-            if (treeNode.val==key){
+            if (treeNode.val == key) {
                 return treeNode.val;
             }
 
-            if (treeNode.val< key){
-                treeNode= treeNode.right;
-            }else{
+            if (treeNode.val < key) {
+                treeNode = treeNode.right;
+            } else {
                 //current highest value before going right
                 ceil = treeNode.val;
                 treeNode = treeNode.left;
@@ -67,3 +67,4 @@ public class FloorCeilInBST {
         return ceil;
     }
 }
+
