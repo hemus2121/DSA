@@ -11,9 +11,7 @@ public class CycleInUnDirectedGraph {
 
     //using BFS way of detecting cycle
     static int isCyclePresent(int A, int[][] B) {
-
         buildGraph(A, B);
-        
         boolean visited[] = new boolean[A + 1];
         //check for each nodes present -whether its visited and isCyclePresent
         for (int i = 1; i <= A; i++) {
