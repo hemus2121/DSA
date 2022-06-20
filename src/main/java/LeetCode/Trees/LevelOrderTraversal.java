@@ -1,7 +1,9 @@
-package Blind75.Trees;
+package LeetCode.Trees;
 /** Binary Tree level order traversal  -https://leetcode.com/problems/binary-tree-level-order-traversal/
  * Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
  */
+
+import Blind75.Trees.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,9 +11,9 @@ import java.util.List;
 import java.util.Queue;
 
 public class LevelOrderTraversal {
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder(Blind75.Trees.TreeNode root) {
 
-        Queue <TreeNode> que = new LinkedList<>();
+        Queue <Blind75.Trees.TreeNode> que = new LinkedList<>();
         List<List<Integer>> resultList = new ArrayList<>();
         List<Integer> tempList = new ArrayList<>();
 

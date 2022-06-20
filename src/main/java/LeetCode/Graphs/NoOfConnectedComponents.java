@@ -1,4 +1,4 @@
-package Blind75.Graphs;
+package LeetCode.Graphs;
 
 import java.util.HashSet;
 import java.util.Set;
