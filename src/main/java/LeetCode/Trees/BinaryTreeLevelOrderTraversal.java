@@ -1,6 +1,6 @@
 package LeetCode.Trees;
 
-import Blind75.Trees.TreeNode;
+
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -12,7 +12,7 @@ import java.util.Queue;
  */
 public class BinaryTreeLevelOrderTraversal {
 
-    public List<List<Integer>> levelOrder(Blind75.Trees.TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
 
         // edge case
         if (root == null) return null;
@@ -20,7 +20,7 @@ public class BinaryTreeLevelOrderTraversal {
         //Using Iterative way of Traversal
         List<List<Integer>> resultList = new ArrayList<>();
         List<Integer> tempList = new ArrayList<>();
-        Queue<Blind75.Trees.TreeNode> que = new LinkedList<>();
+        Queue<TreeNode> que = new LinkedList<>();
 
         que.add(root);
         que.add(null);
@@ -47,9 +47,6 @@ public class BinaryTreeLevelOrderTraversal {
             resultList.add(tempList);
         }
         return  resultList;
-
-
-
     }
 
 }

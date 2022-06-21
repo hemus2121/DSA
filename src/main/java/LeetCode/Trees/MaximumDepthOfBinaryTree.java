@@ -1,6 +1,5 @@
 package LeetCode.Trees;
 
-import Blind75.Trees.TreeNode;
 
 /** Maximum Depth of Binary Tree - https://leetcode.com/problems/maximum-depth-of-binary-tree/
  * Given the root of a binary tree, return its maximum depth.
