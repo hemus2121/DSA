@@ -1,4 +1,4 @@
-package Scal.StringMatching.Assi;
+package Scal.StringHashMap;
 
 import java.util.Arrays;
 

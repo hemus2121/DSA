@@ -1,6 +1,6 @@
-package Scal.StringHashMaps.Assi;
-import java.util.*;
-/*
+package Scal.StringHashMap;
+
+/* Boring SubString
 Problem Description
 
 Given a string A of lowercase English alphabets. Rearrange the characters of the given string A such that there is no boring substring in A.
@@ -29,8 +29,9 @@ public class BoringSubString {
                 else if (temp > largestodd) largestodd=Math.max(largestodd,temp);
             }
         }
-        System.out.println("smallesteven="+smallesteven + " largesteven="+largesteven);
-        System.out.println("smallestodd="+smallestodd + "  largestodd="+ largestodd);
+       // System.out.println("smallesteven="+smallesteven + " largesteven="+largesteven);
+        //System.out.println("smallestodd="+smallestodd + "  largestodd="+ largestodd);
+
         //conditions to check
         if (smallestodd >0 && largesteven >0 && Math.abs(smallestodd-largesteven )!=1) return 1;
        // else if (smallestodd >0 && largesteven>0 && Math.abs(smallestodd -largesteven) !=1) return 1;
