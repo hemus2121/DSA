@@ -1,8 +1,5 @@
 package Scal.StringHashMap;
 
-import java.util.HashMap;
-import java.util.*;
-
 public class PermutationsOfString {
 
     private static int getPermuationCount(String A, String B) {
