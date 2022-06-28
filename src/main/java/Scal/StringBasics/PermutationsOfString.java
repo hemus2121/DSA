@@ -1,4 +1,4 @@
-package Scal.StringHashMap;
+package Scal.StringBasics;
 
 public class PermutationsOfString {
 

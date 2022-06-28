@@ -1,4 +1,4 @@
-package Scal.StringHashMap;
+package Scal.StringBasics;
 
 import java.util.HashMap;
 import java.util.Map;
