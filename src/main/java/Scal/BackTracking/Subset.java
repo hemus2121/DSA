@@ -13,7 +13,7 @@ import java.util.Collections;
  *     Elements in a subset must be in non-descending order.
  *     The solution set must not contain duplicate subsets.
  *     Also, the subsets should be sorted in ascending ( lexicographic ) order.
- *     The list is not necessarily sorted. 
+ *     The list is not necessarily sorted.
  */
 
 public class Subset {
