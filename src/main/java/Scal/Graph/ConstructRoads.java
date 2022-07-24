@@ -5,6 +5,13 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/** Construct Roads
+ * Problem Description
+ * A country consist of N cities connected by N - 1 roads. King of that country want to construct maximum number of roads such that the new country formed remains bipartite country.
+ * Bipartite country is a country, whose cities can be partitioned into 2 sets in such a way, that for each road (u, v) that belongs to the country, u and v belong to different sets. Also, there should be no multiple roads between two cities and no self loops.
+ * Return the maximum number of roads king can construct. Since the answer could be large return answer % 109 + 7.
+ * NOTE: All cities can be visited from any city.
+  */
 
 public class ConstructRoads {
     private static  int countRoads (int A, int [][]B){
@@ -65,12 +72,12 @@ public class ConstructRoads {
                 {3, 2},
                 {3, 5}
         };
-       // System.out.println(countRoads(5, data1));
+        System.out.println(countRoads(5, data1)); //expected 2
 
         int [][] data2 = {
-                {2, 1}
+                {1, 2},
+                {1, 3}
         };
-        System.out.println(countRoads(2, data2));
-
+        System.out.println(countRoads(3, data2)); //expected 0
     }
 }

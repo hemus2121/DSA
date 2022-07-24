@@ -1,6 +1,5 @@
 package Scal.Graph;
 
-import java.net.Inet4Address;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +14,7 @@ import java.util.List;
 public class MakeCircle {
 
     static int charCount =26;
-    //We need to check 2 criteria
+    //We need to check 2 criteria - using Strongly connected component concept
     // 1. whether ind  and out degree edges are equal
     // 2. Graph is strongly connected
     // If 1 && 2 conditions are satisfied then 1 otherwise 0
@@ -61,16 +60,16 @@ public class MakeCircle {
     }
 
     //building Graph way
-    private static void buildGraph(String[] A, List<List<Integer>> adjList, int[] inDegree, int[] outDegree, boolean [] visited) {
+    private static void buildGraph(String[] A, List<List<Integer>> adjList, int[] inDegree, int[] outDegree, boolean [] mark) {
         for (int i =0;i< charCount;i++){
             adjList.add(new ArrayList<>());
         }
         for (int i =0;i< A.length;i++){
-            int front = (int)(A[i].charAt(0)-'a');
-            int last = (int)(A[i].charAt(A[i].length()-1)-'a');
+            int front = (A[i].charAt(0)-'a');
+            int last = (A[i].charAt(A[i].length()-1)-'a');
             //mark them visited
-            visited[front] = true;
-            visited[last] =true;
+            mark[front] = true;
+            mark[last] =true;
 
             //update in & out degree
             outDegree[front]++;
