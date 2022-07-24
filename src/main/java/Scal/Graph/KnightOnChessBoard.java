@@ -5,7 +5,6 @@ import java.util.Queue;
 
 public class KnightOnChessBoard {
 
-    static int rows, cols;
     static int[] dx = {-1, -2, -2, -1, 1, 2, 2, 1};
     static int[] dy = {-2, -1, 1,  2,  2, 1, -1, -2};
     static int dest_x, dest_y;

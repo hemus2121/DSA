@@ -13,8 +13,6 @@ public class MinimumSquare {
     private static int compute (int n, int [] dp){
         //base case
         if (n==0) return 0;
-
-        //already found in array
         if (dp[n]!=0) return dp[n];
 
         //compute if since its not found
@@ -29,6 +27,7 @@ public class MinimumSquare {
 
 
     public static void main(String[] args) {
-        System.out.println(solve(6));
+
+        System.out.println(solve(3));
     }
 }
