@@ -1,5 +1,5 @@
 package Scal.DynamicProg;
-/*
+/* Stairs
 Problem Description
 
 You are climbing a stair case and it takes A steps to reach to the top.

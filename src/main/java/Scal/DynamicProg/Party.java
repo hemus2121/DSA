@@ -1,5 +1,5 @@
 package Scal.DynamicProg;
-/*
+/* Lets Party
 Problem Description
 
 In Danceland, one person can party either alone or can pair up with another person.
@@ -15,7 +15,9 @@ public class Party {
         // return (computePartyRecursion(A));
         return computePartyIterative(A);
     }
-    //TOP DOWN approach
+
+
+    //TOPDOWN
     static int computePartyRecursion(int n){
         //BASE Case
         if (n==1  || n==2) return n;
@@ -28,7 +30,7 @@ public class Party {
         return dp[n];
     }
 
-    //BOTTOM UP approach
+    //BOTTOM UP
     static int computePartyIterative(int n){
 
         if (n==1) return 1;

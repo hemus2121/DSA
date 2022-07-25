@@ -1,5 +1,14 @@
 package Scal.DynamicProg;
 
+/** Ways To Decode
+ * Problem Description
+ * A message containing letters from A-Z is being encoded to numbers using the following mapping:
+ * 'A' -> 1
+ * 'B' -> 2
+ * ...
+ * 'Z' -> 26
+ * Given an encoded message denoted by string A containing digits, determine the total number of ways to decode it modulo 109 + 7.
+ */
 public class WaysToDecode {
     static int mod = (int) Math.pow(10,9)+7;
     private static int getWays(String A){
@@ -37,15 +46,15 @@ public class WaysToDecode {
         for (int i = 2; i <= A.length(); i++) {
 
             //first gets LSB  and second gets whole number
-            int first = Integer.valueOf(A.substring(i - 1, i));
-            int second = Integer.valueOf(A.substring(i - 2, i));
+            int singleCharacter = Integer.valueOf(A.substring(i - 1, i));
+            int doubleCharacter = Integer.valueOf(A.substring(i - 2, i));
 
-            if (first > 0 && first <= 9) {
+            if (singleCharacter > 0 && singleCharacter <= 9) {
                 dp[i] = (dp[i] + dp[i - 1]) % mod;
             }
 
             //check the second number from 9 to 29 which is range for next set of numbers
-            if (second > 9 && second <= 26) {
+            if (doubleCharacter > 9 && doubleCharacter <= 26) {
                 dp[i] = (dp[i] + dp[i - 2]) % mod;
             }
         }
@@ -53,6 +62,6 @@ public class WaysToDecode {
     }
 
     public static void main(String[] args) {
-        System.out.println(getWays("999"));
+        System.out.println(getWays("143"));
     }
 }
