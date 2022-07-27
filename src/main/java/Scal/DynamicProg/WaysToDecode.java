@@ -42,8 +42,9 @@ public class WaysToDecode {
     static int iterative(String A, int []dp) {
         dp[0] = 1; // when String is empty
         dp[1] = 1; // single character has 1 decoding possible
+        int n = A.length();
 
-        for (int i = 2; i <= A.length(); i++) {
+        for (int i = 2; i <= n; i++) {
 
             //first gets LSB  and second gets whole number
             int singleCharacter = Integer.valueOf(A.substring(i - 1, i));
@@ -58,10 +59,10 @@ public class WaysToDecode {
                 dp[i] = (dp[i] + dp[i - 2]) % mod;
             }
         }
-        return dp[A.length()] % mod;
+        return dp[n] % mod;
     }
 
     public static void main(String[] args) {
-        System.out.println(getWays("143"));
+        System.out.println(getWays("8"));
     }
 }
