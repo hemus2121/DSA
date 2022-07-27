@@ -34,11 +34,18 @@ public class MinSumPathInTriangle {
         return pathValue;
     }
 
-    //Bottomup - flip triangle upside down
+    //Bottom up Approach
+    // flip triangle upside down - Iterate up through each row index between n - 2 and 0 inclusive (where n is the number of rows in triangle):
+    //Iterate through each col index between 0 and row inclusive:
+    //Set smallestBelow to be the min out of triangle[row + 1][col] and triangle[row + 1][col + 1].
+    //Set triangle[row][col] to be itself plus smallestBelow.
+    //Return triangle[0][0]
     static int computeMinSumIterative(ArrayList<ArrayList<Integer>>A){
 
         for (int row = A.size()-2;row >=0;row --){
+
             for (int col =0;col <=row;col++){
+
                 int belowVal =Math.min(A.get(row+1).get(col), A.get(row+1).get(col+1));
                 A.get(row).set(col, belowVal+ A.get(row).get(col));
             }
