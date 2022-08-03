@@ -23,6 +23,7 @@ public class SpecialSequenceAG {
          return ans;
     }
     public static void main(String[] args) {
-        System.out.println(getSpecialSequence("ABCGAG"));
+         System.out.println(getSpecialSequence("ABCGAG")); //expected : 3
     }
+
 }
