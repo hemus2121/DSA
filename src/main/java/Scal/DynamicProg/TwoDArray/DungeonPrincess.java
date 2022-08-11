@@ -39,20 +39,20 @@ public class DungeonPrincess {
         int rows = A.length;
         int cols = A[0].length;
 
-        int[][] memo = new int[rows + 1][cols + 1];
-        for (int[] m : memo) {
+        int[][] dpArray = new int[rows + 1][cols + 1];
+        for (int[] m : dpArray) {
             Arrays.fill(m, Integer.MAX_VALUE);
         }
         // the positions behind the princess.
-        memo[rows][cols - 1] = 1;
-        memo[rows - 1][cols] = 1;
+        dpArray[rows][cols - 1] = 1;
+        dpArray[rows - 1][cols] = 1;
 
-        for (int r = rows - 1; r >= 0; r--) {
-            for (int c = cols - 1; c >= 0; c--) {
-                memo[r][c] = Math.max(1, Math.min(memo[r + 1][c], memo[r][c + 1]) - A[r][c]);
+        for (int i = rows - 1; i >= 0; i--) {
+            for (int j = cols - 1; j >= 0; j--) {
+                dpArray[i][j] = Math.max(1, Math.min(dpArray[i + 1][j], dpArray[i][j + 1]) - A[i][j]);
             }
         }
-        return memo[0][0];
+        return dpArray[0][0];
     }
 
     public static void main(String[] args) {

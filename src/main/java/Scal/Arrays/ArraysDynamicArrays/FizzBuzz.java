@@ -8,19 +8,22 @@ But for multiples of 3 the array should have “Fizz” instead of the number. F
 For numbers which are multiple of 3 and 5 both, the array should have "FizzBuzz" instead of the number.
  */
 public class FizzBuzz {
-    private static ArrayList<String> fizzbuzz(int A){
+    private static ArrayList<String> fizzbuzz(int A) {
 
         ArrayList<String> resList = new ArrayList<>();
-        for (int i =1;i<=A;i++){
+        for (int i = 1; i <= A; i++) {
             // this is very important to check at first
-            if (i %3 ==0 && i %5==0) resList.add("FizzBuzz");
-            else if (i%5==0) resList.add("Buzz");
-            else if (i%3==0) resList.add("Fizz");
-            else resList.add(""+i);
+            if (i % 3 == 0 && i % 5 == 0) resList.add("FizzBuzz");
+            else if (i % 5 == 0) resList.add("Buzz");
+            else if (i % 3 == 0) resList.add("Fizz");
+            else resList.add("" + i);
         }
-        return  resList;
+        return resList;
     }
+
     public static void main(String[] args) {
         System.out.println(fizzbuzz(15));
     }
+
+
 }

@@ -1,7 +1,9 @@
 package Scal.DynamicProg;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 
 /**
  *  Russian Doll Envelopes
@@ -57,21 +59,33 @@ public class RussianDollEnvelopes {
         return lengthOfLIS(secondDim);
     }
 
-    private static int lengthOfLIS(int[] nums) {
+    public static int lengthOfLIS(int[] nums) {
         int[] dp = new int[nums.length];
+        List<Integer> dpList = new ArrayList<>();
         int len = 0;
+        dpList.add(nums[0]);
         for (int num : nums) {
-            // method returns location where element needs to be inserted
-            int i = Arrays.binarySearch(dp, 0, len, num);
-            if (i < 0) {
-                i = -(i + 1);
-            }
-            dp[i] = num;
-            if (i == len) {
-                len++;
+
+            if (num > dpList.get(dpList.size()-1))  dpList.add(num);
+            else {
+                // method returns location where element needs to be inserted
+                int i = Arrays.binarySearch(dp, 0, len, num);
+                if (i < 0) {
+                    i = -(i + 1);
+                }
+                dp[i] = num;
+//            if (i <dpList.size() )
+//                dpList.set(i,num);
+//            else dpList.add(num);
+              dpList.set(i, num);
+                if (i == len) {
+                    len++;
+                }
             }
         }
+        System.out.println(dpList.size());
         return len;
+
     }
 
     public static void main(String[] args) {
@@ -81,7 +95,9 @@ public class RussianDollEnvelopes {
                 {6,7},
                 {2,3}
         };
-        System.out.println(getCount(A)); //expected 3
-        System.out.println(maxEnvelopes(A));
+        int [] data = new int[] {10, 3, 2,11};
+       // System.out.println(getCount(A)); //expected 3
+        //System.out.println(maxEnvelopes(A));
+        System.out.println(lengthOfLIS(data));
     }
 }
