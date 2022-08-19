@@ -1,6 +1,6 @@
 package Scal.DynamicProg.TwoDArray;
 
-import java.util.Arrays;
+//https://leetcode.com/problems/palindrome-partitioning-ii/discuss/42213/Easiest-Java-DP-Solution-(97.36)
 
 public class hw_q2_Palindrome_Partitioning_II {
     public static int minCut(String s) {
@@ -48,16 +48,12 @@ public class hw_q2_Palindrome_Partitioning_II {
                 }
             }
         }
-
         return dp;
     }
 
     public static void main(String[] args) {
-
         hw_q2_Palindrome_Partitioning_II obj = new hw_q2_Palindrome_Partitioning_II();
-
-        obj.minCut("abccbc"); // 2
+        System.out.println(obj.minCut("anaconoaa")); // 2
        // obj.minCut("cbcdecbc"); // 3
     }
-
 }

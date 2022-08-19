@@ -14,6 +14,7 @@ public class WaysToDecode {
     private static int getWays(String A){
         int n = A.length();
         int [] dp = new int[n+1];
+        if (A== null || A=="")return 0;
         //return decodeRecur(A, 0, dp);
         return iterative (A,dp);
     }
@@ -40,7 +41,7 @@ public class WaysToDecode {
 
     //Sol2 - BOTTOM UP - Iterative
     static int iterative(String A, int []dp) {
-        dp[0] = 1; // when String is empty
+        //dp[0] = 1; // when String is empty
         dp[1] = 1; // single character has 1 decoding possible
         int n = A.length();
 
@@ -48,7 +49,7 @@ public class WaysToDecode {
 
             //first gets LSB  and second gets whole number
             int singleCharacter = Integer.valueOf(A.substring(i - 1, i));
-            int doubleCharacter = Integer.valueOf(A.substring(i - 2, i));
+            int doubleCharacter = Integer.valueOf(A.substring(i - 2, i)); // this coverts anyting starting with 0 to actual number
 
             if (singleCharacter > 0 && singleCharacter <= 9) {
                 dp[i] = (dp[i] + dp[i - 1]) % mod;
@@ -63,6 +64,6 @@ public class WaysToDecode {
     }
 
     public static void main(String[] args) {
-        System.out.println(getWays("8"));
+        System.out.println(getWays("00"));
     }
 }
