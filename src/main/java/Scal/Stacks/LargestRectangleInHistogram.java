@@ -29,18 +29,18 @@ public class LargestRectangleInHistogram {
     //build near smallest elements response from left side
     private static int[] nearSmallestOnLeft(int[] A) {
         Stack<Integer> st = new Stack<>();
-        int [] res = new int[A.length];
+        int [] leftSmaller = new int[A.length];
         // start from left side
         for (int i =0;i <A.length;i++ ){
-            //popout until u have larger elements on top of stack
+            //popout until u have larger elements on top of stack because we need smaller elements
             while (!st.isEmpty() && A[st.peek()]>= A[i]){
                 st.pop();
             }
-            if (st.isEmpty()) res[i]=-1;
-            else res[i]=st.peek();
+            if (st.isEmpty()) leftSmaller[i]=-1;
+            else leftSmaller[i]=st.peek();
             st.push(i);
         }
-        return res;
+        return leftSmaller;
     }
 
 

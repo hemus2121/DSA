@@ -40,7 +40,7 @@ public class FirstMissingInteger {
         return  n+1;
     }
     public static void main(String[] args) {
-        int [] data = {3, 4, -1, 1};
+        int [] data = {2, 4, 1, 2, -10, 9};
         System.out.println(firstMissingInteger(data));
     }
 }

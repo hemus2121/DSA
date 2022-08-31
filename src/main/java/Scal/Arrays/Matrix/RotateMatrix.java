@@ -16,10 +16,10 @@ public class RotateMatrix {
     //                                          |______________________________________________|
     private static void rotateMatrixInPlace(int [][]A){
         int n = A.length;
-
-        for (int i =1;i < n;i++){
-            for (int j =i;j< i;j++){
-                int temp = A[i][i];
+        for(int i = 0; i<n/2; i++){
+            //for (int j =i;j< i;j++){
+            for(int j = i; j<n-i-1; j++){
+                int temp = A[i][j];
                 A[i][j]= A[n-1-j][i];
                 A[n-1-j][i]= A[ n-1-i][n-1-j];
                 A[n-1-i] [n-1-j] = A [j][n-1-i];

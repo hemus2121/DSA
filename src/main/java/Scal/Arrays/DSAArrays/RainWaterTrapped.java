@@ -21,12 +21,16 @@ public class RainWaterTrapped {
         while (left < right){
             // When height of left side is lower, calculate height of water trapped in left bin else calculate for right bin
             if (A[left] <= A[right]){
-                if (A[left] >= leftMax) leftMax = A[left];
-                else res = leftMax-A[left];
+                if (A[left] >= leftMax)
+                    leftMax = A[left];
+                else
+                    res = leftMax-A[left];
                 left++;
             }else {
-                if (A[right] >= rightMax) rightMax = A[right];
-                else res = rightMax-A[right];
+                if (A[right] >= rightMax)
+                    rightMax = A[right];
+                else
+                    res = rightMax-A[right];
                 right--;
             }
         }

@@ -17,49 +17,52 @@ public class MaximumNonNegativeSubArray {
 
     static int []  getSubArray(int [] A){
 
-        //variable to hold final index and sum
-        int final_start=0;
-        int final_end=0;
-        long final_sum =0;
+        // initialize final start index, end index and sum
+        int answer_start_index = 0;
+        int answer_end_index = 0;
+        // take long as sum can overflow
+        long sum = 0;
 
-        //variable to hold intermediate index and sum
-        int temp_start=0;
-        int temp_end=0;
-        long temp_sum=0;
+        // initialize temp start index, end index and sum
+        int temp_start = 0;
+        int temp_end = 0;
+        long temp_sum = 0;
 
-        //Lets iterate over input array elements
-        for (int i =0;i< A.length;i++){
+        for (int i = 0; i < A.length; i++) {
 
-            //case where read negative input element- reset sum and update indexes
-            if (A[i] <0){
-                temp_sum=0;
-                temp_start = i+1;
-                temp_end = i+1;
-            }else {
-                temp_sum += (long) A[i];
-                temp_end =i;
+            if (A[i] < 0) {
+                // if A[i] is -ve, reset the sum and temp indexes
+                temp_sum = 0;
+                temp_start = i + 1;
+                temp_end = i + 1;
+            } else {
+                // if A[i] is +ve, include this in current temp sum
+                temp_sum = temp_sum + (long) A[i];
+                // increase end index
+                temp_end = i;
 
-                //update final variables based on cond
-                // 1. temp_sum > final_sum
-                // 2. temp_sum == final_sum then get maximum index values
-                if (temp_sum > final_sum ||
-                   temp_sum == final_sum && final_end- final_start < temp_end-temp_start){
-                     final_sum = temp_sum;
-                     final_end = temp_end;
-                     final_start = temp_start;
+                if (temp_sum > sum
+                        || (temp_sum == sum && temp_end - temp_start > answer_end_index - answer_start_index)) {
+                    // if we get the better answer, update the answer variables
+                    answer_start_index = temp_start;
+                    answer_end_index = temp_end;
+                    sum = temp_sum;
                 }
             }
         }
 
-        //Generate result array elements based on final index
-        int j =0;
-        int [] result = new int[final_end-final_start+1];
-        for (int i = final_start ;i<= final_end;i++){
-             result[j++] = A[i];
+        // extract the subarray from indexes and return final array
+        int[] answer = new int[answer_end_index - answer_start_index + 1];
+        int j = 0;
+        for (int i = answer_start_index; i <= answer_end_index; i++) {
+            answer[j++] = A[i];
         }
 
-        //if result start with negative value return new empty array
-        return (result[0]<0) ? new int [] {}: result;
+        // return empty if first element in answer array is -ve
+        if (answer[0] < 0) {
+            answer = new int[] {};
+        }
+        return answer;
     }
 
     public static void main(String[] args) {

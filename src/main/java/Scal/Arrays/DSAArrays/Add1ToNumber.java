@@ -51,7 +51,7 @@ public class Add1ToNumber {
     }
 
     public static void main(String[] args) {
-        int [] data = {9,9,9,4,9};
+        int [] data = {1,0,0,9,9};
         System.out.println(Arrays.toString(add1ToNumber(data)));
     }
 }

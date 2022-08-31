@@ -19,7 +19,7 @@ public class NobleInteger {
         //check for rest array elements
         for (int i =1;i< A.length;i++){
             if (A[i]== A[i-1]){
-                //count won't change
+                //count won't change for handling duplicates
                 if (count ==A[i]){
                     ans ++;
                 }
