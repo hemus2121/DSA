@@ -2,15 +2,13 @@ package ArraysProb;
 
 import java.util.*;
 
-
-public class TwoSum {
-
-    /*
+ /** Two Sum
    Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
    You may assume that each input would have exactly one solution, and you may not use the same element twice.
    You can return the answer in any order.
-    */
+  */
 
+public class TwoSum {
     // TODO Soln1 - time O(n^2) | space O(1)
     public static int [] twoNumberSumUsingLoops( int [] data, int target){
 
@@ -29,13 +27,13 @@ public class TwoSum {
     // TODO Soln2 -using maps - time - O(n) | space - O(n)
     public static int[] twoNumberSumUsingMap(int []data, int target){
         Map<Integer, Integer> dataMap = new HashMap<>();
-         for (int i =0;i< data.length; i++){
-             if (dataMap.containsKey(target-data[i])){
-                 return new int [] {data[dataMap.get(target-data[i])], data[i]};
-             } else {
-                 dataMap.put(data[i], i);
-             }
-         }
+        for (int i =0;i< data.length; i++){
+            if (dataMap.containsKey(target-data[i])){
+                return new int [] {dataMap.get(target-data[i])+1, i+1};
+            } else if(!dataMap.containsKey(data[i])){
+                dataMap.put(data[i], i);
+            }
+        }
         return new int [0];
     }
 
@@ -45,8 +43,8 @@ public class TwoSum {
          Set<Integer> dataset = new HashSet<>();
          for (int i =0;i < data.length;i++){
              if (dataset.contains(target-data[i])){
-                 return new int[]{target-data[i], data[i]};
-             }else {
+                 return new int[]{target-data[i]+1, data[i]+1};
+             }else if (!dataset.contains(target-data[i])){
                  dataset.add(data[i]);
              }
          }

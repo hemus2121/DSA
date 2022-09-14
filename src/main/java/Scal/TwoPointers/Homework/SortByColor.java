@@ -2,7 +2,7 @@ package Scal.TwoPointers.Homework;
 
 import java.util.Arrays;
 
-/*
+/**
 Problem Description
 
 Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white and blue.
@@ -20,16 +20,20 @@ public class SortByColor {
         // right points to 2's latest posn
         // current points to running posn
 
-        int left =0, right= A.length-1, cur=0;
+        int start =0, end= A.length-1, cur=0;
 
-        // 3 cases - 1. if current = ZERO swap left <-> current and increment both
+        // 3 cases -
+        // 1. if current = ZERO swap left <-> current and increment both
         // 2. If current=1 increment curr
         // 3. If current=2 swap with right and decrement right pointer t
-        while (cur <= right){
+        while (cur <= end){
             if (A[cur]==0){
-                swap(A, cur++, left++);
+                swap(A, cur, start);
+                cur++;
+                start++;
             } else if (A[cur]==2){
-                swap (A, cur, right--);
+                swap (A, cur, end);
+                end--;
             }else cur++;
         }
         return A;

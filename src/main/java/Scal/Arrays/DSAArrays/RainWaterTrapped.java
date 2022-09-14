@@ -14,27 +14,25 @@ public class RainWaterTrapped {
 
     //Computation without using Extra Space
     private static int computeWithoutExtraSpace(int []A){
-        int n = A.length;
-        int left =0, right =n-1,res=0;
-        int leftMax=0, rightMax=0;
-
-        while (left < right){
-            // When height of left side is lower, calculate height of water trapped in left bin else calculate for right bin
-            if (A[left] <= A[right]){
-                if (A[left] >= leftMax)
+        int result = 0, leftMax = 0, rightMax = 0, left= 0, right = A.length-1;
+        while(left <= right){
+            if(A[left] <= A[right]){
+                if(A[left] >= leftMax){
                     leftMax = A[left];
-                else
-                    res = leftMax-A[left];
+                }else{
+                    result += leftMax - A[left];
+                }
                 left++;
-            }else {
-                if (A[right] >= rightMax)
+            }else{
+                if(A[right] >= rightMax){
                     rightMax = A[right];
-                else
-                    res = rightMax-A[right];
+                }else{
+                    result += rightMax - A[right];
+                }
                 right--;
             }
         }
-        return res;
+        return result;
     }
 
     //Computation using Extra Space

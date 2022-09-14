@@ -1,11 +1,11 @@
 package Scal.Heaps;
 
-import java.lang.reflect.Array;
 import java.util.*;
+import java.util.Queue;
 
 public class product3 {
     private  static ArrayList<Integer> getProduct(List<Integer> A){
-        PriorityQueue<Integer> pq = new PriorityQueue();
+        Queue<Integer> pq = new PriorityQueue();
         ArrayList <Integer> resList = new ArrayList();
         final int LIMIT = 3;
 
@@ -30,7 +30,7 @@ public class product3 {
         }
         return resList;
     }
-    static void computeProduct(PriorityQueue pq, ArrayList<Integer> resList){
+    static void computeProduct(Queue pq, ArrayList<Integer> resList){
         Iterator<Integer> it = pq.iterator();
         int product =1;
         while (it.hasNext()){

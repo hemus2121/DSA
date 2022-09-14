@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ThreeSum {
 
-  //time O(n^2) || space O(n)
+  //TC O(n^2) || SCs O(n)
     private static List<Integer[]> threeSum(int [] array, int target){
         List<Integer[]> response = new ArrayList();
 
@@ -47,6 +47,5 @@ public class ThreeSum {
         results1.stream().forEach(integers -> {
             System.out.println(Arrays.toString(integers));
         });
-
     }
 }

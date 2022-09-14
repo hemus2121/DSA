@@ -27,7 +27,6 @@ public class PerfectNumbers {
         while (resList.size() < A){
             // take from q
             String temp = que.peek();
-            int tempInt =Integer.parseInt(temp);
             resList.add(temp);
             que.remove();
 

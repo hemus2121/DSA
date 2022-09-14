@@ -33,13 +33,10 @@ public class Fooddistribution {
     // check whether each element devided by K (mid) sums up to B required offices
     private static boolean check (int []A, int k, int B){
         int req=0;
-        //for (int i =0;i<=A.length-1;i++){
-        //    req += A[i]/k;
-        //}
         for (int a : A){
             req += a/k;
         }
-        return req >=B ? true:false;
+        return req >=B ;
     }
 
     public static void main(String[] args) {
