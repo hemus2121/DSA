@@ -11,12 +11,12 @@ class CloneNode {
 
     public CloneNode() {
         val = 0;
-        neighbors = new ArrayList<CloneNode>();
+        neighbors = new ArrayList<>();
     }
 
     public CloneNode(int _val) {
         val = _val;
-        neighbors = new ArrayList<CloneNode>();
+        neighbors = new ArrayList<>();
     }
 
     public CloneNode(int _val, ArrayList<CloneNode> _neighbors) {
