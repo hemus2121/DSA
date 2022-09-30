@@ -25,7 +25,7 @@ public class CheckBipartiteGraph {
         int [] color = new int[A];
         Arrays.fill(color, -1);
 
-        constructGraph(adjList, A, B);
+        buildGraph(adjList, A, B);
         //iterate for all components present in graph
         for (int i =0;i<A;i++){
             if (color[i]== -1){
@@ -55,7 +55,7 @@ public class CheckBipartiteGraph {
         return  true;
     }
 
-    static void constructGraph(List<List<Integer>> adjList , int A, int [][]B){
+    static void buildGraph(List<List<Integer>> adjList , int A, int [][]B){
         for (int i =0;i<=A;i++){
             adjList.add(new ArrayList<>());
         }

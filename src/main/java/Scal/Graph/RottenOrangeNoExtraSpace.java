@@ -21,8 +21,7 @@ public class RottenOrangeNoExtraSpace {
     static int[] dy = {0, 0, -1, 1};
 
     static class Pair {
-        int x;
-        int y;
+        int x, y ;
         Pair(int x, int y) {
             this.x = x;
             this.y = y;
@@ -32,6 +31,7 @@ public class RottenOrangeNoExtraSpace {
     private static int getCountOfOranges(int[][] A) {
         if(A == null || A.length == 0 || A[0].length == 0) return 0;
 
+        // Step 1 -- Multi Source BFS- add all rotten oranges to Q first
         Queue<Pair> queue = new LinkedList<>();
         int freshOranges = 0;
         for(int i = 0 ; i <  A.length; i++) {
@@ -47,7 +47,7 @@ public class RottenOrangeNoExtraSpace {
         }
 
         int minutes = 0; // this is basically number of levels in BFS
-        int[][] dir = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
         //continue the bfs till there are no more valid fresh oranges that can be rotten
         while(!queue.isEmpty() && freshOranges > 0){
             int sz = queue.size();

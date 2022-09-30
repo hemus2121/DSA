@@ -36,8 +36,9 @@ public class RottenOrangesExtraSpace {
         int count=0,max=0;
 
         Queue<Pair> queue = new LinkedList<>();
-        boolean[][] visited = new boolean[row][col];
+        boolean[][] visited = new boolean[row][col]; // EXTRA SPACE to hold visited Information
 
+        // add all initial elements to Queue - multi source BFS
         for(int i=0;i<row;i++){
             for(int j=0;j<col;j++){
                 if(A[i][j]==2){
@@ -72,7 +73,7 @@ public class RottenOrangesExtraSpace {
     }
 
     static boolean isValidDir(int i,int j,int A[][]){
-        if(i<0 || i>=A.length|| j<0 || j>=A[0].length)return false;
+        if(i<0 || i>=A.length|| j<0 || j>=A[0].length) return false;
         return true;
     }
 
