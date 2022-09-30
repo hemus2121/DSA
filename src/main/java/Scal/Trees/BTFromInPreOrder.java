@@ -1,4 +1,4 @@
-package Scal.Trees.Trees2;
+package Scal.Trees;
 
 /** Problem Description
  Given preorder and inorder traversal of a tree, construct the binary tree.

@@ -1,9 +1,6 @@
 package LeetCode.Graphs;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**  Alien Dictionary - -https://leetcode.com/problems/alien-dictionary/
  * There is a new alien language that uses the English alphabet. However, the order among the letters is unknown to you.

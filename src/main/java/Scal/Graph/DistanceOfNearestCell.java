@@ -1,6 +1,6 @@
 package Scal.Graph;
 
-/* Distance of the nearest cell
+/** Distance of the nearest cell
 Problem Description
 
 Given a matrix of integers A of size N x M consisting of 0 or 1.
@@ -68,6 +68,7 @@ public class DistanceOfNearestCell {
             {0,0,0},
             {0,0,0}
         };
+
         System.out.println(Arrays.toString(nearestCell(data)));
 
         int [][] data1 = {

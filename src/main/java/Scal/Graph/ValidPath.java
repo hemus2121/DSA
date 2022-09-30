@@ -49,7 +49,7 @@ public class ValidPath {
         if ( adjMatrix[0][0]==-1 || adjMatrix [A][B]==-1) return "NO";
 
         // lets to BFS for adjacency matrix
-        Queue <Integer> q = new LinkedList <Integer> ();
+        Queue <Integer> q = new LinkedList ();
         q.add(0);
         q.add(0);
         adjMatrix[0][0] = -1;

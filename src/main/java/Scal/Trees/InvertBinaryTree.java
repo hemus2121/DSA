@@ -1,4 +1,4 @@
-package Scal.Trees.Trees2;
+package Scal.Trees;
 /** Invert Binary Tree
  * Problem Description
  * Given a binary tree A, invert the binary tree and return it.

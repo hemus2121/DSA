@@ -28,10 +28,10 @@ public class FirstDepthFirstSearch {
              adjList.get(A.get(i)).add(i+1);
          }
 
-         return compute(adjList, B, C);
+         return computeUsingDFS(adjList, B, C);
      }
 
-      static  int compute(List<List<Integer>> adjList , int b, int c){
+      static  int computeUsingDFS(List<List<Integer>> adjList , int b, int c){
 
           Stack<Integer> s = new Stack<>();
           boolean [] visited = new boolean[adjList.size()+1];
@@ -41,7 +41,7 @@ public class FirstDepthFirstSearch {
           while (!s.isEmpty ()) {
 
               int node = s.pop ();
-              if (node == b) return 1;
+              if (node == b) return 1; //check if node is found or not s
               for(Integer child:adjList.get(node)){
                   if (!visited[child]){
                       visited[child]=true;
@@ -54,7 +54,6 @@ public class FirstDepthFirstSearch {
 
     public static void main(String[] args) {
         ArrayList <Integer> data1 = new ArrayList<>(Arrays.asList(1,1,2));
-
         System.out.println(computeFirstDepth(data1,1,2));
         System.out.println(computeFirstDepth(data1,2,1));
     }

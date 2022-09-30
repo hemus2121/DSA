@@ -1,4 +1,4 @@
-package Scal.Trees.Trees2;
+package Scal.Trees;
 
 /**  Binary Tree From Inorder And Postorder
  * Problem Description

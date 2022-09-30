@@ -12,8 +12,7 @@ Given a binary tree represented by root A.
  */
 public class ValidBinarySearchTreeBottomUp {
     class Data{
-        long min;
-        long max;
+        long min, max ;
         boolean result;
         public Data(){
             min = 1 + (long)Integer.MAX_VALUE;

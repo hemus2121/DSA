@@ -19,7 +19,6 @@ public class CycleInDirectedGraph {
         // build in-degree array and adjacency list
         int [] indegree = new int [A+1];
         buildGraph(A, B, adjList, indegree);
-
         return isCyclePresent(A, indegree, adjList);
     }
 
@@ -47,10 +46,8 @@ public class CycleInDirectedGraph {
                 }
             }
         }
-
         // at the end, if count  == no of nodes present then No cycle is present else cycle is present
-        if(cnt == A) return 0;
-        return 1;
+        return (cnt == A) ?  0:1;
     }
 
     static  void buildGraph(int A, int [][]B, List<List<Integer>> adjList, int [] indegree){

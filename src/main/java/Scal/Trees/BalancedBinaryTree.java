@@ -1,4 +1,4 @@
-package Scal.Trees.Trees2;
+package Scal.Trees;
 
 /** Balance Binary Tree
   * Problem Description

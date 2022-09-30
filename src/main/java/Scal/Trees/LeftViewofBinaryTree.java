@@ -1,4 +1,4 @@
-package Scal.Trees.Trees2;
+package Scal.Trees;
 
 /** Print Left View of the Tree
  * Using Prev pointer

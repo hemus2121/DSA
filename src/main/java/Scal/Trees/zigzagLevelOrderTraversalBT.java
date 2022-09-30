@@ -1,4 +1,4 @@
-package Scal.Trees.Trees2;
+package Scal.Trees;
 /** ZigZag Level Order Traversal BT
  * Problem Description
  *
