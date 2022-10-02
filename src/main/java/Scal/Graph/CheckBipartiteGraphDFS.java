@@ -18,7 +18,7 @@ The graph may or may not be connected.
 Nodes are Numbered from 0 to A-1.
 Your solution will run on multiple testcases. If you are using global variables make sure to clear them.
  */
-public class CheckBipartiteGraph {
+public class CheckBipartiteGraphDFS {
     static int checkBiPartiteGraph(int A, int [][] B){
         List<List<Integer>> adjList = new ArrayList<>();
 
@@ -29,8 +29,6 @@ public class CheckBipartiteGraph {
         //iterate for all components present in graph
         for (int i =0;i<A;i++){
             if (color[i]== -1){
-                //set initial value
-                color[i] = 1;
                 if (!checkUsingDFS(adjList, i, color)) return 0;
             }
         }
@@ -38,7 +36,7 @@ public class CheckBipartiteGraph {
     }
 
     static boolean  checkUsingDFS(List<List<Integer>> adjList, int source, int [] color){
-
+        color[source] = 1;
         for (int neighbour : adjList.get(source)){
             //check if neighbour is not colored yet
             if (color[neighbour] == -1){
@@ -66,29 +64,17 @@ public class CheckBipartiteGraph {
         }
     }
     public static void main(String[] args) {
-        //A : 9
-        //B :
-        //[
-        //  [2, 5]
-        //  [6, 7]
-        //  [4, 8]
-        //  [2, 3]
-        //  [0, 3]
-        //  [4, 7]
-        //  [1, 8]
-        //  [3, 8]
-        //  [1, 3]
-        //]
-        int [] [] data = {
-                {0, 1}
-        };
-       // System.out.println(checkBiPartiteGraph(2, data));
 
         int [][] data1 = {
-                {0, 1},
                 {0, 2},
-                {1, 2}
+                {2, 0},
+                {0, 3},
+                {3, 0},
+                {1, 3},
+                {3, 1},
+                {2, 3},
+                {3, 2}
         };
-        System.out.println(checkBiPartiteGraph(3, data1));
+        System.out.println(checkBiPartiteGraph(4, data1)); //expected 0
     }
 }
