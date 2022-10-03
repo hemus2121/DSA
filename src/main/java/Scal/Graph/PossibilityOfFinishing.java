@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-/*Possibility of Finishing
+/** Possibility of Finishing
 Problem Description
 
 There are a total of A courses you have to take, labeled from 1 to A.
@@ -19,6 +19,7 @@ public class PossibilityOfFinishing {
         List<List<Integer>> adjList = new ArrayList<>();
         int [] indegree = new int[A+1];
         buildGraph(adjList, indegree,A, B,C);
+
         int count = computeCountUsingBFSTopoSort(adjList, indegree);
         return (count== A) ? 1 :0;
     }

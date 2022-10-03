@@ -2,21 +2,15 @@ package Scal.Graph;
 
 import java.util.*;
 
-/** Toplogical Sort - Using BFS
- * Problem Description
- * Given an directed acyclic graph having A nodes. A matrix B of size M x 2 is given which represents the M edges such that there is a edge directed from node B[i][0] to node B[i][1].
- * Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge uv, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG.
- * Return the topological ordering of the graph and if it doesn't exist then return an empty array.
- * If there is a solution return the correct ordering. If there are multiple solutions print the lexographically smallest one.
- * Ordering (a, b, c) is said to be lexographically smaller than ordering (e, f, g) if a < e or if(a==e) then b < f and so on.
- *
- * The first argument given is an integer A representing the number of nodes in the graph.
- *
- * The second argument given a matrix B of size M x 2 which represents the M edges such that there is a edge directed from node B[i][0] to node B[i][1].
- */
-public class TopologicalSort {
 
-    static public int [] topoSort(int A, int [][]B){
+/** Prerequisite Tasks - https://bit.ly/3ApDfOm , https://bit.ly/3SYjQvp
+ * There are a total of N tasks, labeled from 0 to N-1. Some tasks may have prerequisites, for example to do task 0 you have to first complete task 1, which is expressed as a pair: [0, 1]
+ * Given the total number of tasks N and a list of prerequisite pairs P, find if it is possible to finish all tasks.
+ *
+ */
+public class PrerequisiteTasks {
+    //Method of building Graph along with collecting Indegree for each node
+    static public String topoSort(int A, int [][]B){
 
         List<List<Integer>> adjList = new ArrayList<>();
 
@@ -25,12 +19,12 @@ public class TopologicalSort {
         buildGraph(A, B, adjList, indegree);
 
         List<Integer> resultList = new ArrayList<>();
-        topoSortData(A, indegree,adjList, resultList);
-        return resultList.stream().mapToInt(val -> val).toArray();
+        return (topoSortData(A, indegree, adjList, resultList) == A) ? "YES" :"NO";
+        //return resultList.stream().mapToInt(val -> val).toArray();
     }
 
     //Topological sort Method using BFS
-    private static void topoSortData(int n, int [] indegree,  List<List<Integer>> adjList,List<Integer> resultList){
+    private static int topoSortData(int n, int [] indegree,  List<List<Integer>> adjList,List<Integer> resultList){
         Queue<Integer> que = new LinkedList<>();
 
         //Add nodes which have indegree ==0
@@ -40,10 +34,12 @@ public class TopologicalSort {
             }
         }
 
+        int count=0;
         //Normal BFS process using Que
         while (!que.isEmpty()){
             int temp = que.poll();
-            resultList.add(temp); // add to result List indegree =0 nodes as we are taking out from Q
+            resultList.add(temp);// add to result List indegree =0 nodes as we are taking out from Q
+            count++;
 
             for (int neighbour : adjList.get(temp)){
                 indegree[neighbour]--; // reduce indegree of destination nodes
@@ -52,6 +48,7 @@ public class TopologicalSort {
                 }
             }
         }
+        return count;
     }
 
     //Method of building Graph along with collecting Indegree for each node
@@ -74,6 +71,6 @@ public class TopologicalSort {
                 {5, 2},
                 {3, 4},
                 {4, 2 } };
-        System.out.println(Arrays.toString(topoSort(A, B)));
+        System.out.println(topoSort(A, B));
     }
 }

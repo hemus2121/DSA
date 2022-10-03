@@ -5,7 +5,7 @@ package Scal.Graph;
  Replace all ‘O’ with ‘X’ that is surrounded by ‘X’. An ‘O’ (or a set of ‘O’) is considered to be surrounded by ‘X’ if there are ‘X’ at locations just below, just above just left, and just right of it.
  **/
 
-public class SurroundRegions {
+public class SurroundRegionsDFS {
 
     private static int ROWS = 5;
     private static int COLS = 4;
@@ -77,7 +77,7 @@ public class SurroundRegions {
                 {'X', 'O', 'O', 'X'},
                 {'X', 'O', 'X', 'X'},
                 {'X', 'X', 'O', 'O'}};
-        SurroundRegions surroundRegions = new SurroundRegions();
+        SurroundRegionsDFS surroundRegions = new SurroundRegionsDFS();
         char [][] ans = surroundRegions.fill( mat, ROWS, COLS);
 
         for (int i =0;i< ROWS;i++){

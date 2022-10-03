@@ -3,19 +3,12 @@ package Scal.Graph;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Cycle Detection using DFS  TC- O(N + 2E) + O(N)  Where N = Nodes, 2E is for total degrees as we traverse all adjacent nodes. In the case of connected components of a graph, it will take another O(N) time.
+/** Cycle Detection using DFS
+ *  TC- O(N + 2E) + O(N)  Where N = Nodes, 2E is for total degrees as we traverse all adjacent nodes. In the case of connected components of a graph, it will take another O(N) time.
  *  SC - : O(N) + O(N) ~ O(N) Space for recursive stack space and visited array.**/
 public class CycleDetectionDFS {
     private int TOTAL_NODES  = 4;
     List<List<Integer>> adjList = new ArrayList<>();
-
-    class Pair {
-        int current, parent;
-        Pair (int current, int previous){
-            this.current = current;
-            this.parent = previous;
-        }
-    }
 
     private void buildGraph() {
         for (int i =0;i< TOTAL_NODES ;i++){
