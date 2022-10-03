@@ -67,7 +67,6 @@ public class CheckBipartiteGraphBFS {
         }
     }
     public static void main(String[] args) {
-
         int [][] data1 = {
                 {0, 2},
                 {2, 0},

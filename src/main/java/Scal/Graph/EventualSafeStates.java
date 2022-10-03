@@ -55,7 +55,5 @@ public class EventualSafeStates {
     }
 
     public static void main(String[] args) {
-
     }
-
 }
