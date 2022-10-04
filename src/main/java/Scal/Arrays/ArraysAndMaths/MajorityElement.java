@@ -1,5 +1,5 @@
 package Scal.Arrays.ArraysAndMaths;
-/* Majority Element
+/** Majority Element
 
 Problem Description
 Given an array of size N, find the majority element. The majority element is the element that appears more than floor(n/2) times.
