@@ -6,7 +6,36 @@ package StriverSDE.Arrays;
  */
 public class SetMatrixZeros {
 
-    private static void setZeroes(int[][] matrix) {
+    // Time Complexity: O(N*M + N*M)
+    // Space Complexity: O(N)
+    private static void setZeroesSemiOptimal(int [][] matrix){
+        //lets have 2 extra arrays to denote position of Zeros in input matrix - EXTRA SPACE
+        int [] dummy1 = new int [matrix.length];
+        int [] dummy2 = new int [matrix.length];
+
+        //Iterate input matrix
+        for (int i =0;i<matrix.length;i++){
+            for (int j =0;j< matrix[0].length;j++){
+                if (matrix[i][i]==1){
+                    dummy1[i]=0;
+                    dummy2[j]=0;
+                }
+            }
+        }
+        //Now iterate matrix and check dummy values and set original matrix
+        for (int i =0;i< matrix.length;i++){
+            for (int j =0;j< matrix[0].length;j++){
+                if (dummy1[i] ==0 || dummy2[j]==0){
+                    matrix[i][j]=0;
+                }
+            }
+        }
+    }
+
+
+    // Time Complexity:O(2*(N*M))
+    // Space Complexity: O(1)
+    private static void setZeroesOptimal(int[][] matrix) {
 
         int colIndex=1, row = matrix.length, cols= matrix[0].length;
 
@@ -34,6 +63,7 @@ public class SetMatrixZeros {
     public static void main(String[] args) {
             int [][] matrix ={
             {1,1,1}, {1,0,1}, {1,1,1} };
-            setZeroes(matrix);
+            setZeroesSemiOptimal(matrix);
+            setZeroesOptimal(matrix);
     }
 }

@@ -5,6 +5,8 @@ import java.util.List;
 
 /** Pascals Triangle
  * https://www.codingninjas.com/codestudio/problems/1089580?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website
+ * TC: We are creating a 2D array of size (numRows * numCols) (where 1 <= numCols <= numRows), and we are traversing through each of the cells to update it with its correct value, so Time Complexity = O(numRows2).
+ * SC:  Since we are creating a 2D array, space complexity = O(numRows2).
  */
 
 public class PascalsTriangle {
