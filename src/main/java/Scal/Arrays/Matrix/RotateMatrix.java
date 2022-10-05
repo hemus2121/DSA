@@ -14,6 +14,11 @@ public class RotateMatrix {
 
     //USING INDEX manipulation - BEST APPROACH (i-j) -- (j, n-1-i)  - - (n-1-i, n-1-j) -- (n-i-j,i)
     //                                          |______________________________________________|
+
+    //   i , j  // j becomes row for next and column is computed as (n-1) of previous row value
+    //   j,  n-1-i (n-1-i)
+    //   n-1-i, n-1-j (n-1-j)
+    //   n-1-j , i --> [n-1-(n-1-i)--> n -1 -n +1 +i) --->i)
     private static void rotateMatrixInPlace(int [][]A){
         int n = A.length;
         for(int i = 0; i<n/2; i++){
