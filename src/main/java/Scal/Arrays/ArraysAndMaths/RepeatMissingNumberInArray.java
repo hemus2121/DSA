@@ -29,8 +29,8 @@ public class RepeatMissingNumberInArray {
             sum += A[i];
         }
 
-        //this is critical-->  n*(n+1) -sum +rep
-        int miss = (int) ((1L * n * (1L * n + 1)) / 2 - sum + rep);
+        //this is CRITICAL-->  n*(n+1) -sum +rep
+        int miss = (int) (( n * (1L * n + 1)) / 2 - sum + rep);
         return new int [] { rep, miss };
     }
 
