@@ -7,7 +7,7 @@ import java.util.List;
 /** Majoriy Element -II
  * Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
  */
-public class MajorityElementII {
+public class MajorityElement {
     private static  int[] getMajorityElement(int [] nums){
         // for N/3 majority we need to keep track by 2 buckets or variables
         int num1= -1, num2=-1, count1=0, count2=0, len = nums.length;
