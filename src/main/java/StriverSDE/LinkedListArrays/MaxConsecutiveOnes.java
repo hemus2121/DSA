@@ -12,7 +12,7 @@ public class MaxConsecutiveOnes {
             if ( nums[i] ==1){
                 currentCount++;
             }else {
-                currentCount =0; // reset to ZERO count and we shall restart counter again 
+                currentCount =0; // reset to ZERO count and we shall restart counter again
             }
             maxCount = Math.max(maxCount, currentCount);
         }
