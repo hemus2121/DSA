@@ -20,15 +20,15 @@ public class VerticalOrderTraversal {
             this.level = level;
         }
     }
-    private static ArrayList<ArrayList<Integer>> verticalOrder(TreeNode A){
+    private static List<ArrayList<Integer>> verticalOrder(TreeNode A){
         return computeVerticalOrder(A);
     }
 
-    static HashMap<Integer, ArrayList<Integer>> levelMap = new HashMap<>();
+    static Map<Integer, ArrayList<Integer>> levelMap = new HashMap<>();
     static Queue <Pair> que = new LinkedList<>();
     static int maxl=0, minl=0;
 
-    private static ArrayList<ArrayList<Integer>>computeVerticalOrder(TreeNode A){
+    private static List<ArrayList<Integer>>computeVerticalOrder(TreeNode A){
         Pair pair = new Pair(A, 0);
         que.add(pair);
 
@@ -66,7 +66,7 @@ public class VerticalOrderTraversal {
             }
         }
 
-        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        List<ArrayList<Integer>> res = new ArrayList<>();
         //Iterate map index minl to maxl and add to response list
         for (int i = minl;i<=maxl;i++){
             res.add(levelMap.get(i));

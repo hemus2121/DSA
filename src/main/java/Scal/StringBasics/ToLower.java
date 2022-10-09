@@ -12,10 +12,17 @@ Return the lowercase version of the given character array.
 public class ToLower {
     private static char [] toLower(char [] A){
 
-        for (int i=0;i < A.length;i++){
+       /* for (int i=0;i < A.length;i++){
             int temp = A[i];// assign to int variable to get integer value
             if ( temp >=65 && temp < 91){
                 A[i] = (char)(temp + 32);
+            }
+        }
+        return A;*/
+
+        for (int i =0;i< A.length;i++){
+            if ( A[i] >='A' && A[i] <= 'Z'){
+                A[i] ^= 32;
             }
         }
         return A;

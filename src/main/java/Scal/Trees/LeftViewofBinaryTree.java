@@ -8,10 +8,11 @@ package Scal.Trees;
 import Scal.Trees.TreeNode;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class LeftViewofBinaryTree {
-    public static ArrayList<Integer> leftView(TreeNode root) {
+    public static List<Integer> leftView(TreeNode root) {
 
         // Using concept of Level order traversal only - with additional prev pointer
 
@@ -19,9 +20,9 @@ public class LeftViewofBinaryTree {
         if (root == null || root.val == -1) {
             return null;
         }
-
         Queue<TreeNode> que = new LinkedList<>();
-        ArrayList<Integer> resultList = new ArrayList<>();
+        List<Integer> resultList = new ArrayList<>();
+
         //Maintain prev pointer
         TreeNode prev = null;
 
