@@ -17,17 +17,6 @@ public class DiameterWidthofBinaryTree {
         }
     }
 
-    // Using Recursion reusing GetHeight method- different problem mostly
-    private static int diameter= -1;
-    public static int getHeight(Node root){
-        if  (root==null) {
-            return -1;
-        }
-        int left = getHeight(root.left);
-        int right = getHeight(root.right);
-        diameter = Math.max(diameter,left+right+2);
-        return Math.max(left,right)+1;
-    }
 
     //Using Level order traversal- bit tricky one - refer - https://www.youtube.com/watch?v=ZbybYvcVLks
     // using 2i+1 for left and 2i+2 for right node in array
@@ -70,10 +59,5 @@ public class DiameterWidthofBinaryTree {
 
         int maxWidth = getWidthOfTree(root);
         System.out.println("The maximum width of the Binary Tree is "+maxWidth);
-        getHeight(root);
-        System.out.println(diameter);
     }
-
-
-
 }
