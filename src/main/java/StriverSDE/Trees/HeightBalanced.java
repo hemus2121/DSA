@@ -4,7 +4,7 @@ package StriverSDE.Trees;
  * Check if the Binary Tree is Balanced Binary Tree
  * Problem Statement: Check whether the given Binary Tree is a Balanced Binary Tree or not. A binary tree is balanced if, for all nodes in the tree, the difference between left and right subtree height is not more than 1.
  * TC: O(N)
- * SC: O(1) Extra Space + O(H) Recursion Stack space (Where “H”  is the height of binary tree) 
+ * SC: O(1) Extra Space + O(H) Recursion Stack space (Where “H”  is the height of binary tree)
  */
 public class HeightBalanced {
 
