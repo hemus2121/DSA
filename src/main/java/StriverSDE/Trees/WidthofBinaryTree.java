@@ -6,7 +6,7 @@ import java.util.Queue;
 /** Maximum Width of a Binary Tree
  * Problem Statement: Write a program to find the Maximum Width of A Binary Tree.
  */
-public class DiameterWidthofBinaryTree {
+public class WidthofBinaryTree {
 
     static class Pair{
         Node node;
