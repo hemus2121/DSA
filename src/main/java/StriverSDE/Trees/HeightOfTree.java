@@ -14,7 +14,7 @@ public class HeightOfTree {
         if (node ==null) return 0;
         int left = getHeight(node.left);
         int right = getHeight(node.right);
-        return Math.max(left, right)+1;
+        return Math.max(left, right)+1; //for current node
     }
 
     // using Iterative Way
