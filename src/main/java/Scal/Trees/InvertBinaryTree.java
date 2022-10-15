@@ -6,7 +6,7 @@ package Scal.Trees;
  * Inverting refers to making the left child the right child and vice versa.
  */
 
-import Scal.Trees.TreeNode;
+
 
 public class InvertBinaryTree {
     public TreeNode invertTree(TreeNode A) {
