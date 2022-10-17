@@ -17,7 +17,7 @@ public class LCAInBinaryTree {
         Node left = lowestCommonAncestor(root.left, p, q);
         Node right = lowestCommonAncestor(root.right,p, q);
 
-        //return non null values wh
+        //return non null values which we should traverse
         if (null== left) return right;
         else if (null== right) return left;
         else return root; //both left and right are not null, we found our result

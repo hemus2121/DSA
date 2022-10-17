@@ -1,6 +1,6 @@
 package Scal.Trees.BST;
 
-/*
+/**
 Problem Description
 
 Given preorder traversal of a binary tree, check if it is possible that it is also a preorder traversal of a Binary Search Tree (BST),
