@@ -1,5 +1,9 @@
 package Scal.Arrays.PFSumCarryForward;
 
+/** Subarray with least average
+ * Problem Description
+ * Given an array of size N, find the subarray of size K with the least average.
+ */
 public class SubArrayWithLeastAvg {
     static int getIndexOfSubArray(int [] A, int B){
 
