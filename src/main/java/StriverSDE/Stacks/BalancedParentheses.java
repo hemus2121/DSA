@@ -24,7 +24,7 @@ public class BalancedParentheses {
                 if( ( c == '(' && s.charAt(i)== ')') ||
                         ( c == '{' && s.charAt(i)== '}') ||
                         ( c == '[' && s.charAt(i)== ']') )
-                    return true;
+                    continue; //check for other next set of brackets
                 else return  false;
             }
         }
