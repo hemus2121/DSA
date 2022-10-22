@@ -24,7 +24,8 @@ public class MinStack {
         origStack.push(x);
         if (!minStack.isEmpty() && x < minStack.peek()){
             minStack.push(minStack.peek());
-        }else minStack.push(x);
+        }else
+            minStack.push(x);
     }
 
     public void pop(){

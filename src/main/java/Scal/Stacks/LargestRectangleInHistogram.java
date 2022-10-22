@@ -2,13 +2,15 @@ package Scal.Stacks;
 
 import java.util.Stack;
 
-/*
+/**
 Problem Description
 
 Given an array of integers A .
 
 A represents a histogram i.e A[i] denotes height of the ith histogram's bar. Width of each bar is 1.
 Find the area of the largest rectangle formed by the histogram.
+
+ using 3 iteration
  */
 public class LargestRectangleInHistogram {
     // BASED on NearestSmaller Element concept
