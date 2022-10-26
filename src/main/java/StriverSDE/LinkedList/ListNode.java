@@ -6,6 +6,9 @@ public class ListNode {
     int val;
     ListNode next;
 
+    ListNode(){
+
+    }
     ListNode(int _val){
         this.val = _val;
     }
