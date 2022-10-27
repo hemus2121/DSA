@@ -11,6 +11,7 @@ import java.util.Set;
 
 public class IntersectionOfTwoLists {
 
+    // this takes extra space
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         //using Extra place holder to hold nodes in Set
         Set<ListNode> dataSet = new HashSet<>();
@@ -27,5 +28,21 @@ public class IntersectionOfTwoLists {
 
         // no intersection found
         return null;
+    }
+
+    // MOST optimal approach
+    // TC: O(2*max(length of list1,length of list2))
+    // SC: O(1)
+    public ListNode getIntersectionNodeOpt(ListNode headA, ListNode headB){
+        //No intersection if any ofthe nodes is NULL
+        if (headA == null || headB ==null) return null;
+        ListNode a = headA;
+        ListNode b = headB;
+        //check if both nodes are not equal
+        while ( a != b){
+            a = a==null? headB: a.next; // if null reassign to start of other list
+            b = b==null? headA: b.next;
+        }
+        return a;
     }
 }
