@@ -18,6 +18,7 @@ public class LongestConsecutiveSequence {
 
         //iterate for elements
         int maxLength = Integer.MIN_VALUE;
+
         for (int a: A) {
             int count = 1;
             int previousElement = a - 1;

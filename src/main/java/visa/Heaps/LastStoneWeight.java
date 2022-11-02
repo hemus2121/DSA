@@ -1,4 +1,4 @@
-package visa;
+package visa.Heaps;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

@@ -40,19 +40,20 @@ public class TrappingRainWater {
     // SC:O(1)
     private static int getTrappedWaterOptimal (int []height){
         int leftMax=0, rightMax=0, res=0;
+
         int left =0, right = height.length-1;
 
         while (left < right ){
              // 2 cases arise
             if (height[left] <= height[right]){
-                if (height[left]>=leftMax){ // check if current left is maximum till now if YES - remaining leftMax value
+                if (height[left]>=leftMax){ // check if current left is maximum till now if YES - revise leftMax value
                     leftMax = height[left];
                 }else res += leftMax- height[left];
 
                  left++;
             } else {
                 if (height[right] >= rightMax){
-                    rightMax = height[right]; // check if current right is maximum till now if YES - remaining leftMax value
+                    rightMax = height[right]; // check if current right is maximum till now if YES - revise leftMax value
                 }else {
                     res += rightMax- height[right];
                 }

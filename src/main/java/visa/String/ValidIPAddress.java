@@ -1,4 +1,4 @@
-package visa;
+package visa.String;
 
 //https://leetcode.com/problems/validate-ip-address/
 public class ValidIPAddress {

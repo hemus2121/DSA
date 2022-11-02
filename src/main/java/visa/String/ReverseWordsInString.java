@@ -1,4 +1,4 @@
-package visa;
+package visa.String;
 
 public class ReverseWordsInString {
     public String reverseWords(String s){

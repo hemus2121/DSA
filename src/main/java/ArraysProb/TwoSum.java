@@ -24,7 +24,7 @@ public class TwoSum {
         return new int[0];
     }
 
-    // TODO Soln2 -using maps - time - O(n) | space - O(n)
+    // TODO Soln2 -using maps - time - O(n) | space - O(n) -- return indices
     public static int[] twoNumberSumUsingMap(int []data, int target){
         Map<Integer, Integer> dataMap = new HashMap<>();
         for (int i =0;i< data.length; i++){
@@ -54,6 +54,6 @@ public class TwoSum {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(twoNumberSumUsingLoops(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10)));
         System.out.println(Arrays.toString(twoNumberSumUsingMap(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10)));
-        System.out.println(Arrays.toString(twoNumberSumUsingSet(new int[] {3, 5, 4, 8, 11, 1, -1, 6}, 10)));
+        System.out.println(Arrays.toString(twoNumberSumUsingSet(new int[] {3, 5, -4, 8, 11, 1, -1, 6}, 10)));
     }
 }

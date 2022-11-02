@@ -11,9 +11,11 @@ public class MajorityElement {
     private static  int[] getMajorityElement(int [] nums){
         // for N/3 majority we need to keep track by 2 buckets or variables
         int num1= -1, num2=-1, count1=0, count2=0, len = nums.length;
+
         for (int i=0;i< len;i++){
             if (nums[i]== num1) count1++;
             else if (nums[i] == num2) count2++;
+
             else if (count1 ==0){
                 num1= nums[i];
                 count1++;

@@ -1,4 +1,4 @@
-package visa;
+package visa.String;
 
 public class BreakPalindrome {
 
