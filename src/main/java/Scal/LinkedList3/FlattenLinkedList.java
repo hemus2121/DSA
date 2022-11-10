@@ -1,4 +1,4 @@
-package Scal.LinkedList3.HomeWork;
+package Scal.LinkedList3;
 
 
 /*

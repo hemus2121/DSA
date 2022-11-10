@@ -1,4 +1,4 @@
-package Scal.LinkedList3.Assi;
+package Scal.LinkedList3;
 
 import java.util.HashMap;
 import java.util.Map;

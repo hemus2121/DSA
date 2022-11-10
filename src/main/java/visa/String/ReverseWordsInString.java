@@ -48,7 +48,6 @@ public class ReverseWordsInString {
     public static  String reverseWordsUsingInbuilt(String s){
         String[] strs = s.split(" ");
         String res="";
-        StringBuilder sb = new StringBuilder();
         for (int i =0;i< strs.length;i++){
             if (strs[i].equals("")) continue;
             if (res.equals("")) res = strs[i];
