@@ -10,7 +10,9 @@ public class MaximumSquare {
         }
 
         int max =0, n = matrix.length, m = matrix[0].length;
+
        // BOTTOM UP approach
+
         int[] [] dp = new int [n+1][m+1];
         // dp(i, j) represents the length of the square
         // whose lower-right corner is located at (i, j)
@@ -25,7 +27,7 @@ public class MaximumSquare {
             }
         }
         // we need to return square area
-        return  max *max;
+        return  max*max;
     }
 
 }

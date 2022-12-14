@@ -13,7 +13,7 @@ public class SearchInRotatedSortedArray {
 
             if(nums[start] <= nums[mid]){
                 //checking if first half array is sorted if so
-                if (nums[start]<= target && target  <nums[mid]){ //check if target lies in the range if so
+                if (nums[start]<= target && target  < nums[mid]){ //check if target lies in the range if so
                     end = mid -1;  // search in first half only
                 }else  start = mid+1;  //else search in second half
             }else {

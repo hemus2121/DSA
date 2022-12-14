@@ -26,7 +26,8 @@ public class MinimumFallingPathSum {
 
         //check in last row for minimum element
         for(int i = 0; i < matrix.length; i++){
-            if(dp[matrix.length-1][i] < min)  min = dp[matrix.length-1][i];
+            if(dp[matrix.length-1][i] < min)
+                min = dp[matrix.length-1][i];
         }
         return min;
     }

@@ -6,6 +6,7 @@ import java.util.Map;
 public class TwoSum {
 
     private static int [] twoSum(int [] number, int target) {
+
         int[] result = new int[2];
         Map<Integer, Integer> targetMap = new HashMap<>(); //store key as number and index as value
 

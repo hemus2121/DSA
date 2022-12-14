@@ -21,11 +21,11 @@ public class MergeIntervals {
 
         //iterate other once
         for (int [] i : intervals){
-            if (i[0] < end){
+            if (i[0] < end){ // check if next start is less than curren end - if yes expand interveral
                 end = Math.max(end, i[0]);
             }
             else {
-                //add the current interval
+                //add the current interval since no overlapping is present
                 resultList.add(new int []{ start, end});
                 //initialize next set of interval as beginning for comparison
                 start = i[0];

@@ -17,7 +17,7 @@ public class SearchIn2DMatrix {
         while (low <= high) {
             int mid = (low + high) / 2;
 
-            //get 2D matrix coordinates
+            //get 2D matrix coordinates- IMPORTANT
             int rows = mid / col, cols = mid % col;
 
             if (matrix[rows][cols] == target) return true;

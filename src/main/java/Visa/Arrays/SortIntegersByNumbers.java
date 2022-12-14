@@ -12,11 +12,12 @@ public class SortIntegersByNumbers {
         }
 
         Arrays.sort(cur, (a,b)-> a[1]== b[1]? a[0]-b[0]: a[1]-b[1]);
+        //since array is sorted get back 1st index from 2D array
 
        for (int i=0;i< arr.length;i++){
            arr[i]= cur[i][0];
        }
-        return  arr;
+        return arr;
     }
 
     public static void main(String[] args) {

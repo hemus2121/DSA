@@ -14,12 +14,13 @@ public class SubArrayWithSumEqualsK {
     public static int subarraySum(int[] nums, int k) {
         int count =0, currSum=0;
         // using concept of Prefix Array and map to store previous stored values
-        // store values of count of how many time pf count was seen before
+        // store values of count of how manytimes pf count was seen before
         Map<Integer, Integer> countMap = new HashMap<>();
         for (int i =0;i< nums.length;i++){
             currSum += nums[i];
             //check if current sum == required value
             if (currSum== k) count++;
+
             if (countMap.containsKey(currSum-k)){
                 count += countMap.get(currSum-k);
             }
@@ -32,6 +33,5 @@ public class SubArrayWithSumEqualsK {
     public static void main(String[] args) {
         int [] nums = {1,1,1};
         System.out.println(subarraySum(nums,2));
-
     }
 }

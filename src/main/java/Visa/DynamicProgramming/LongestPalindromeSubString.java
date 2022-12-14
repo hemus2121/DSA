@@ -10,14 +10,14 @@ public class LongestPalindromeSubString {
         String maxPalindrome = "";
         for (int i = 0; i < s.length(); i++) {
 
-            //Odd length palindrome
+            //ODD length palindrome
             String palindrome = expand(s, i, i);
             //store the highest maximum String
             if (maxPalindrome.length() < palindrome.length()) {
                 maxPalindrome = palindrome;
             }
 
-            //handle even case
+            //EVEN Length Palindrome
             palindrome = expand(s, i, i + 1);
             //compare with previous maximum string
             if (maxPalindrome.length() < palindrome.length()) {
@@ -27,9 +27,10 @@ public class LongestPalindromeSubString {
         return maxPalindrome;
     }
 
+    // 2pointers one goes LEFT from Centre and other goes RIGHT from Center
     static String expand(String s, int p1, int p2) {
         while (p1 >= 0 && p2 < s.length() && (s.charAt(p1) == s.charAt(p2))) {
-            p1--;
+            p1--; //
             p2++;
         }
         return s.substring(p1 + 1, p2);
