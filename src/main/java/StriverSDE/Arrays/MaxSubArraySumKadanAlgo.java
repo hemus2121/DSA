@@ -11,7 +11,7 @@ public class MaxSubArraySumKadanAlgo {
         for (int i =0;i< data.length;i++){
             currentSum = currentSum+data[i];
             maxSum = Math.max(maxSum, currentSum);
-            if (currentSum <0 ){
+            if (currentSum <0 ){ // reset current sum to ZERO if currentSum is NEGATIVE
                 currentSum =0;
             }
         }

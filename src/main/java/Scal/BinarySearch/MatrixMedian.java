@@ -1,4 +1,4 @@
-package Scal.BinarySearch2.Assi.Home;
+package Scal.BinarySearch;
 
 /*
 Problem Description

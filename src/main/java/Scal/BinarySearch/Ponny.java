@@ -1,4 +1,4 @@
-package Scal.BinarySearch1.Assi;
+package Scal.BinarySearch;
 
 import java.util.ArrayList;
 import java.util.*;

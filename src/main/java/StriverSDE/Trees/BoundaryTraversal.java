@@ -11,6 +11,7 @@ import java.util.List;
 public class BoundaryTraversal {
 
     private static  boolean isLeafNode(Node node){
+
         return (node.left == null) && (node.right == null);
     }
    static void addLeftBoundary(Node node, List<Integer> resultList){

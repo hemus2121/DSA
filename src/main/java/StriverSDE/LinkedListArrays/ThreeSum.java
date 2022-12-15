@@ -14,7 +14,7 @@ public class ThreeSum {
     private  static List <List< Integer >> threeSum(int[] num) {
 
         List<List<Integer>> resList = new ArrayList<>();
-        //critical step
+        //CRITICAL STEP
         Arrays.sort(num);
 
         for (int i =0;i< num.length-2;i++){

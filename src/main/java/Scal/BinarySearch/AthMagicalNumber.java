@@ -1,4 +1,4 @@
-package Scal.BinarySearch2.Assi;
+package Scal.BinarySearch;
 
 public class AthMagicalNumber {
     private static  int getMagicalNumber(int A, int B , int C){

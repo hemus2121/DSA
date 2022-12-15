@@ -29,7 +29,8 @@ public class ZigZagTraversal {
                 if (node.left != null) q.add(node.left);
                 if (node.right != null) q.add(node.right);
 
-                if (flag==true) internalList.add(node.data);
+                if (flag==true)
+                    internalList.add(node.data);
                 else internalList.add(0, node.data);
             }
             flag = !flag; //reverse flag status for next level

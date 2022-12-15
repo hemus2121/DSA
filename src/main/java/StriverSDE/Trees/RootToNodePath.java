@@ -12,7 +12,8 @@ public class RootToNodePath {
     private static boolean  getPath (Node root, List<Integer> resultList, int k){
         //base case
         if (root == null) return false;
-        // push the node's value in 'arr'
+
+        // push the node's value into result
         resultList.add(root.data);
 
         // if it is the required node return true
@@ -24,7 +25,7 @@ public class RootToNodePath {
             return  true;
         }
 
-        // required node does not lie either in the left or right subtree of the current nod Thus, remove current node's value from 'arr'and then return false
+        // required node does not lie either in the left or right subtree of the current nod Thus, remove current node's value from result and then return false
         resultList.remove(resultList.size()-1);
         return  false;
     }

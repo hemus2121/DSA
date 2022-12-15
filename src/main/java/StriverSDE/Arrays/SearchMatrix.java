@@ -20,6 +20,7 @@ public class SearchMatrix {
             int mid = (low +high)/2;
             // trying to coordinates for 2D matris from 1 D matrix
             int row = mid /m, col = mid%m;
+
             if (matrix[row][col]== target ) return true;
             if (matrix [row][col] < target) low = mid+1;
             else high= mid-1;

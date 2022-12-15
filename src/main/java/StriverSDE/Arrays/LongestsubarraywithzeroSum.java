@@ -14,6 +14,7 @@ public class LongestsubarraywithzeroSum {
         //Use Prefix array and Hashmap- this keeps track for index of previous prefix values
 
         Map<Integer,Integer> prefixMap = new HashMap<>();
+
         int maxi =0;
         int pfSum =0;
         for (int i = 0; i< A.length; i++){

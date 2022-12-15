@@ -8,7 +8,7 @@ public class ReverseLL {
         //using extra dummy node concept
        ListNode newHead = null;
        while (head !=null){
-           ListNode next = head.next;
+           ListNode next = head.next; // to store link of next node
            head.next = newHead;
            newHead = head;
            head = next;

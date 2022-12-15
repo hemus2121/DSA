@@ -11,7 +11,7 @@ import java.util.Map;
 public class BTFromInPostOrder {
 
     public Node buildTree(int [] inorder , int [] postorder) {
-        Map<Integer, Integer> inorderMap = new HashMap<>();
+        Map<Integer, Integer> inorderMap = new HashMap<>(); // to reduce time taken to get inorder element values
         for (int i = 0; i < inorder.length; i++) {
             inorderMap.put(inorder[i], i);
         }

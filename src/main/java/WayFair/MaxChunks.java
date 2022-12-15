@@ -19,7 +19,7 @@ public class MaxChunks {
         int [] maxFromStart = new int [n];
         int [] minFromEnd = new int [n];
 
-        // get the maximimum elements from left
+        // get the maximmum elements from left
         maxFromStart[0]=arr[0];
         for(int i=1;i<arr.length;i++){
             if(arr[i]>maxFromStart[i-1]){

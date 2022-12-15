@@ -16,7 +16,8 @@ public class MergeTwoSortedArrays {
     public static void mergeUsingApproach1(int[] nums1, int m, int[] nums2, int n) {
         int index = m + n - 1, p1 = m - 1, p2 = n - 1;
         while (p1 >= 0 && p2 >= 0) {
-            if (nums1[p1] > nums2[p2]) nums1[index] = nums1[p1--];
+            if (nums1[p1] > nums2[p2])
+                nums1[index] = nums1[p1--];
             else nums1[index] = nums2[p2--];
             index--;
         }
@@ -27,7 +28,8 @@ public class MergeTwoSortedArrays {
     public static void mergeUsingApproach2(int[] A, int m, int[] B, int n) {
 
         for (int i = m + n - 1, a = m - 1, b = n - 1; b >= 0; i--) {
-            if (a >= 0 && A[a] > B[b]) A[i] = A[a--];
+            if (a >= 0 && A[a] > B[b])
+                A[i] = A[a--];
             else A[i] = B[b--];
         }
     }

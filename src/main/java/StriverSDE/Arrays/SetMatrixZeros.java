@@ -44,7 +44,7 @@ public class SetMatrixZeros {
             if (matrix[i][0]==0) colIndex =0;  // but for 1st column if any Zero is present  update column Index value to 0
             for (int j =1;j< cols;j++){
                 if ( matrix[i][j]==0){
-                    matrix [ 0] [j] = matrix[i][0]=0;// setting both respective cols and row values as zero
+                    matrix [0][j] = matrix[i][0]=0;// setting both respective cols and row values as zero
                 }
             }
         }
@@ -56,7 +56,7 @@ public class SetMatrixZeros {
                     matrix[i][j]=0;
                 }
             }
-            if ( colIndex==0)matrix[i][0]=0;// if any colIndex is zero set matrix column value  to be zero
+            if (colIndex==0) matrix[i][0]=0;// if any colIndex is zero set matrix column value  to be zero
         }
     }
 

@@ -10,6 +10,7 @@ public class MirrorTree {
     Node generateMirror (Node node){
         //base case
         if (node == null) return null;
+
         // Main logic - recursively call in post order
         generateMirror(node.left);
         generateMirror(node.right);

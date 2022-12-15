@@ -11,8 +11,6 @@ public class EmployeeFreeTime {
         public int start;
         public int end;
 
-        public Interval() {}
-
         public Interval(int _start, int _end) {
             start = _start;
             end = _end;
@@ -20,7 +18,7 @@ public class EmployeeFreeTime {
     };
     public static List<Interval> employeeFreeTime(List<List<Interval>> schedule) {
 
-        PriorityQueue<Interval> q = new PriorityQueue<Interval>((a,b)-> {
+        PriorityQueue<Interval> q = new PriorityQueue<>((a,b)-> {
             return a.start - b.start;
         });
 

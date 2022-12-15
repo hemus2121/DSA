@@ -35,7 +35,7 @@ public class CycleDetectionBFS {
     boolean checkCycle (int src, boolean[] visited){
 
         visited [src] = true;
-        Queue <Pair> q = new LinkedList<>();
+        Queue <Pair> q = new LinkedList();
         q.add(new Pair(src, -1));
 
         while (!q.isEmpty()){

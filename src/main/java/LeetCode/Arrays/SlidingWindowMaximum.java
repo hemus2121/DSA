@@ -28,7 +28,7 @@ public class SlidingWindowMaximum {
             while (!deque.isEmpty() && deque.getLast() < A[i]){
                 deque.removeLast();
             }
-                 deque.add(A[i]);//Add incoming element
+            deque.add(A[i]);//Add incoming element
         }
         resultArray[resultIndex++] = deque.getFirst();
 

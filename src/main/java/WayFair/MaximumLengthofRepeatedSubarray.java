@@ -10,7 +10,8 @@ public class MaximumLengthofRepeatedSubarray {
         int [][] dp = new int [ n+1][m+1];
 
         int ans=0;
-        //lets iterate from bakside
+
+        //lets iterate from backside
         for(int ind1= n-1;ind1>=0;ind1--){
             for(int ind2= m-1;ind2 >=0;ind2--){
                 if (nums1[ind1]== nums2[ind2]){

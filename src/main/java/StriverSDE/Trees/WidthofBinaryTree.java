@@ -23,16 +23,18 @@ public class WidthofBinaryTree {
     private static int getWidthOfTree (Node root){
         if (root == null) return 0;
         int ans =0;
-        Queue<Pair> q = new LinkedList<>();
+        Queue<Pair> q = new LinkedList();
         q.offer(new Pair(root,0));
 
         while(!q.isEmpty()) {
             int size = q.size();
-            int mmin = q.peek().num;    //to make the id starting from zero- get current minimun
+            int mmin = q.peek().num;    //to make the id starting from zero - get current minimum
             int first = 0,last = 0;
+
             for(int i=0; i<size; i++){
                 int cur_id = q.peek().num-mmin; // reset count to begin with ZERO
                 Node node = q.peek().node;
+
                 q.poll();
 
                 if(i==0) first = cur_id;

@@ -14,15 +14,16 @@ import java.util.Map;
  **/
 public class SubDomain {
     public static List<String> subdomainVisits(String[] cpdomains) {
-        Map <String , Integer> domMap = new HashMap<>();
-        List <String> resList = new ArrayList<>();
+        Map <String , Integer> domMap = new HashMap();
+        List <String> resList = new ArrayList();
 
         // iterate over input array element
         for (int i =0;i< cpdomains.length;i++){
             String[] arrIntDom = cpdomains[i].split(" ");
-            int visits = Integer.parseInt(arrIntDom[0]);
 
-            //second element contains "discuss.leetcode.com" -- <key- name , value -- count >
+            //extract count out
+            int visits = Integer.parseInt(arrIntDom[0]);
+            //second element contains "discuss.leetcode.com" -- <key-- name , value -- count>
             domMap.put(arrIntDom[1], domMap.getOrDefault(arrIntDom[1],0)+visits);
 
             //Split the domain in at least 2 //array contains "discuss", "leetcode.com"

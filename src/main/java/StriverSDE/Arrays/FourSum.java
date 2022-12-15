@@ -21,6 +21,7 @@ public class FourSum {
 
         //sort input array
         Arrays.sort(array);
+
         // IMP --> iterate through array one by one choose last-2 because we want to have atleast element after it to consider for summation
         for (int i=0;i< array.length-3;i++){
             for (int j =i+1;j< array.length-2;j++){

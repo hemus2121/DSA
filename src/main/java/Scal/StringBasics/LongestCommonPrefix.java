@@ -30,6 +30,7 @@ public class LongestCommonPrefix {
         //compare only that much length of characters
         StringBuilder sb = new StringBuilder();
         for (int i =0;i<minLen;i++){
+
             char c = data[0].charAt(i);
             //start comparison with next set of String elements  in input array
             for (int j =1;j< data.length;j++){

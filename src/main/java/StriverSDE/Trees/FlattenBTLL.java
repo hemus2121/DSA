@@ -13,10 +13,13 @@ public class FlattenBTLL {
 
     // EXTRA SPACE - using Stack Approach  - Sc:O(N)
     static void flatten(Node  root) {
-        if (root == null) return;
+        if (root == null)
+            return;
+
         //using Stack extra DS
         Stack<Node> st = new Stack();
         st.add(root);
+
         // Add right, left
         // pop and connect curr to st.peek()
         while (!st.isEmpty()){

@@ -19,7 +19,7 @@ public class BottomViewBinaryTree {
     }
 
     // Using Level order traversal technique
-    public static List<Integer> topView (Node root){
+    public static List<Integer> bottomView (Node root){
 
         List <Integer> resultList = new ArrayList<>();
         Map <Integer, Integer> nodeMap= new TreeMap<>() ;// value type is just 1 value rather than list

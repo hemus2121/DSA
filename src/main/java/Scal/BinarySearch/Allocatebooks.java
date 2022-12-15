@@ -1,4 +1,4 @@
-package Scal.BinarySearch3.HomeWork;
+package Scal.BinarySearch;
 /*Problem Description
 
         Given an array of integers A of size N and an integer B.

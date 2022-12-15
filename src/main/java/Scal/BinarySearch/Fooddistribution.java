@@ -1,4 +1,4 @@
-package Scal.BinarySearch3.HomeWork;
+package Scal.BinarySearch;
 /*
 The government wants to set up B distribution offices across N cities for the distribution of food
 packets. The population of the ith city is A[i]. Each city must have at least 1 office,

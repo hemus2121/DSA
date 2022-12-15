@@ -8,7 +8,7 @@ public class ReverseTheString {
         StringBuilder reversedString = new StringBuilder(A.trim());
 
         for (int i =0;i< len/2;i++){
-            reverse(  reversedString,i, len-1-i);
+            reverse( reversedString,i, len-1-i);
         }
 
         int startIndex=0;
@@ -43,7 +43,8 @@ public class ReverseTheString {
         for (int s = strWords.length - 1; s >= 0; s--) {
             if (ans.toString().isEmpty()){
                 ans.append(strWords[s]);
-            }else ans.append(" ").append(strWords[s]);
+            }else
+                ans.append(" ").append(strWords[s]);
         }
         return  ans.toString();
     }
@@ -51,6 +52,5 @@ public class ReverseTheString {
         String s = " love hate data structures";
         System.out.println(reverseString(s));
         System.out.println(reverseSol2(s));
-
     }
 }

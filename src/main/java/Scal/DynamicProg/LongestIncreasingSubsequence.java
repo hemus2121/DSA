@@ -9,16 +9,13 @@ In other words, find a subsequence of array in which the subsequence's elements 
 In this case, return the length of the longest increasing subsequence.
  */
 
-import java.util.Arrays;
-import java.util.Comparator;
-
 public class LongestIncreasingSubsequence {
 
     private static int getLength(int []A){
         int n = A.length;
         int [] dp = new int [n];
         int maxCount=-1;
-        //lets iterate inpt array elements
+        //lets iterate input array elements
         for (int i=0;i<n;i++){
             for (int j =0;j<i;j++){
                 //check for smaller elements
@@ -33,7 +30,7 @@ public class LongestIncreasingSubsequence {
     }
 
     public static void main(String[] args) {
-        int [] data = {10,9,2,5,3,7,101,18};
+        int [] data = {1,2, 3,1, 6};
         System.out.println(getLength(data));
     }
 }

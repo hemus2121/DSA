@@ -20,7 +20,7 @@ public class SerializeDeSerialize {
         while (!q.isEmpty()) {
             Node node = q.poll();
             if (node == null) {
-                sb.append("n ");
+                sb.append("n "); // acts as DELIMITER
                 continue;
             }
             sb.append(node.data + " ");

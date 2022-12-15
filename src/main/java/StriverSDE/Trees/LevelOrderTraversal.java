@@ -21,7 +21,7 @@ public class LevelOrderTraversal {
         q.add(root);
         while (!q.isEmpty()) {
             Node node = q.poll();
-            resultList.add(node.data);
+            resultList.add(node.data);// add current node data to result list
 
             if (node.left != null)
                 q.add(node.left);
