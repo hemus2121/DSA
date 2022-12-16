@@ -1,4 +1,4 @@
-package Scal.Hashing2Adv.HomeWork;
+package Scal.Hashing2Adv.Assi.HomeWork;
 
 import java.util.*;
 /*
