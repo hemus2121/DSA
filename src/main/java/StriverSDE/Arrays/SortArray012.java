@@ -20,7 +20,7 @@ public class SortArray012 {
              }else mid++; // if 1 comes just retain there and increment pointer
         }
     }
-    public static void swap (int [] data, int low, int high){
+     static void swap (int [] data, int low, int high){
         int tmp = data[low];
         data[low] = data[high];
         data[high] =tmp;
