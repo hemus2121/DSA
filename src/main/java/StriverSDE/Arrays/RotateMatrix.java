@@ -24,5 +24,11 @@ public class RotateMatrix {
         };
         rotateMatrixInPlace(data);
         System.out.println(data);
+
+        /** logical way of denoting coordinates
+        i , j
+        j, n-1-i
+        n-1-i, n-1-j,
+        n-1-j, i */
     }
 }

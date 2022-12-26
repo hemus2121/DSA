@@ -10,9 +10,10 @@ NOTE:The rightmost element is always a leader.
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-public class LeadersInArray {
+public class    LeadersInArray {
     private static int [] getLeaders(int [] data){
 
         int n = data.length;
@@ -32,6 +33,7 @@ public class LeadersInArray {
         }
 
         return resultList.stream().mapToInt(val->val).toArray();
+        //Collections.reverseOrder(resultList);
     }
 
     public static void main(String[] args) {
