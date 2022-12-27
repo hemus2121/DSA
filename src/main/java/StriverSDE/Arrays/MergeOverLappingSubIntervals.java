@@ -23,19 +23,20 @@ public class MergeOverLappingSubIntervals {
 
         //Iterate for intervals
         for (int [] i : intervals){
-            if ( i[0] <= end){
-                end  = Math.max(end, i[1]);
+            if ( i[0] <= end){ // incoming interval start is less than curren end
+                end  = Math.max(end, i[1]);  // get the maximum end
             }else {
+                // no overlapping to add to result and revise start, end values
                 resList.add (new int []{ start, end});
                 start = i[0];
                 end = i[1];
             }
         }
-        resList.add(new int []{start,end});
-        return resList.toArray(new int [0][1]);
+        resList.add(new int []{start,end}); // add the last start and end values
+        return resList.toArray(new int [resList.size()][1]);
     }
     public static void main(String[] args) {
-        int [][] data = { {1,3},{2,6},{8,10},{15,18}};
+        int [][] data = { {1,3},{2,4},{2,6},{8,9},{8,10}, {9,11},{15,18},{16,17}};
         mergeInterval(data);
         System.out.println(Arrays.toString(data));
     }
