@@ -1,5 +1,8 @@
 package Visa.String;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LongestCommonPrefix {
     public static String longestCommonPrefix(String[] strs) {
 
@@ -27,6 +30,15 @@ public class LongestCommonPrefix {
             sb.append(c);
         }
         return sb.toString();
+    }
+
+    static boolean isIsomorphic(String s, String t){
+        Map map = new HashMap();
+        for (int i =0;i< s.length();i++){
+            if (map.put(s.charAt(i),i) != map.put(t.charAt(i)+"",i))
+                return  false;
+        }
+        return true;
     }
 
     public static void main(String[] args) {

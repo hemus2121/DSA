@@ -82,5 +82,4 @@ public class NoOfConnectedComponents {
         };
         System.out.println(countComponents(5,edges1)); //expected 1
     }
-
 }

@@ -1,7 +1,7 @@
 package Visa.String;
 
 public class ReverseWordsInString {
-    public String reverseWords(String s){
+    public  static String reverseWords(String s){
         if (s == null) return null;
         char [] a = s.toCharArray();
         int n = s.length();
@@ -27,20 +27,25 @@ public class ReverseWordsInString {
 
     static void reverseWords(char [] a, int n){
         int i =0, j=0;
-        while (i <n){
-            while (i<j &&i <n && a[i] == ' ')i++;// skip spaces
-            while (j<i &&j <n && a[j] != ' ')j++; // skip non spaces
-            reverse (a,i, j-1);
+        while (i <n){s
+            while (i<j || i <n && a[i] == ' ') // skip starting spaces
+                i++;
+            while (j<i || j <n && a[j] != ' ') // skip non spaces
+                j++;
+            reverse (a,i, j-1); // reverse each words
         }
     }
 
-    String cleanSpaces(char [] a, int n){
+    static String  cleanSpaces(char [] a, int n){
         int i =0, j=0;
         while (j <n){
-            while (j<n && a[j] == ' ')j++;
-            while (j<n && a[j] != ' ')a[i++] = a[j++];
-            while (j<n && a[j]== ' ')j++;
-            if (j<n) a[i++] = ' ';
+            while (j<n && a[j] == ' ') //skip spaces
+                j++;
+            while (j<n && a[j] != ' ') //copy data
+                a[i++] = a[j++];
+            while (j<n && a[j]== ' ') //skip spaces
+                j++;
+            if (j<n) a[i++] = ' '; // keep only one space
         }
         return new String(a).substring(0,i);
     }
@@ -59,5 +64,6 @@ public class ReverseWordsInString {
     public static void main(String[] args) {
         String s ="the sky is blue";
         System.out.println(reverseWordsUsingInbuilt(s));
+        System.out.println(reverseWords(s));
     }
 }

@@ -26,6 +26,7 @@ public class TopologicalSort {
 
         List<Integer> resultList = new ArrayList<>();
         topoSortData(A, indegree,adjList, resultList);
+
         return resultList.stream().mapToInt(val -> val).toArray();
     }
 

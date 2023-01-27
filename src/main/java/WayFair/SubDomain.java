@@ -23,6 +23,7 @@ public class SubDomain {
 
             //extract count out
             int visits = Integer.parseInt(arrIntDom[0]);
+
             //second element contains "discuss.leetcode.com" -- <key-- name , value -- count>
             domMap.put(arrIntDom[1], domMap.getOrDefault(arrIntDom[1],0)+visits);
 

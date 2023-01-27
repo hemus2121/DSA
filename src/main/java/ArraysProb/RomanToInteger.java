@@ -32,14 +32,26 @@ public class RomanToInteger {
     public static int convertRomanToInt2(String s){
         int res = 0;
         for (int i =0;i<s.length();i++){
-            if ( i==0 || romMap.get(s.charAt(i))<= romMap.get(s.charAt(i-1))) res= res+ romMap.get(s.charAt(i));
+            if ( i==0 || romMap.get(s.charAt(i))<= romMap.get(s.charAt(i-1)))
+                res= res+ romMap.get(s.charAt(i));
             else res = res + (romMap.get(s.charAt(i))-2*romMap.get(s.charAt(i-1)));
         }
         return  res;
     }
+
+    public static int convertRomanToIntBest(String s){
+        int res=0;
+        for (int i=0;i <s.length()-1;i++){
+            if (romMap.get(s.charAt(i)) <romMap.get(s.charAt(i+1))){
+                res = res - romMap.get(s.charAt(i));
+            }else res = res + romMap.get(s.charAt(i));
+        }
+        return res + romMap.get(s.charAt(s.length()-1));
+    }
     public static void main(String[] args) {
-        System.out.println(convertRomanToInt1("IV"));
-        System.out.println(convertRomanToInt2("IV"));
+        //System.out.println(convertRomanToInt1("IX"));
+       //System.out.println(convertRomanToInt2("IV"));
+        System.out.println(convertRomanToIntBest("IV"));
 
     }
 }

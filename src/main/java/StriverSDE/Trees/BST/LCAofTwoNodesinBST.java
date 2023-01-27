@@ -14,7 +14,7 @@ public class LCAofTwoNodesinBST {
     //Recursive
     public Node lowestCommonAncestor(Node root, Node p, Node q) {
         //base case
-        if (root == null ) return null;
+         if (root == null ) return null;
         int cur = root.data ;
         // traverse left or right based on root value comparison
         if(cur < p.data && cur <q.data){
