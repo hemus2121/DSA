@@ -18,46 +18,38 @@ public class FreeCars {
     static class Pair{
         int time;
         int profit;
-
-        Pair(int time ,int profit){
+        Pair(int time, int profit){
             this.time = time;
             this.profit = profit;
         }
     }
         private static int computeMaxProfit(int [] A, int [] B){
 
-        //priority Que to hold data based on deadline
-            PriorityQueue<Integer> pq = new PriorityQueue();
-            List<Pair> deadLineList = new ArrayList<>();
-            for (int i =0;i< A.length;i++){
-                deadLineList.add(new Pair(A[i], B[i]));
+            int mod = 1000000007;
+            PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+            ArrayList<Pair> list = new ArrayList<>();
+            int maxProfit = 0;
+            for(int i = 0; i < A.length; i++){
+                list.add(new Pair(A[i], B[i]));
             }
-
-            Collections.sort(deadLineList, (Pair p1, Pair p2) -> {
-                return p1.time -p2.time;
-            });
-
-            int time =0;
-            for (Pair p : deadLineList){
-                if (time <= p.time-1){
-                    time++;
-                    pq.add(p.profit);
-                }else {
-                    if (pq.peek() < p.profit){
-                        pq.poll(); //extracting minimum
-                        pq.add(p.profit); //adding higher profits
-                    }
+            Collections.sort(list, (Pair a, Pair b) -> (a.time - b.time));
+            int t = 0;
+            for(Pair car : list){
+                int time = car.time;
+                int profit = car.profit;
+                if(t < time){
+                    minHeap.add(profit);
                 }
+                else if(--t < time && profit > minHeap.peek()){
+                    minHeap.remove();
+                    minHeap.add(profit);
+                }
+                t++;
             }
-
-            //Computing total profit
-            int totalProfit =0;
-            int mod = (int) Math.pow(10,7)+9;
-            while (pq.size() >0){
-                totalProfit += pq.poll();
-                totalProfit %=mod;
+            while(!minHeap.isEmpty()){
+                maxProfit = ( maxProfit + minHeap.remove()) % mod;
             }
-            return  totalProfit;
+            return maxProfit;
         }
     public static void main(String[] args) {
         int [] A = {1, 3, 2, 3, 3};

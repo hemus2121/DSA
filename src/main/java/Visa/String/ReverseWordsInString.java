@@ -27,7 +27,7 @@ public class ReverseWordsInString {
 
     static void reverseWords(char [] a, int n){
         int i =0, j=0;
-        while (i <n){s
+        while (i <n){
             while (i<j || i <n && a[i] == ' ') // skip starting spaces
                 i++;
             while (j<i || j <n && a[j] != ' ') // skip non spaces
