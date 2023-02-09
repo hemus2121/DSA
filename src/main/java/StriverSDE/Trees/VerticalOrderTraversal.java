@@ -54,11 +54,11 @@ public class VerticalOrderTraversal {
             }
         }
         List < List < Integer >> list = new ArrayList ();
-        for (TreeMap < Integer, PriorityQueue <Integer>> ys: map.values()) {
+        for (TreeMap < Integer, PriorityQueue <Integer>> tmap: map.values()) {
             list.add(new ArrayList < > ());
-            for (PriorityQueue <Integer> nodes: ys.values()) {
-                while (!nodes.isEmpty()) {
-                    list.get(list.size() - 1).add(nodes.poll());
+            for (PriorityQueue <Integer> pq: tmap.values()) {
+                while (!pq.isEmpty()) {
+                    list.get(list.size() - 1).add(pq.poll());
                 }
             }
         }

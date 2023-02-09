@@ -20,7 +20,7 @@ public class MorrisInOrderTraversal {
             //case 1. - No left subtree present
             if (curr.left == null){
                 inorderList.add(curr.data);  // add to result list
-                curr = curr.right;  //traverse to right of curren tnode
+                curr = curr.right;  //traverse to right of curren node
             }
             else {
                 // Case 2: Left  subtree is present

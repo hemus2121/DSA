@@ -1,5 +1,6 @@
 package Visa.String;
 
+//https://leetcode.com/problems/string-compression/
 public class StringCompression {
     public static int compress(char[] chars) {
         int index =0,len=0;

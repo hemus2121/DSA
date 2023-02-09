@@ -19,7 +19,7 @@ public class RemoveAllAdjDuplicateElements {
         for (int i =0;i <s.length();i++){
             if (st.isEmpty() || s.charAt(i)!= st.peek().c){
                 st.push (new Pair(s.charAt(i),1));
-            }else {
+            }else { ///bbbaa
                 if (++st.peek().count==k){
                     st.pop();
                 }

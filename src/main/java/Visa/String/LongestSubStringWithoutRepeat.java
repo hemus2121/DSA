@@ -1,4 +1,9 @@
 package Visa.String;
+/** Longest Substring Without Repeating Characters
+ * Given a string s, find the length of the longest substring without repeating characters.
+ *
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+ */
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,8 +15,10 @@ public class LongestSubStringWithoutRepeat {
         int n = s.length();
         int l =0, r=0;
         int ans = Integer.MIN_VALUE;
+
         //to store unique elements
         Set<Character> st = new HashSet<>();
+
         //edge case
         if (n==1) return 1;
 
@@ -25,7 +32,7 @@ public class LongestSubStringWithoutRepeat {
                 //add new incoming character to set
                 st.add(s.charAt(r));
                 r++;
-                // compute answer till no w
+                // compute answer till now
                 ans = Math.max(ans, st.size());
             }
         }

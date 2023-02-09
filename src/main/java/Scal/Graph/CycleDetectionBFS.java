@@ -16,9 +16,9 @@ public class CycleDetectionBFS {
 
     class Pair {
         int current, parent;
-        Pair (int current, int previous){
+        Pair (int current, int parent){
             this.current = current;
-            this.parent = previous;
+            this.parent = parent;
         }
     }
 
@@ -57,7 +57,6 @@ public class CycleDetectionBFS {
         return false;
     }
     private boolean isCyclePresent() {
-        //create boolean array
         boolean [] visited = new boolean[TOTAL_NODES];
 
         //check for all nodes present in graphs - checking for all connected components

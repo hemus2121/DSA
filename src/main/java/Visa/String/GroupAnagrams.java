@@ -1,32 +1,34 @@
 package Visa.String;
-
+/** Group Anagrams
+* Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+*An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+ */
 import java.util.*;
 
 //https://leetcode.com/problems/group-anagrams/
 public class GroupAnagrams {
 
-    static String customCharSort (char [] data){
-        Arrays.sort(data);
-        return new String(data);
-    }
     public static List<List<String>> groupAnagrams(String[] strs) {
-        // place holder needed for storing anagrams
-        Map<String ,List<String>> hm = new HashMap<>();
+        //stores the group of anagrams
+        Map <String, List<String>> freqMap = new HashMap();
+        for (String s : strs){
 
-        //iterate over string array
-        for (int i =0;i< strs.length;i++) {
-            char[] data = strs[i].toCharArray();
-            String sortedValue = customCharSort(data);
+            char[] ca = s.toCharArray();
+            Arrays.sort(ca);
+            String sortedValue = String.valueOf(ca);
 
-            // check if persent in map - if YES - Add to list
-            if (hm.containsKey(sortedValue)) {
-                hm.get(sortedValue).add(strs[i]);
-            } else {
-                hm.put(sortedValue, new ArrayList<>());
-                hm.get(sortedValue).add(strs[i]);
+            //check that sorted value is present as key in HM
+            // if present add the actual string value to existing list
+            if (freqMap.containsKey(sortedValue)){
+                freqMap.get(sortedValue).add(s);
+            }else {
+                freqMap.put(sortedValue, new LinkedList<>());
+                freqMap.get(sortedValue).add(s);
             }
         }
-        return new ArrayList<>(hm.values());
+
+        //iterate over the map the get values and return array list
+        return new ArrayList(freqMap.values());
     }
 
     public static void main(String[] args) {

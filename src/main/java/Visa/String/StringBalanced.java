@@ -37,8 +37,9 @@ public class StringBalanced {
     }
 
     public static void main(String[] args) {
-        String data = "]]][[[";
-        System.out.println(minSwaps(data));
-        System.out.println(minSwaps2Variables(data));
+       // String data = "]]][[[";
+        String data1 ="][][";
+        System.out.println(minSwaps(data1));
+        System.out.println(minSwaps2Variables(data1));
     }
 }

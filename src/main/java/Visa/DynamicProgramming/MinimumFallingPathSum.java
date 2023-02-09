@@ -1,8 +1,10 @@
 package Visa.DynamicProgramming;
 
 //https://leetcode.com/problems/minimum-falling-path-sum/description/
-
-public class MinimumFallingPathSum {
+/** Given an n x n array of integers matrix, return the minimum sum of any falling path through matrix.
+ A falling path starts at any element in the first row and chooses the element in the next row that is either directly below or diagonally left/right. Specifically, the next element from position (row, col) will be (row + 1, col - 1), (row + 1, col), or (row + 1, col + 1).
+**/
+ public class MinimumFallingPathSum {
     public int  minFallingPathSum(int [][]matrix){
         int [][] dp = new int [matrix.length][matrix.length];
         int n = matrix.length;

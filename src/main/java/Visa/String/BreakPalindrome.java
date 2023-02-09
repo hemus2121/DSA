@@ -2,7 +2,10 @@ package Visa.String;
 
 public class BreakPalindrome {
 
-    public String breakPalindrome(String s){
+    public static void main(String[] args) {
+        System.out.println(breakPalindrome("aaa"));
+    }
+    public static String breakPalindrome(String s){
         int n = s.length();
 
         if (n==1) return "";

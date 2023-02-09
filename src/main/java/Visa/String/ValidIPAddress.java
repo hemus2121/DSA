@@ -6,6 +6,7 @@ public class ValidIPAddress {
     public static void main(String[] args) {
         String s1 = "172.16.254.1";
         System.out.println(validIPAddress(s1));
+
         String s2= "2001:0db8:85a3:0:0:8A2E:0370:7334";
         System.out.println(validIPAddress(s2));
     }
