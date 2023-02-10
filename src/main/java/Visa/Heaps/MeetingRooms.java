@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 /**
- * Given an array of meeting time intervals intervals where intervals[i] = [starti, endi], return the minimum number of conference rooms required.
+ * Given an array of meeting time intervals  where intervals[i] = [starti, endi], return the minimum number of conference rooms required.
  */
 //https://leetcode.com/problems/meeting-rooms-ii/discuss/1068957/Java-min-heap-w-explanation
 

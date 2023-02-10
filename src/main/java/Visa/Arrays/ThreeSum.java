@@ -8,7 +8,7 @@ public class ThreeSum {
 
     static public List<List<Integer>> threeSum(int[] num) {
 
-        Arrays.sort(num); // very critical step sort the array
+        Arrays.sort(num); // very critical step-- SORT  array
 
         List<List<Integer>> resultList =new ArrayList<>();
 
