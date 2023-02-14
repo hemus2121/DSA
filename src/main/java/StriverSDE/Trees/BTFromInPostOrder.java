@@ -15,10 +15,11 @@ public class BTFromInPostOrder {
         for (int i = 0; i < inorder.length; i++) {
             inorderMap.put(inorder[i], i);
         }
-        return build(inorder, 0, inorder.length - 1, postorder, 0, postorder.length - 1, inorderMap);
+        return build( 0, inorder.length - 1, postorder, 0, postorder.length - 1, inorderMap);
     }
 
-    private Node build(int[] inorder, int is, int ie, int[] postorder, int ps, int pe, Map<Integer, Integer> inorderMap) {
+    private Node build(int is, int ie, int[] postorder, int ps, int pe, Map<Integer, Integer> inorderMap) {
+        //base case
         if (ps >pe || is >ie){
             return  null;
         }
@@ -28,8 +29,8 @@ public class BTFromInPostOrder {
         int rootIndex = inorderMap.get(postorder[pe]);
         int leftNums = rootIndex -is;
 
-        root.left = build(inorder, is, rootIndex-1, postorder, ps, ps+leftNums-1, inorderMap);
-        root.right = build(inorder, rootIndex+1, ie, postorder, ps+leftNums, pe-1, inorderMap);
+        root.left = build( is, rootIndex-1, postorder, ps, ps+leftNums-1, inorderMap);
+        root.right = build(rootIndex+1, ie, postorder, ps+leftNums, pe-1, inorderMap);
         return root;
     }
 }

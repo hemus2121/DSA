@@ -11,6 +11,17 @@ import java.util.Stack;
  */
 public class FlattenBTLL {
 
+    static Node prev = null;
+    static void flattenRecursion(Node root){
+        if (root == null) return;;
+        flatten(root.right);
+        flatten(root.left);
+        root.right = prev;
+        root.left =null;
+        prev = root;
+    }
+
+
     // EXTRA SPACE - using Stack Approach  - Sc:O(N)
     static void flatten(Node  root) {
         if (root == null)
@@ -24,6 +35,7 @@ public class FlattenBTLL {
         // pop and connect curr to st.peek()
         while (!st.isEmpty()){
             Node cur = st.pop();
+
             if (cur.right != null){
                 st.add(cur.right);
             }
@@ -31,9 +43,9 @@ public class FlattenBTLL {
                 st.add(cur.left);
             }
             if(!st.isEmpty()){
-                cur.right = st.peek();
+                cur.right = st.peek(); // connect element on top of stack
             }
-            cur.left = null;
+            cur.left = null; //  set the left poiner to null
         }
     }
     //NO EXTRA SPACE - similar to Morris Inorder linking flow

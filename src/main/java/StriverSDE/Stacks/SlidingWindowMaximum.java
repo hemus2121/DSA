@@ -1,5 +1,6 @@
 package StriverSDE.Stacks;
 
+import java.io.IOException;
 import java.util.*;
 
 /**  Sliding window maximum
@@ -42,6 +43,6 @@ public class SlidingWindowMaximum {
         int i, j, n, k = 3, x;
         int arr[]={4,0,-1,3,5,3,6,8};
         int ans[] = slidingwindowMax(arr, k);
-        System.out.println(Arrays.toString(ans)); //expected 4 3 5 5 6 8
+        System.out.println(Arrays.toString(ans)); //expected 4 3 5 5 6
     }
 }

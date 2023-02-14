@@ -29,5 +29,4 @@ public class CheckTreeSymmetrical {
             System.out.println("The tree is symmetrical");
          else System.out.println("The tree is NOT symmetrical"); // expected Symmetrical answer
     }
-
 }

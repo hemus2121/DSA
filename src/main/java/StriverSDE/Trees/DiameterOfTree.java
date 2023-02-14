@@ -6,17 +6,17 @@ package StriverSDE.Trees;
  **/
 public class DiameterOfTree {
 
-    int diameter =0;
     private int computeDiaMeter(Node root){
-        computeHeight(root);
-        return diameter;
+        int [] diameter = new int [1];
+        computeHeight(root, diameter);
+        return diameter[0];
     }
-    int computeHeight(Node root){
+    int computeHeight(Node root, int [] diameter){
         //base case
         if (root == null) return -1;// this is important since we are computing based on edge
-        int left = computeHeight(root.left);
-        int right = computeDiaMeter(root.right);
-        diameter = Math.max(diameter, left+right+2);
-        return Math.max(left,right)+1;
+        int left = computeHeight(root.left, diameter);
+        int right = computeHeight(root.right, diameter);
+        diameter[0] = Math.max(diameter[0], left+right);
+        return 1 + Math.max(left,right);
     }
 }

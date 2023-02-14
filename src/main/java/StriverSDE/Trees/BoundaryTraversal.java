@@ -17,8 +17,10 @@ public class BoundaryTraversal {
    static void addLeftBoundary(Node node, List<Integer> resultList){
         Node curr = node.left ;
         while (curr != null){
-            if (isLeafNode(curr)== false) resultList.add(curr.data);
-            if (curr.left != null) curr = curr.left;
+            if (isLeafNode(curr)== false)
+                resultList.add(curr.data);
+            if (curr.left != null)
+                curr = curr.left;
             else curr = curr.right;
         }
     }

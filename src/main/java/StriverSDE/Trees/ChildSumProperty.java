@@ -10,9 +10,11 @@ package StriverSDE.Trees;
  * SC : O(N)  Reason: In the worst case( skewed tree), space complexity can be O(N).
  **/
 public class ChildSumProperty {
+
     static void reorder(Node root) {
         if (root == null) return;
         int sum = 0;
+
         // add left and right values
         if (root.left != null) sum += root.left.data;
         if (root.right != null) sum += root.right.data;

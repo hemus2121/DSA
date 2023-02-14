@@ -22,7 +22,7 @@ public class HeightBalanced {
         int rightHeight = dfsHeight(root.right);
         if (rightHeight == -1) return  -1;
         //check abs difference
-        if (Math.abs(leftHeight -rightHeight)>1) return -1;
+        if (Math.abs(leftHeight - rightHeight)>1) return -1;
         return Math.max(leftHeight,rightHeight) +1;
     }
 }

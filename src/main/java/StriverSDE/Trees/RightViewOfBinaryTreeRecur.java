@@ -26,12 +26,22 @@ public class RightViewOfBinaryTreeRecur {
         //base caes
         if (node == null) return;
 
-        // check if size matches
+        // check if size and level matches
         if (resultList.size() == currLevel){
             resultList.add(node.data);
         }
         rightView(node.right, resultList, currLevel+1);
         rightView(node.left, resultList, currLevel+1);
+    }
+
+    public void leftView (Node node, List<Integer> resultList,int currLevel ){
+        if (node == null) return;
+        //check if size and level matches
+        if (resultList.size() == currLevel){
+            resultList.add(node.data);
+        }
+        leftView(node.left, resultList, currLevel+1);
+        leftView(node.right, resultList, currLevel+1);
     }
 
 }

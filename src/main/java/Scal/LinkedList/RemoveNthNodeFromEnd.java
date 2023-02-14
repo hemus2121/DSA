@@ -1,6 +1,6 @@
 package Scal.LinkedList;
 
-/*
+/**
 Problem Description
 
 Given a linked list A, remove the B-th node from the end of list and return its head.

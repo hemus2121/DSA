@@ -2,9 +2,9 @@ package StriverSDE.Trees;
 
 import java.util.*;
 
-/** Top view of a Binary Tree
+/** Bottom View of Binary Tree
  * Problem Statement: Given below is a binary tree.
- * The task is to print the top view of  binary tree. The top view of a binary tree is the set of nodes visible when the tree is viewed from the top
+ * The task is to print the bottom view of  binary tree. The top view of a binary tree is the set of nodes visible when the tree is viewed from the top
  * TC: SC : O( N)
  */
 public class BottomViewBinaryTree {
@@ -34,7 +34,7 @@ public class BottomViewBinaryTree {
             Node tempNode = tempPair.node;
             int level = tempPair.level;
 
-            // update with latest value in map so that we get bottom view of TREE
+            // update with latest value in map so that we get bottom view of TREE - NO check whether element is present is required
             nodeMap.put(level, tempNode.data);
 
             if (tempNode.left != null){

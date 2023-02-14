@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class IntersectionOfTwoLists {
 
-    // this takes extra space
+    // With Extra Space
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         //using Extra place holder to hold nodes in Set
         Set<ListNode> dataSet = new HashSet<>();
