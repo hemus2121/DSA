@@ -4,7 +4,7 @@ package StriverSDE.Arrays;
  * has the largest sum and return its sum and print the subarray.
  *  TC: O(N) SC: (1)
  **/
-public class MaxSubArraySumKadanAlgo {
+public class MaxSubArraySum {
     private static int getMaxSubArraySum(int [] data){
         // we need to maintain 2 variables running sum and Max sum so far
         int currentSum =0, maxSum = Integer.MIN_VALUE;

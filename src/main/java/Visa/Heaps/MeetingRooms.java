@@ -15,7 +15,7 @@ public class MeetingRooms {
         //Minimum heap, used to track meeting end times.
         //Meetings get added to heap when they start, and are removed once done.
         //The size of the heap tells us the number of meetings going on at present.
-        PriorityQueue<Integer> curMeetings = new PriorityQueue<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
         int maxRooms =0;
         for (int i =0;i< intervals.length;i++){
@@ -23,13 +23,13 @@ public class MeetingRooms {
             int endTime = intervals[i][1];
 
             //Meetings that end before or at the same time as current meeting starts, need to 'release' their rooms.
-            while (curMeetings.size() >0 && curMeetings.peek()<= startTime){
-                curMeetings.remove();
+            while (pq.size() >0 && pq.peek()<= startTime){
+                pq.remove();
             }
             //Current meeting occupies a room. Add current meeting's end time to heap.
-            curMeetings.add(endTime);
+            pq.add(endTime);
             //update result
-            maxRooms = Math.max(maxRooms, curMeetings.size());
+            maxRooms = Math.max(maxRooms, pq.size());
         }
         return maxRooms;
     }

@@ -19,7 +19,7 @@ public class ThreeSum {
 
         for (int i =0;i< num.length-2;i++){
             // this will take care of handling duplicates at starting index
-            if (i == 0 || (i > 0) && num[i-1]!= num[i]) {
+            if (i == 0 || (i > 0) && num[i-1]!= num[i]) { // check whether current element is same as previous
 
                 int low = i+1, high = num.length-1, target = 0-num[i];
 
