@@ -1,14 +1,10 @@
 package Scal.LinkedList;
 
-/*
+/**
  Given a singly linked list A
-
  A: A0 → A1 → … → An-1 → An
-
 reorder it to:
-
  A0 → An → A1 → An-1 → A2 → An-2 → …
-
 You must do this in-place without altering the nodes' values.
  */
 public class ReorderList {
@@ -23,6 +19,14 @@ public class ReorderList {
         return mergeLists(A, h2);
     }
 
+    public ListNode getMiddle(ListNode head){
+        ListNode fast=head, slow=head;
+        while (fast.next != null && fast.next.next != null){
+            fast= fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
     public ListNode mergeLists(ListNode h1, ListNode h2){
         ListNode cur= h1;
         while (h2!=null){
@@ -46,12 +50,5 @@ public class ReorderList {
         }
         return prev;
     }
-    public ListNode getMiddle(ListNode head){
-        ListNode fast=head, slow=head;
-        while (fast.next != null && fast.next.next != null){
-            fast= fast.next.next;
-            slow = slow.next;
-        }
-        return slow;
-    }
+
 }

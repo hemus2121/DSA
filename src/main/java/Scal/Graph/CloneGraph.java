@@ -27,7 +27,7 @@ class CloneNode {
 public class CloneGraph {
 
     //Map to contain mapping of old and new nodes references
-    static Map<CloneNode, CloneNode> nodeVisitedMap = new HashMap<>();
+    static Map<CloneNode, CloneNode> oldNewNodeMap = new HashMap<>();
      public static CloneNode graphClone (CloneNode node){
          return cloneGraph(node);
     }
@@ -38,21 +38,21 @@ public class CloneGraph {
         if (node ==null) return null;
         // If the node was already visited before.
         // Return the clone from the visited dictionary.
-        if (nodeVisitedMap.containsKey(node)) return nodeVisitedMap.get(nodeVisitedMap.get(node));
+        if (oldNewNodeMap.containsKey(node)) return oldNewNodeMap.get(oldNewNodeMap.get(node));
 
         //Main logic
         // Create a clone for the given node.
         // Note that we don't have cloned neighbors as of now, hence [].
-        CloneNode newNode = new CloneNode(node.val);
+        CloneNode cloneNode = new CloneNode(node.val);
         // The key is original node and value being the clone node.
-        nodeVisitedMap.put(node, newNode);
+        oldNewNodeMap.put(node, cloneNode);
 
         // Iterate through the neighbors to generate their clones
         // and prepare a list of cloned neighbors to be added to the cloned node.
         for ( CloneNode  neighbor :  node.neighbors){
-            newNode.neighbors.add(cloneGraph(neighbor));
+            cloneNode.neighbors.add(cloneGraph(neighbor));
         }
-        return newNode;
+        return cloneNode;
     }
 
 }

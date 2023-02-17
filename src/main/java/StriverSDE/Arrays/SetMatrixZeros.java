@@ -16,7 +16,7 @@ public class SetMatrixZeros {
         //Iterate input matrix
         for (int i =0;i<matrix.length;i++){
             for (int j =0;j< matrix[0].length;j++){
-                if (matrix[i][i]==1){
+                if (matrix[i][i]==0){
                     dummy1[i]=0;
                     dummy2[j]=0;
                 }

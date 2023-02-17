@@ -37,7 +37,6 @@ public class ModifiedSearchUsingMap {
         public String solve(String []A, String [] B){
             TrieNode root = new TrieNode();
 
-
             for (String a: A){
                 root.insert(a);
             }

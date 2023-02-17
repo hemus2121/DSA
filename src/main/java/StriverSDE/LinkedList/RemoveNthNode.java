@@ -7,9 +7,9 @@ public class RemoveNthNode {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
         //creating dummy node is important
-        ListNode currentHead = new ListNode();
-        currentHead.next = head;
-        ListNode slow =currentHead, fast = currentHead;
+        ListNode dummyNode = new ListNode();
+        dummyNode.next = head;
+        ListNode slow =dummyNode, fast = dummyNode;
 
         //iterate for first n nodes
         for  (int i =1; i<=n;i++){
@@ -21,6 +21,6 @@ public class RemoveNthNode {
             fast = fast.next;
         }
         slow.next = slow.next.next;
-        return currentHead.next;
+        return dummyNode.next;
     }
 }

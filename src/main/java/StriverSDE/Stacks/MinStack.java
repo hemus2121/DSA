@@ -9,10 +9,10 @@ import java.util.Stack;
  */
 
 class Pair {
-    int x, y; // stores actual value and minimum value till now
-    Pair (int x, int y) {
+    int x, min; // stores actual value and minimum value till now
+    Pair (int x, int min) {
         this.x = x;
-        this.y = y;
+        this.min = min;
     }
 }
 public class MinStack {
@@ -26,7 +26,7 @@ public class MinStack {
          if (st.isEmpty()){
             min = x ;
          } else {
-             min = Math.min(st.peek().y, x);
+             min = Math.min(st.peek().min, x);
          }
          st.add(new Pair(x, min)); //storing minimum till now
      }
@@ -38,6 +38,6 @@ public class MinStack {
          return st.peek().x;
      }
      int getMin(){
-         return st.peek().y;
+         return st.peek().min;
      }
 }
