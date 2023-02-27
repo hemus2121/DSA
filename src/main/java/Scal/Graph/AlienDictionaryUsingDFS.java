@@ -1,4 +1,4 @@
-package LeetCode.Graphs;
+package Scal.Graph;
 
 import java.util.*;
 

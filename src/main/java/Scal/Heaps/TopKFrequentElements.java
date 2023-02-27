@@ -37,6 +37,4 @@ public class TopKFrequentElements {
         }
         return resultList;
     }
-
-
 }

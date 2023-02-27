@@ -1,4 +1,4 @@
-package ArraysProb;
+package LeetCode.Arrays;
 
 /**
  * There are N holes arranged in a row in the top of an old table. We want to fix the table by covering the holes with two boards. For technical reasons, the boards need to be of the same length.

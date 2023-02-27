@@ -15,7 +15,7 @@ public class LongestCommonPrefix {
         // edge case
         if (strs.length ==1) return  strs[0];
 
-        //get the minimim string lenght
+        //get the minimum string length
         int min  =Integer.MAX_VALUE;
         for (String s : strs){
             min = Math.min(s.length(), min);

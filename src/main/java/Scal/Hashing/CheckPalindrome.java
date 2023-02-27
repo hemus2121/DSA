@@ -1,6 +1,6 @@
-package Scal.Hashing1Adv;
+package Scal.Hashing;
 
-/*
+/**
 Problem Description
 
 Given a string A consisting of lowercase characters.
@@ -27,12 +27,11 @@ public class CheckPalindrome {
             if (val%2==1) oddcount++;
         }
         return oddcount>1?0:1;
-
     }
 
 
     public static void main(String[] args) {
-        System.out.println(checkPalindrome("abcde"));
-        System.out.println(checkPalindrome("abbaee"));
+        System.out.println(checkPalindrome("aab"));
+        System.out.println(checkPalindrome("aabc"));
     }
 }

@@ -22,6 +22,7 @@ public class LongestIncreasingSubMemo {
         if (dp [ind][prev_ind+1] != -1) return  dp[ind][prev_ind+1];
 
         int notTake = getAns(nums, n, ind+1, prev_ind, dp);
+
         int take =0;
         if ( prev_ind ==-1 || nums [ind] > nums[prev_ind]){
             take = 1 + getAns(nums, n, ind+1, ind, dp);

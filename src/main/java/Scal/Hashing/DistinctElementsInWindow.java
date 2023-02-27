@@ -1,4 +1,4 @@
-package Scal.Hashing1Adv;
+package Scal.Hashing;
 
 import java.util.*;
 
@@ -32,6 +32,5 @@ public class DistinctElementsInWindow {
     public static void main(String[] args) {
         int [] data=  {1,2,1,3,4,3};
         System.out.println(Arrays.toString(getDistcount(data,3)));
-
     }
 }

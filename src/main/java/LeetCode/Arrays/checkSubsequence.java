@@ -1,4 +1,4 @@
-package ArraysProb;
+package LeetCode.Arrays;
 
 import java.util.Arrays;
 import java.util.List;

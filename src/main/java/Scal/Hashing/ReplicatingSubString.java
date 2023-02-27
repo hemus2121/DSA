@@ -1,4 +1,4 @@
-package Scal.Hashing1Adv;
+package Scal.Hashing;
 
 import java.util.*;
 
